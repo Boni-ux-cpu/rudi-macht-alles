@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudi Macht Alles — Gartenbau & Gartengestaltung | Musterstadt</title>
+  <meta name="description" content="Ihr Gartenbau-Experte in Musterstadt. Rasenpflege, Gartengestaltung, Baumschnitt und Pflasterarbeiten. 15+ Jahre Erfahrung, 500+ zufriedene Kunden." />
+  <meta name="keywords" content="Gartenbau Musterstadt, Gartengestaltung, Rasenpflege, Baumschnitt, Pflasterarbeiten, Gärtner" />
+  <meta property="og:title" content="Rudi Macht Alles — Premium Gartenbau" />
+  <meta property="og:description" content="Gärten, die begeistern. Ihr Experte für Gartenbau & Gartengestaltung in Musterstadt." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Rudi Macht Alles",
+    "description": "Professioneller Gartenbau & Gartengestaltung",
+    "telephone": "+49-123-456789",
+    "email": "info@rudimachtalles.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Musterstadt",
+      "addressCountry": "DE"
+    },
+    "openingHours": "Mo-Fr 07:00-18:00",
+    "priceRange": "€€"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ──────────────────────────────────── -->
+  <header class="navbar navbar--transparent" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Rudi Macht Alles – Startseite">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" aria-hidden="true">
+          <defs>
+            <linearGradient id="treeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#3A7D54"/>
+              <stop offset="100%" stop-color="#B8750E"/>
+            </linearGradient>
+          </defs>
+          <g id="icon" transform="scale(0.6)">
+            <rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/>
+            <circle cx="20" cy="28" r="16" fill="url(#treeGrad)" opacity="0.95"/>
+            <circle cx="12" cy="42" r="14" fill="url(#treeGrad)" opacity="0.85"/>
+            <circle cx="28" cy="42" r="14" fill="url(#treeGrad)" opacity="0.85"/>
+            <circle cx="8" cy="54" r="12" fill="url(#treeGrad)" opacity="0.75"/>
+            <circle cx="32" cy="54" r="12" fill="url(#treeGrad)" opacity="0.75"/>
+            <path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/>
+            <path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/>
+            <path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/>
+            <line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <text x="65" y="75" class="logo-name" font-family="'Lora', serif" font-size="48" font-style="italic" font-weight="700">Rudi</text>
+          <text x="65" y="105" class="logo-sub" font-family="'Montserrat', sans-serif" font-size="18" font-weight="700" letter-spacing="2">Macht Alles</text>
+        </svg>
+      </a>
+
+      <button class="navbar__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__nav" id="navMenu" role="navigation">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <div class="navbar__cta">
+          <a href="kontakt.html" class="btn btn--gold btn--sm">Anfrage stellen</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ────────────────────────────────────────── -->
+  <section class="hero" id="home" aria-label="Willkommen">
+    <div class="hero__bg hero__parallax-bg">
+      <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1585974687185-95146fa06c78?w=1600&q=80'); background-size: cover; background-position: center;">
+        <img src="https://images.unsplash.com/photo-1585974687185-95146fa06c78?w=1600&q=80" alt="Premium Gartenprojekt mit Terrasse und Bepflanzung" style="width:100%;height:100%;object-fit:cover;display:none;">
+      </div>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__inner reveal">
+        <span class="eyebrow eyebrow--gold">Ihr Gartenbau-Experte</span>
+        <h1 data-content="heroHeadline">Gärten,<br>die <em>begeistern.</em></h1>
+        <p data-content="heroSubheadline">Von der ersten Idee bis zum fertigen Traumgarten — zuverlässig, sorgfältig und mit echter Leidenschaft für grüne Räume.</p>
+        <div class="hero__cta">
+          <a href="galerie.html" class="btn btn--gold btn--lg">Projekte ansehen</a>
+          <a href="kontakt.html" class="btn btn--outline btn--lg">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__award">
+      <span class="hero__award-icon">★</span>
+      <div>
+        <strong>15+ Jahre</strong>
+        <span>Erfahrung &amp; Leidenschaft</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── STATS BAND ───────────────────────────────────── -->
+  <div class="stats-band" aria-label="Unsere Zahlen">
+    <div class="container">
+      <div class="stats-band__inner">
+        <div class="stat-item reveal">
+          <span class="stat-item__num" data-stat="experience" data-count="15" data-suffix="+">15+</span>
+          <span class="stat-item__label">Jahre Erfahrung</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__num" data-stat="projects" data-count="500" data-suffix="+">500+</span>
+          <span class="stat-item__label">Realisierte Projekte</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__num" data-stat="satisfaction" data-count="100" data-suffix="%">100%</span>
+          <span class="stat-item__label">Zufriedenheitsgarantie</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__num" data-stat="service_area">50km</span>
+          <span class="stat-item__label">Einsatzgebiet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AUSGEWÄHLTE PROJEKTE ─────────────────────────── -->
+  <section class="section" aria-labelledby="projekte-title">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="eyebrow">Unsere Arbeit</span>
+        <div class="gold-line"></div>
+        <h2 class="section__title" id="projekte-title">Ausgewählte Projekte</h2>
+        <p class="section__subtitle">Ein Blick auf das, was wir für unsere Kunden geschaffen haben — vom verwilderten Garten zum Traumort.</p>
+      </div>
+
+      <div class="projects-grid">
+        <a href="galerie.html" class="project-card reveal">
+          <div class="project-card__img">
+            <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80'); background-size: cover; background-position: center;">
+              <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80" alt="Gartengestaltung Privatgarten" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:none;">
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__cat">Gartengestaltung</span>
+              <h3 class="project-card__title">Moderner Privatgarten</h3>
+            </div>
+          </div>
+        </a>
+        <a href="galerie.html" class="project-card reveal">
+          <div class="project-card__img">
+            <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'); background-size: cover; background-position: center;">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Naturstein Terrasse mit Bepflanzung" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:none;">
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__cat">Pflasterarbeiten</span>
+              <h3 class="project-card__title">Naturstein-Terrasse</h3>
+            </div>
+          </div>
+        </a>
+        <a href="galerie.html" class="project-card reveal">
+          <div class="project-card__img">
+            <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80'); background-size: cover; background-position: center;">
+              <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Professionelle Rasenpflege" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:none;">
+            </div>
+            <div class="project-card__overlay">
+              <span class="project-card__cat">Rasenpflege</span>
+              <h3 class="project-card__title">Rasen-Neuanlage</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="section-link reveal">
+        <a href="galerie.html" class="btn btn--outline-dark">
+          Alle Projekte ansehen
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LEISTUNGEN ÜBERSICHT ─────────────────────────── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="leistungen-title">
+    <div class="container">
+      <div class="section__header section__header--center reveal">
+        <span class="eyebrow">Was wir tun</span>
+        <div class="gold-line gold-line--center"></div>
+        <h2 class="section__title" id="leistungen-title">Unsere Leistungen</h2>
+        <p class="section__subtitle">Von der einfachen Pflege bis zur kompletten Neugestaltung — alles aus einer Hand.</p>
+      </div>
+
+      <div class="services-overview-grid" id="servicesGrid">
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M24 30v10M10 44h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-service="0-title">Rasenpflege</h3>
+          <p data-service="0-desc">Mähen, Düngen, Vertikutieren — satter grüner Rasen das ganze Jahr.</p>
+          <a href="leistungen.html#rasenpflege" class="service-link">Mehr erfahren →</a>
+        </div>
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Baum- & Heckenschnitt</h3>
+          <p>Formschnitt, Auslichten und Pflege für Gesundheit und ein gepflegtes Bild.</p>
+          <a href="leistungen.html#baumschnitt" class="service-link">Mehr erfahren →</a>
+        </div>
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M16 28V18a8 8 0 0116 0v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Gartengestaltung</h3>
+          <p>Planung und Anlage von Beeten, Wegen und Gartenräumen nach Ihrem Wunsch.</p>
+          <a href="leistungen.html#gestaltung" class="service-link">Mehr erfahren →</a>
+        </div>
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 36h32M12 36V24l12-8 12 8v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="28" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3>Pflasterarbeiten</h3>
+          <p>Terrassen, Einfahrten und Wege aus Naturstein oder Pflasterstein.</p>
+          <a href="leistungen.html#pflaster" class="service-link">Mehr erfahren →</a>
+        </div>
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 40L20 24l8 8 6-12 6 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 42h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Pflanzpflege & Beete</h3>
+          <p>Unkrautjäten, Mulchen, Pflanzen setzen — für blühende Beete das ganze Jahr.</p>
+          <a href="leistungen.html#pflanzpflege" class="service-link">Mehr erfahren →</a>
+        </div>
+
+        <div class="service-overview-item reveal">
+          <div class="service-overview-item__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Entrümpelung & Abtransport</h3>
+          <p>Grünschnitt, Laub, Gartenabfälle — wir räumen auf und entsorgen alles.</p>
+          <a href="leistungen.html#entruempelung" class="service-link">Mehr erfahren →</a>
+        </div>
+      </div>
+
+      <div class="section-link reveal" style="text-align:center; margin-top:var(--space-5)">
+        <a href="leistungen.html" class="btn btn--primary btn--lg">Alle Leistungen &amp; Preise</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROZESS ──────────────────────────────────────── -->
+  <section class="section" style="background:var(--cream-dark);" aria-labelledby="prozess-title">
+    <div class="container">
+      <div class="section__header section__header--center reveal">
+        <span class="eyebrow">So arbeiten wir</span>
+        <div class="gold-line gold-line--center"></div>
+        <h2 class="section__title" id="prozess-title">Ihr Weg zum Traumgarten</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="process-step__num">01</div>
+          <div class="process-step__title">Anfrage</div>
+          <p class="process-step__text">Beschreiben Sie kurz Ihr Anliegen — kostenlos und unverbindlich.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-step__num">02</div>
+          <div class="process-step__title">Beratung vor Ort</div>
+          <p class="process-step__text">Wir kommen zu Ihnen, schauen uns die Situation an und erstellen ein Angebot.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-step__num">03</div>
+          <div class="process-step__title">Umsetzung</div>
+          <p class="process-step__text">Pünktlich, sauber, professionell — wir realisieren Ihr Projekt.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-step__num">04</div>
+          <div class="process-step__title">Übergabe & Pflege</div>
+          <p class="process-step__text">Sie freuen sich über Ihren neuen Garten. Wir bleiben für laufende Pflege an Ihrer Seite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ÜBER RUDI TEASER ─────────────────────────────── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-img reveal reveal--left">
+          <div class="img-placeholder" style="background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 50%,#52B788 100%); min-height:480px;">
+            <!-- <img src="images/rudi-portrait.jpg" alt="Rudi, Inhaber von Rudi Macht Alles" loading="lazy"> -->
+          </div>
+          <div class="about-badge">
+            <span class="about-badge__num">15+</span>
+            <span class="about-badge__label">Jahre<br>Erfahrung</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal reveal--right">
+          <span class="eyebrow">Wer wir sind</span>
+          <div class="gold-line"></div>
+          <h2 class="section__title" id="about-title">Ein Name, dem du vertrauen kannst.</h2>
+          <p style="color:var(--text-muted); max-width:100%">Ich bin Rudi — und ich mache wirklich alles, was deinen Garten schöner macht. Was 2009 als kleiner Nebenjob begann, ist heute ein etablierter Gartenbaubetrieb mit einem eingespielten Team und Hunderten glücklicher Kunden.</p>
+          <p style="color:var(--text-muted); max-width:100%; margin-top:var(--space-2)">Bei uns gibt es keine Ausreden und keine halben Sachen. Wir kommen pünktlich, arbeiten sorgfältig und hinterlassen alles besser als wir es vorgefunden haben.</p>
+
+          <ul class="values-list" style="margin-top:var(--space-4)">
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Zuverlässig &amp; pünktlich — immer
+            </li>
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Faire, transparente Preise ohne Überraschungen
+            </li>
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              15 Jahre Erfahrung im Gartenbau
+            </li>
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Lokales Team aus der Region
+            </li>
+          </ul>
+
+          <a href="ueber-uns.html" class="btn btn--primary btn--lg" style="margin-top:var(--space-4)">Unsere Geschichte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ─────────────────────────────────── -->
+  <section class="section" style="background:var(--cream-dark);" aria-labelledby="bewertungen-title">
+    <div class="container">
+      <div class="section__header section__header--center reveal">
+        <span class="eyebrow">Kundenstimmen</span>
+        <div class="gold-line gold-line--center"></div>
+        <h2 class="section__title" id="bewertungen-title">Was unsere Kunden sagen</h2>
+      </div>
+
+      <div class="testimonials-grid" data-content="testimonials">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Rudi hat unseren verwilderten Garten komplett umgestaltet. Das Ergebnis ist atemberaubend — und er war pünktlich, sauber und freundlich. Absolute Empfehlung!"</p>
+          <p class="testimonial-card__author">Maria K. / Stammkundin seit 2019</p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Endlich ein Gärtner, der hält was er verspricht. Rasen gemäht, Hecken geschnitten, alles aufgeräumt — und das zu einem fairen Preis. Danke Rudi!"</p>
+          <p class="testimonial-card__author">Thomas H. / Kunde seit 2021</p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Der Name sagt alles: Rudi macht alles! Von der Planung bis zur Umsetzung unserer Terrasse war er professionell und kreativ. Wir sind begeistert."</p>
+          <p class="testimonial-card__author">Sandra L. / Kundin seit 2020</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA SEKTION ──────────────────────────────────── -->
+  <div class="cta-section" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow eyebrow--light">Bereit?</span>
+        <h2 id="cta-title">Bereit für deinen Traumgarten?</h2>
+        <p>Kostenlose Erstberatung vor Ort — wir kommen zu Ihnen und erstellen ein unverbindliches Angebot.</p>
+        <div class="cta-section__btns">
+          <a href="kontakt.html" class="btn btn--gold btn--lg">Jetzt anfragen</a>
+          <a href="tel:+49123456789" class="btn btn--outline btn--lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Direkt anrufen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ───────────────────────────────────────── -->
+  <footer class="footer" aria-label="Seitenfu&szlig;">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" width="160" height="44">
+            <defs>
+              <linearGradient id="treeGradF" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#3A7D54"/>
+                <stop offset="100%" stop-color="#B8750E"/>
+              </linearGradient>
+            </defs>
+            <g id="iconF" transform="scale(0.25)">
+              <rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/>
+              <circle cx="20" cy="28" r="16" fill="url(#treeGradF)" opacity="0.95"/>
+              <circle cx="12" cy="42" r="14" fill="url(#treeGradF)" opacity="0.85"/>
+              <circle cx="28" cy="42" r="14" fill="url(#treeGradF)" opacity="0.85"/>
+              <circle cx="8" cy="54" r="12" fill="url(#treeGradF)" opacity="0.75"/>
+              <circle cx="32" cy="54" r="12" fill="url(#treeGradF)" opacity="0.75"/>
+              <path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/>
+              <path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/>
+              <path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/>
+              <line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <text x="150" y="85" font-family="'Lora', serif" font-size="32" font-style="italic" font-weight="700" fill="#B7E4C7">Rudi</text>
+            <text x="150" y="115" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#52B788">Macht Alles</text>
+          </svg>
+          <p>Gartenbau-Experte mit Leidenschaft für Natur und Handwerk.</p>
+        </div>
+
+        <div class="footer__col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Leistungen</h5>
+          <ul>
+            <li><a href="leistungen.html#rasenpflege">Rasenpflege</a></li>
+            <li><a href="leistungen.html#baumschnitt">Baumschnitt</a></li>
+            <li><a href="leistungen.html#gestaltung">Gartengestaltung</a></li>
+            <li><a href="leistungen.html#pflaster">Pflasterarbeiten</a></li>
+            <li><a href="leistungen.html#pflanzpflege">Pflanzpflege</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Kontakt</h5>
+          <ul>
+            <li class="footer__contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#D4A853" stroke-width="2"/></svg>
+              +49 (0) 123 456 789
+            </li>
+            <li class="footer__contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#D4A853" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#D4A853" stroke-width="2"/></svg>
+              info@rudimachtalles.de
+            </li>
+            <li class="footer__contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#D4A853" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#D4A853" stroke-width="2"/></svg>
+              Musterstadt &amp; Umgebung
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2024 Rudi Macht Alles. Alle Rechte vorbehalten.</span>
+        <div class="footer__legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING CTA ─────────────────────────────────── -->
+  <a href="kontakt.html" class="floating-cta" id="floatingCta" aria-label="Jetzt Anfrage stellen">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+    Anfrage stellen
+  </a>
+
+  <script src="js/content-loader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="Rudi Macht Alles">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,144,400;1,144,500&amp;family=Inter:wght@500;600&amp;display=swap');
+      .wm-rudi { font-family: 'Fraunces', 'EB Garamond', Georgia, serif; font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144, "SOFT" 100; fill: #1E3026; }
+      .wm-sub  { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; fill: #1E3026; letter-spacing: 0.36em; }
+      .wm-tag  { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; fill: #B8623A; letter-spacing: 0.42em; }
+    </style>
+  </defs>
+
+  <text x="360" y="118" text-anchor="middle" class="wm-rudi" font-size="132">Rudi</text>
+
+  <g stroke="#4A7C5D" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <path d="M 220 132 Q 260 138 290 138" />
+    <path d="M 232 130 Q 236 122 244 120" />
+    <path d="M 248 132 Q 252 124 261 122" />
+    <path d="M 264 134 Q 268 126 277 124" />
+    <ellipse cx="240" cy="120" rx="6" ry="2.4" transform="rotate(-22 240 120)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+    <ellipse cx="257" cy="122" rx="6.5" ry="2.6" transform="rotate(-18 257 122)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+    <ellipse cx="273" cy="124" rx="6.5" ry="2.6" transform="rotate(-14 273 124)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+  </g>
+
+  <g stroke="#4A7C5D" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <path d="M 500 132 Q 460 138 430 138" />
+    <path d="M 488 130 Q 484 122 476 120" />
+    <path d="M 472 132 Q 468 124 459 122" />
+    <path d="M 456 134 Q 452 126 443 124" />
+    <ellipse cx="480" cy="120" rx="6" ry="2.4" transform="rotate(22 480 120)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+    <ellipse cx="463" cy="122" rx="6.5" ry="2.6" transform="rotate(18 463 122)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+    <ellipse cx="447" cy="124" rx="6.5" ry="2.6" transform="rotate(14 447 124)" fill="#4A7C5D" stroke="none" opacity="0.85"/>
+  </g>
+
+  <text x="360" y="158" text-anchor="middle" class="wm-sub" font-size="15">MACHT ALLES</text>
+
+  <line x1="306" y1="180" x2="414" y2="180" stroke="#B8623A" stroke-width="1.2" opacity="0.9"/>
+  <text x="360" y="200" text-anchor="middle" class="wm-tag" font-size="10">GARTEN  ·  PFLEGE  ·  HANDWERK</text>
+</svg>

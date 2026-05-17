@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" role="img" aria-label="Rudi Macht Alles Mark">
+  <g stroke="#4A7C5D" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 70 168 L 70 28"/>
+
+    <path d="M 70 50 Q 56 46 44 38"/>
+    <path d="M 70 50 Q 84 46 96 38"/>
+
+    <path d="M 70 78 Q 50 74 36 62"/>
+    <path d="M 70 78 Q 90 74 104 62"/>
+
+    <path d="M 70 108 Q 46 104 30 90"/>
+    <path d="M 70 108 Q 94 104 110 90"/>
+
+    <path d="M 70 138 Q 50 134 38 122"/>
+    <path d="M 70 138 Q 90 134 102 122"/>
+  </g>
+
+  <g fill="#4A7C5D" stroke="none" opacity="0.95">
+    <ellipse cx="48" cy="40" rx="10" ry="3.6" transform="rotate(-32 48 40)"/>
+    <ellipse cx="92" cy="40" rx="10" ry="3.6" transform="rotate(32 92 40)"/>
+    <ellipse cx="40" cy="64" rx="11" ry="4" transform="rotate(-26 40 64)"/>
+    <ellipse cx="100" cy="64" rx="11" ry="4" transform="rotate(26 100 64)"/>
+    <ellipse cx="33" cy="92" rx="12" ry="4.2" transform="rotate(-22 33 92)"/>
+    <ellipse cx="107" cy="92" rx="12" ry="4.2" transform="rotate(22 107 92)"/>
+    <ellipse cx="41" cy="124" rx="11" ry="4" transform="rotate(-20 41 124)"/>
+    <ellipse cx="99" cy="124" rx="11" ry="4" transform="rotate(20 99 124)"/>
+  </g>
+
+  <circle cx="70" cy="24" r="2.4" fill="#B8623A"/>
+
+  <line x1="58" y1="168" x2="82" y2="168" stroke="#B8623A" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

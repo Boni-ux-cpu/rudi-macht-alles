@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudi Macht Alles — Brandkit 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream:       #F4EFE3;
+    --paper:       #FCF9F1;
+    --mist:        #E0D9C8;
+    --fern:        #4A7C5D;
+    --fern-deep:   #3A6248;
+    --moss-light:  #A8C29C;
+    --forest:      #1E3026;
+    --forest-deep: #0F1E14;
+    --clay:        #B8623A;
+    --clay-deep:   #9C4F2D;
+    --stone:       #6B6358;
+    --ink:         #1A1A18;
+
+    --serif: 'Fraunces', 'EB Garamond', Georgia, serif;
+    --sans:  'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+    --opsz-display: "opsz" 144, "SOFT" 100;
+    --opsz-text:    "opsz" 36, "SOFT" 50;
+
+    --page-w: 210mm;
+    --page-h: 297mm;
+    --pad:    24mm;
+
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: #D9D2C0;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    background: var(--cream);
+    padding: var(--pad);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page--forest {
+    background: var(--forest);
+    color: var(--cream);
+  }
+
+  .page--fern {
+    background: var(--fern);
+    color: var(--cream);
+  }
+
+  .page__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .page--forest .page__meta,
+  .page--fern .page__meta {
+    color: rgba(244, 239, 227, 0.55);
+  }
+
+  .page__num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ============ COVER ============ */
+  .cover {
+    background: var(--cream);
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 86% 14%, rgba(74, 124, 93, 0.10) 0%, transparent 38%),
+      radial-gradient(circle at 12% 88%, rgba(184, 98, 58, 0.08) 0%, transparent 36%);
+    pointer-events: none;
+  }
+
+  .cover > * { position: relative; }
+
+  .cover__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cover__hairline {
+    width: 100%;
+    height: 1px;
+    background: var(--clay);
+    margin: 14mm 0 12mm;
+    opacity: 0.5;
+  }
+
+  .cover__title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: var(--opsz-display);
+    font-size: 168px;
+    line-height: 0.9;
+    letter-spacing: -0.028em;
+    color: var(--forest);
+  }
+
+  .cover__title em {
+    color: var(--clay);
+    font-style: italic;
+  }
+
+  .cover__title small {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-top: 16mm;
+  }
+
+  .cover__leaf {
+    width: 56mm;
+    height: auto;
+    align-self: flex-end;
+    margin-top: -10mm;
+    margin-right: -4mm;
+    opacity: 0.9;
+  }
+
+  .cover__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .cover__edition {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: var(--opsz-text);
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--stone);
+    max-width: 80mm;
+  }
+
+  /* ============ HEADINGS ============ */
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 8mm;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: var(--clay);
+  }
+
+  .page--forest .eyebrow,
+  .page--fern .eyebrow { color: var(--moss-light); }
+
+  .page--forest .eyebrow::before,
+  .page--fern .eyebrow::before { background: var(--moss-light); }
+
+  .h-display {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: var(--opsz-display);
+    font-size: 90px;
+    line-height: 0.96;
+    letter-spacing: -0.022em;
+    color: var(--forest);
+  }
+
+  .h-display em { color: var(--clay); font-style: italic; }
+
+  .h-section {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-variation-settings: "opsz" 96;
+    font-size: 50px;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    color: var(--forest);
+  }
+
+  .h-section em {
+    font-style: italic;
+    color: var(--clay);
+  }
+
+  .body {
+    font-family: var(--sans);
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--stone);
+    font-weight: 400;
+  }
+
+  .body--lg { font-size: 13px; line-height: 1.7; max-width: 140mm; }
+
+  .page--forest .body,
+  .page--fern .body { color: rgba(244, 239, 227, 0.82); }
+
+  /* ============ MANIFESTO ============ */
+  .manifesto { justify-content: space-between; }
+
+  .manifesto__body {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 16mm;
+    align-items: start;
+    margin-top: 18mm;
+  }
+
+  .manifesto__quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 36px;
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+    color: var(--forest);
+  }
+
+  .manifesto__quote em { color: var(--clay); font-style: italic; }
+
+  .manifesto__signature {
+    margin-top: 10mm;
+    display: flex;
+    align-items: center;
+    gap: 8mm;
+  }
+
+  .manifesto__signature-line {
+    width: 28mm;
+    height: 1px;
+    background: var(--clay);
+    opacity: 0.6;
+  }
+
+  .manifesto__signature-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--stone);
+  }
+
+  .manifesto__principles {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8mm;
+  }
+
+  .principle {
+    border-top: 1px solid var(--mist);
+    padding-top: 5mm;
+    display: grid;
+    grid-template-columns: 14mm 1fr;
+    gap: 4mm;
+  }
+
+  .principle__num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: var(--opsz-display);
+    font-size: 38px;
+    line-height: 0.9;
+    color: var(--fern);
+  }
+
+  .principle__title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-variation-settings: "opsz" 96;
+    line-height: 1.15;
+    color: var(--forest);
+    margin-bottom: 2mm;
+  }
+
+  .principle__desc {
+    font-family: var(--sans);
+    font-size: 11px;
+    line-height: 1.65;
+    color: var(--stone);
+  }
+
+  /* ============ LOGO PAGE ============ */
+  .logo-grid {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10mm;
+    margin-top: 8mm;
+  }
+
+  .logo-hero {
+    background: var(--paper);
+    border: 1px solid var(--mist);
+    padding: 26mm 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-hero::after {
+    content: '';
+    position: absolute;
+    inset: 6mm;
+    border: 1px dashed var(--mist);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .logo-hero img { width: 320px; height: auto; position: relative; z-index: 1; }
+
+  .logo-variants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5mm;
+  }
+
+  .logo-variant {
+    padding: 14mm 6mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6mm;
+    min-height: 58mm;
+  }
+
+  .logo-variant--cream  { background: var(--paper); border: 1px solid var(--mist); }
+  .logo-variant--fern   { background: var(--fern); }
+  .logo-variant--forest { background: var(--forest); }
+
+  .logo-variant img { width: 100%; max-width: 130px; height: auto; }
+  .logo-variant--fern img,
+  .logo-variant--forest img { filter: brightness(0) invert(0.96); }
+
+  .logo-variant__label {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .logo-variant--fern .logo-variant__label,
+  .logo-variant--forest .logo-variant__label { color: rgba(244, 239, 227, 0.7); }
+
+  .logo-rules {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+  }
+
+  .rule {
+    display: grid;
+    grid-template-columns: 8mm 1fr;
+    gap: 4mm;
+    align-items: start;
+  }
+
+  .rule__bullet {
+    width: 8mm;
+    height: 8mm;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    margin-top: -0.5mm;
+  }
+
+  .rule__bullet--ja { background: var(--fern); color: var(--cream); }
+  .rule__bullet--no { background: var(--clay); color: var(--cream); }
+
+  .rule__title {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 1.5mm;
+  }
+
+  .rule__desc {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: var(--stone);
+  }
+
+  /* ============ COLOR PAGE ============ */
+  .color-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 4mm;
+    margin-top: 8mm;
+  }
+
+  .swatch {
+    position: relative;
+    padding: 9mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 56mm;
+    overflow: hidden;
+  }
+
+  .swatch--featured {
+    grid-row: span 3;
+    min-height: auto;
+  }
+
+  .swatch--cream    { background: var(--cream); color: var(--ink); border: 1px solid var(--mist); }
+  .swatch--paper    { background: var(--paper); color: var(--ink); border: 1px solid var(--mist); }
+  .swatch--mist     { background: var(--mist); color: var(--ink); }
+  .swatch--fern     { background: var(--fern); color: var(--cream); }
+  .swatch--clay     { background: var(--clay); color: var(--cream); }
+  .swatch--stone    { background: var(--stone); color: var(--cream); }
+  .swatch--forest   { background: var(--forest); color: var(--cream); }
+
+  .swatch__name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+
+  .swatch--featured .swatch__name {
+    font-size: 60px;
+    line-height: 0.9;
+  }
+
+  .swatch__role {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 2mm;
+  }
+
+  .swatch__values {
+    font-family: var(--sans);
+    font-size: 10px;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.92;
+  }
+
+  .swatch__values div { display: flex; gap: 8px; margin-bottom: 1px; }
+
+  .swatch__values dt {
+    width: 36px;
+    opacity: 0.55;
+    font-weight: 500;
+  }
+
+  .swatch__use {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    line-height: 1.55;
+    margin-top: 3mm;
+    opacity: 0.85;
+    max-width: 56mm;
+  }
+
+  .swatch--featured .swatch__use {
+    font-size: 11px;
+    max-width: 70mm;
+  }
+
+  /* ============ TYPOGRAPHY PAGE ============ */
+  .type-hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8mm 0;
+  }
+
+  .type-hero__line1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: var(--opsz-display);
+    font-size: 138px;
+    line-height: 0.94;
+    letter-spacing: -0.028em;
+    color: var(--forest);
+  }
+
+  .type-hero__line2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-variation-settings: var(--opsz-display);
+    font-size: 138px;
+    line-height: 0.94;
+    letter-spacing: -0.028em;
+    color: var(--clay);
+    margin-top: -6mm;
+  }
+
+  .type-hero__line2 em {
+    font-style: italic;
+    color: var(--fern);
+  }
+
+  .type-system {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10mm;
+    margin-top: 12mm;
+    border-top: 1px solid var(--mist);
+    padding-top: 10mm;
+  }
+
+  .type-family__name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: var(--opsz-display);
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 2mm;
+    color: var(--forest);
+  }
+
+  .type-family__role {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 4mm;
+  }
+
+  .type-family__desc {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    line-height: 1.65;
+    color: var(--stone);
+    margin-bottom: 5mm;
+  }
+
+  .type-family__sample {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 96;
+    font-size: 22px;
+    line-height: 1.35;
+    color: var(--forest);
+    border-top: 1px solid var(--mist);
+    padding-top: 4mm;
+  }
+
+  .type-family--sans .type-family__name {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .type-family--sans .type-family__sample {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ============ TYPESCALE ============ */
+  .scale-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+    margin-top: 10mm;
+  }
+
+  .scale-row {
+    display: grid;
+    grid-template-columns: 30mm 1fr;
+    align-items: baseline;
+    gap: 10mm;
+    border-bottom: 1px solid var(--mist);
+    padding-bottom: 5mm;
+  }
+
+  .scale-row__meta {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--clay);
+  }
+
+  .scale-row__meta small {
+    display: block;
+    margin-top: 1mm;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    color: var(--stone);
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scale-row__sample { color: var(--forest); }
+
+  .s-h1   { font-family: var(--serif); font-style: italic; font-variation-settings: var(--opsz-display); font-size: 66px; line-height: 1.0; letter-spacing: -0.022em; }
+  .s-h2   { font-family: var(--serif); font-variation-settings: "opsz" 96; font-size: 44px; line-height: 1.08; letter-spacing: -0.015em; }
+  .s-h3   { font-family: var(--serif); font-variation-settings: "opsz" 64; font-size: 28px; line-height: 1.2; }
+  .s-lede { font-family: var(--serif); font-style: italic; font-variation-settings: "opsz" 64; font-size: 20px; line-height: 1.45; }
+  .s-body { font-family: var(--sans); font-size: 14px; line-height: 1.65; }
+  .s-label{ font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--clay); }
+
+  /* ============ COMPONENTS PAGE ============ */
+  .comp-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9mm;
+    margin-top: 10mm;
+  }
+
+  .comp-cell {
+    border-top: 1px solid var(--mist);
+    padding-top: 6mm;
+  }
+
+  .comp-cell--span { grid-column: span 2; }
+
+  .comp-cell__label {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 6mm;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.4s var(--ease), color 0.4s ease, transform 0.3s var(--ease);
+  }
+
+  .btn--primary {
+    background: var(--clay);
+    color: var(--cream);
+  }
+  .btn--primary:hover { background: var(--clay-deep); transform: translateY(-1px); }
+
+  .btn--secondary {
+    background: var(--forest);
+    color: var(--cream);
+  }
+  .btn--secondary:hover { background: var(--forest-deep); transform: translateY(-1px); }
+
+  .btn--ghost {
+    background: transparent;
+    color: var(--forest);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--forest);
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 6mm;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .link {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--forest);
+    text-decoration: none;
+    border-bottom: 1px solid var(--clay);
+    padding-bottom: 1px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  .link:hover { color: var(--clay); }
+
+  .input {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--mist);
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--forest);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  .input:focus { border-color: var(--clay); }
+
+  .input-label {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 2mm;
+  }
+
+  .card-sample {
+    background: var(--paper);
+    border: 1px solid var(--mist);
+    padding: 8mm;
+    position: relative;
+  }
+
+  .card-sample::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3mm; height: 100%;
+    background: var(--fern);
+  }
+
+  .card-sample__cat {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 4mm;
+  }
+
+  .card-sample__title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 28px;
+    line-height: 1.1;
+    color: var(--forest);
+    margin-bottom: 3mm;
+  }
+
+  .card-sample__body {
+    font-family: var(--sans);
+    font-size: 11px;
+    line-height: 1.65;
+    color: var(--stone);
+  }
+
+  .ornament {
+    width: 28mm;
+    height: 1px;
+    background: var(--clay);
+    margin: 2mm 0;
+    position: relative;
+    opacity: 0.75;
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--clay);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -3px;
+    opacity: 0.75;
+  }
+  .ornament::before { left: -3px; }
+  .ornament::after  { right: -3px; }
+
+  /* ============ APPLICATION PAGE ============ */
+  .app {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 8mm;
+    margin-top: 8mm;
+  }
+
+  .app-hero {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 18mm 14mm 14mm;
+    position: relative;
+    overflow: hidden;
+    min-height: 120mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .app-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 100% 0%, rgba(74, 124, 93, 0.32) 0%, transparent 55%),
+      radial-gradient(ellipse at 0% 100%, rgba(184, 98, 58, 0.18) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .app-hero > * { position: relative; z-index: 1; }
+
+  .app-hero__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(244, 239, 227, 0.78);
+  }
+
+  .app-hero__nav-items {
+    display: flex;
+    gap: 7mm;
+  }
+
+  .app-hero__brand {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 24px;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+  }
+
+  .app-hero__brand em { color: var(--clay); }
+
+  .app-hero__head {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: var(--opsz-display);
+    font-size: 76px;
+    line-height: 0.96;
+    letter-spacing: -0.022em;
+    color: var(--cream);
+    max-width: 140mm;
+  }
+
+  .app-hero__head em { color: var(--clay); font-style: italic; }
+
+  .app-hero__sub {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: rgba(244, 239, 227, 0.78);
+    max-width: 95mm;
+    margin-top: 6mm;
+  }
+
+  .app-hero__cta-row {
+    display: flex;
+    gap: 4mm;
+    margin-top: 8mm;
+  }
+
+  .app-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 26px;
+    color: var(--cream);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .app-hero__cta--primary { background: var(--clay); }
+  .app-hero__cta--ghost   { border: 1px solid rgba(244, 239, 227, 0.4); }
+
+  .app-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4mm;
+  }
+
+  .app-service {
+    background: var(--paper);
+    border: 1px solid var(--mist);
+    padding: 8mm;
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+    min-height: 56mm;
+    position: relative;
+  }
+
+  .app-service__icon {
+    width: 16mm;
+    height: 16mm;
+    border-radius: 50%;
+    background: var(--fern);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 22px;
+    margin-bottom: 2mm;
+  }
+
+  .app-service__title {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 96;
+    font-size: 22px;
+    line-height: 1.15;
+    color: var(--forest);
+  }
+
+  .app-service__desc {
+    font-family: var(--sans);
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--stone);
+    margin-top: auto;
+  }
+
+  .app-quote {
+    background: var(--fern);
+    color: var(--cream);
+    padding: 12mm 14mm;
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .app-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -30mm;
+    right: -8mm;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 280px;
+    color: rgba(244, 239, 227, 0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .app-quote__text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 96;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--cream);
+    max-width: 145mm;
+    position: relative;
+  }
+
+  .app-quote__by {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(244, 239, 227, 0.78);
+  }
+
+  /* ============ VOICE PAGE ============ */
+  .voice-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm;
+    margin-top: 10mm;
+  }
+
+  .voice-col__h {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: var(--opsz-display);
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 8mm;
+  }
+
+  .voice-col--ja .voice-col__h { color: var(--fern); }
+  .voice-col--no .voice-col__h { color: var(--clay); }
+
+  .voice-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+    padding: 5mm 0;
+    border-top: 1px solid var(--mist);
+  }
+
+  .voice-pair__sample {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 64;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--forest);
+  }
+
+  .voice-col--no .voice-pair__sample {
+    color: var(--stone);
+    text-decoration: line-through;
+    text-decoration-color: var(--mist);
+  }
+
+  .voice-pair__note {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    line-height: 1.6;
+    color: var(--stone);
+  }
+
+  /* ============ END / KOLOPHON ============ */
+  .end {
+    background: var(--forest);
+    color: var(--cream);
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .end::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 100% 0%, rgba(74, 124, 93, 0.28) 0%, transparent 50%),
+      radial-gradient(ellipse at 0% 100%, rgba(184, 98, 58, 0.16) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .end > * { position: relative; }
+
+  .end__title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: var(--opsz-display);
+    font-size: 92px;
+    line-height: 0.98;
+    color: var(--cream);
+  }
+
+  .end__title em { color: var(--clay); font-style: italic; }
+
+  .end__signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14mm;
+    margin-top: 14mm;
+  }
+
+  .end__signature h4 {
+    font-family: var(--sans);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--moss-light);
+    margin-bottom: 4mm;
+  }
+
+  .end__signature p {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 64;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--cream);
+  }
+
+  .end__hairline {
+    height: 1px;
+    background: var(--clay);
+    opacity: 0.5;
+    margin: 14mm 0;
+  }
+
+  /* ============ NAV (screen only) ============ */
+  .nav {
+    position: fixed;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 16px;
+    background: rgba(30, 48, 38, 0.95);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+
+  .nav a {
+    color: rgba(244, 239, 227, 0.7);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .nav a:hover { color: var(--clay); }
+  .nav__title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-variation-settings: "opsz" 64;
+    font-size: 15px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--cream);
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(244, 239, 227, 0.18);
+  }
+
+  .print-cta {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    padding: 14px 22px;
+    background: var(--clay);
+    color: var(--cream);
+    border: 0;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .print-cta:hover { background: var(--clay-deep); transform: translateY(-1px); }
+
+  /* ============ PRINT ============ */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  @media print {
+    html, body { background: white; }
+    body { padding: 0; gap: 0; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      page-break-after: always;
+      break-after: page;
+      margin: 0;
+    }
+    .nav, .print-cta { display: none !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+
+  /* ============ MOTION (screen) ============ */
+  @media (prefers-reduced-motion: no-preference) {
+    .page { opacity: 0; transform: translateY(8px); transition: opacity 0.7s ease, transform 0.7s var(--ease); }
+    .page.in { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Brandkit Inhalt">
+  <div class="nav__title">Brandkit</div>
+  <a href="#cover">Cover</a>
+  <a href="#identitaet">Identität</a>
+  <a href="#logo">Logo</a>
+  <a href="#farbe">Farbe</a>
+  <a href="#typografie">Typografie</a>
+  <a href="#skala">Skala</a>
+  <a href="#komponenten">Komponenten</a>
+  <a href="#anwendung">Anwendung</a>
+  <a href="#sprache">Sprache</a>
+  <a href="#kolophon">Kolophon</a>
+</nav>
+
+<button class="print-cta" onclick="window.print()">Als PDF speichern</button>
+
+<!-- ============ COVER ============ -->
+<section class="page cover" id="cover">
+  <div class="cover__top page__meta">
+    <span>Brandkit · Edition Eins</span>
+    <span class="page__num">01 / 10</span>
+  </div>
+
+  <div style="display: flex; gap: 8mm; align-items: flex-start;">
+    <div style="flex: 1;">
+      <div class="cover__hairline"></div>
+      <h1 class="cover__title">
+        Rudi <em>Macht</em><br>Alles.
+        <small>Garten · Pflege · Handwerk</small>
+      </h1>
+    </div>
+    <img src="logo-mark.svg" class="cover__leaf" alt="Botanische Marke">
+  </div>
+
+  <div class="cover__bottom">
+    <span class="cover__edition">
+      Eine lebendige Anleitung.<br>
+      Für eine Marke, die wächst.
+    </span>
+    <span class="page__meta">München · MMXXVI</span>
+  </div>
+</section>
+
+<!-- ============ IDENTITÄT / MANIFESTO ============ -->
+<section class="page manifesto" id="identitaet">
+  <div class="page__meta">
+    <span>Kapitel I · Identität</span>
+    <span class="page__num">02 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Wer wir sind</p>
+    <h2 class="h-display">Wir kommen<br>vorbei <em>—</em><br>und kümmern uns.</h2>
+  </div>
+
+  <div class="manifesto__body">
+    <div>
+      <p class="manifesto__quote">
+        Rudi macht den Garten.<br>
+        Persönlich. Pünktlich.<br>
+        Mit Werkzeug aus zweiter<br>
+        Hand und einem Blick,<br>
+        der jedem Baum<br>
+        <em>seinen Schnitt</em> gibt.
+      </p>
+      <div class="manifesto__signature">
+        <span class="manifesto__signature-line"></span>
+        <span class="manifesto__signature-text">Rudi Baralija — Inhaber, seit 2009</span>
+      </div>
+    </div>
+
+    <ol class="manifesto__principles">
+      <li class="principle">
+        <span class="principle__num">01</span>
+        <div>
+          <h3 class="principle__title">Rudi kommt selbst.</h3>
+          <p class="principle__desc">Keine Zeitarbeiter, keine Sub-Sub-Sub-Unternehmer. Wer anruft, bekommt Rudi am Telefon — und am Garten.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="principle__num">02</span>
+        <div>
+          <h3 class="principle__title">Wir lesen den Garten.</h3>
+          <p class="principle__desc">Jeder Baum hat seinen Schnitt. Jede Hecke ihren Tag. Wir gehen erst einmal hin, schauen — dann erst sagen wir, was es kostet.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="principle__num">03</span>
+        <div>
+          <h3 class="principle__title">Wir kommen wieder.</h3>
+          <p class="principle__desc">Ein Garten ist kein einmaliger Auftrag. Wir betreuen viele Gärten seit zehn Jahren — und das soll auch so bleiben.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="principle__num">04</span>
+        <div>
+          <h3 class="principle__title">Sauber raus, sauber rein.</h3>
+          <p class="principle__desc">Wir hinterlassen den Garten wie wir ihn vorgefunden haben — nur eben gepflegt. Werkzeuge weg, Abfall mit, Tor zu.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="page__meta">
+    <span>Rudi Macht Alles</span>
+    <span>Persönlich · Pünktlich · Verlässlich</span>
+  </div>
+</section>
+
+<!-- ============ LOGO ============ -->
+<section class="page" id="logo">
+  <div class="page__meta">
+    <span>Kapitel II · Logo</span>
+    <span class="page__num">03 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Die Wortmarke</p>
+    <h2 class="h-section">Ein Name,<br>der <em>wächst</em>.</h2>
+  </div>
+
+  <div class="logo-grid">
+    <div class="logo-hero">
+      <img src="logo-wordmark.svg" alt="Rudi Macht Alles Wortmarke">
+    </div>
+
+    <div class="logo-variants">
+      <div class="logo-variant logo-variant--cream">
+        <img src="logo-wordmark.svg" alt="Wortmarke auf Cream">
+        <span class="logo-variant__label">Primär · Cream</span>
+      </div>
+      <div class="logo-variant logo-variant--fern">
+        <img src="logo-wordmark.svg" alt="Wortmarke auf Fern">
+        <span class="logo-variant__label">Akzent · Fern</span>
+      </div>
+      <div class="logo-variant logo-variant--forest">
+        <img src="logo-monogram.svg" alt="Monogramm auf Forest">
+        <span class="logo-variant__label">Monogramm · Forest</span>
+      </div>
+    </div>
+
+    <div class="logo-rules">
+      <div class="rule">
+        <span class="rule__bullet rule__bullet--ja">✓</span>
+        <div>
+          <p class="rule__title">Atem geben</p>
+          <p class="rule__desc">Mindestens die Höhe des „R" als freien Raum um die Wortmarke. Lieber zu viel als zu wenig — die Marke braucht Platz.</p>
+        </div>
+      </div>
+      <div class="rule">
+        <span class="rule__bullet rule__bullet--no">✕</span>
+        <div>
+          <p class="rule__title">Nicht verzerren</p>
+          <p class="rule__desc">Niemals quetschen, strecken, neu einfärben oder mit Schatten versehen. Die Wortmarke steht, wie sie steht.</p>
+        </div>
+      </div>
+      <div class="rule">
+        <span class="rule__bullet rule__bullet--ja">✓</span>
+        <div>
+          <p class="rule__title">Kleinste Größe</p>
+          <p class="rule__desc">Print 25 mm Breite, digital 160 px Breite. Darunter werden die Zweige unsichtbar — dann das Monogramm einsetzen.</p>
+        </div>
+      </div>
+      <div class="rule">
+        <span class="rule__bullet rule__bullet--no">✕</span>
+        <div>
+          <p class="rule__title">Keine unruhigen Untergründe</p>
+          <p class="rule__desc">Auf Bildern nur, wenn eine ruhige Fläche unterlegt ist. Sonst auf Cream, Forest oder Fern.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FARBE ============ -->
+<section class="page" id="farbe">
+  <div class="page__meta">
+    <span>Kapitel III · Farbe</span>
+    <span class="page__num">04 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Palette · Wachstum</p>
+    <h2 class="h-section">Wald, Blatt,<br><em>gebrannter Ton</em>.</h2>
+  </div>
+
+  <div class="color-grid">
+    <div class="swatch swatch--forest swatch--featured">
+      <div>
+        <div class="swatch__role">Primärfarbe</div>
+        <h3 class="swatch__name">Forest</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#1E3026</dd></div>
+          <div><dt>RGB</dt><dd>30 · 48 · 38</dd></div>
+          <div><dt>OKLCH</dt><dd>0.28 0.03 154</dd></div>
+        </div>
+        <p class="swatch__use">Hero-Sektionen. Footer. Statement-Flächen. Die Marke ruht hier.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--fern">
+      <div>
+        <div class="swatch__role">Lebendiges Grün</div>
+        <h3 class="swatch__name">Fern</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#4A7C5D</dd></div>
+          <div><dt>RGB</dt><dd>74 · 124 · 93</dd></div>
+        </div>
+        <p class="swatch__use">Akzent-Sektionen, Icons, Hover-States, Linien.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--clay">
+      <div>
+        <div class="swatch__role">Warmer Akzent</div>
+        <h3 class="swatch__name">Clay</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#B8623A</dd></div>
+          <div><dt>RGB</dt><dd>184 · 98 · 58</dd></div>
+        </div>
+        <p class="swatch__use">CTA-Buttons. Eyebrows. Glanzlichter. Sparsam.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--cream">
+      <div>
+        <div class="swatch__role">Primärfläche</div>
+        <h3 class="swatch__name">Cream</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#F4EFE3</dd></div>
+          <div><dt>RGB</dt><dd>244 · 239 · 227</dd></div>
+        </div>
+        <p class="swatch__use">Standard-Hintergrund. Wärme ohne Eile.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--paper">
+      <div>
+        <div class="swatch__role">Karte · Surface 2</div>
+        <h3 class="swatch__name">Paper</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#FCF9F1</dd></div>
+          <div><dt>RGB</dt><dd>252 · 249 · 241</dd></div>
+        </div>
+        <p class="swatch__use">Cards, Detailbereiche.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--stone">
+      <div>
+        <div class="swatch__role">Text Sekundär</div>
+        <h3 class="swatch__name">Stone</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#6B6358</dd></div>
+          <div><dt>RGB</dt><dd>107 · 99 · 88</dd></div>
+        </div>
+        <p class="swatch__use">Body-Text, Captions, Meta-Info.</p>
+      </div>
+    </div>
+
+    <div class="swatch swatch--mist">
+      <div>
+        <div class="swatch__role">Linien · Borders</div>
+        <h3 class="swatch__name">Mist</h3>
+      </div>
+      <div>
+        <div class="swatch__values">
+          <div><dt>HEX</dt><dd>#E0D9C8</dd></div>
+          <div><dt>RGB</dt><dd>224 · 217 · 200</dd></div>
+        </div>
+        <p class="swatch__use">Hairlines. Inputs. Card-Borders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TYPOGRAFIE ============ -->
+<section class="page" id="typografie">
+  <div class="page__meta">
+    <span>Kapitel IV · Typografie</span>
+    <span class="page__num">05 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Zwei Schriften · Eine Stimme</p>
+  </div>
+
+  <div class="type-hero">
+    <div class="type-hero__line1">Garten</div>
+    <div class="type-hero__line2"><em>in</em> Form.</div>
+  </div>
+
+  <div class="type-system">
+    <div class="type-family">
+      <h3 class="type-family__name">Fraunces</h3>
+      <p class="type-family__role">Display Serif · Headlines · Charakter</p>
+      <p class="type-family__desc">
+        Die Stimme der Marke. Fraunces hat Charakter, organische Kurven und eine Italic, die sich wie ein Zweig im Wind bewegt.
+        Wir nutzen sie für Überschriften und Statements. Niemals für Lesetext.
+      </p>
+      <div class="type-family__sample">
+        Gärten, die mit den Jahren<br>
+        <em>besser</em> werden — nicht schlechter.
+      </div>
+    </div>
+
+    <div class="type-family type-family--sans">
+      <h3 class="type-family__name">Inter</h3>
+      <p class="type-family__role">Sans Serif · Body · Funktion</p>
+      <p class="type-family__desc">
+        Die unsichtbare Stimme. Inter trägt alles, was funktionieren muss — Navigation, Buttons, Eingabefelder, Lesetext.
+        Sie ist nicht laut. Sie ist verlässlich. Wie Rudi.
+      </p>
+      <div class="type-family__sample">
+        Wir pflegen Gärten in München und Umgebung seit 2009. Erreichbar Mo–Fr, 07:00–18:00 Uhr. Anrufen genügt.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TYPESCALE ============ -->
+<section class="page" id="skala">
+  <div class="page__meta">
+    <span>Kapitel V · Typo-Skala</span>
+    <span class="page__num">06 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Hierarchie · Eine Stimme, sieben Lautstärken</p>
+    <h2 class="h-section">Die Skala.</h2>
+  </div>
+
+  <ol class="scale-list">
+    <li class="scale-row">
+      <div class="scale-row__meta">H1 · Display<small>Fraunces Italic · 66 px · 1.0</small></div>
+      <div class="scale-row__sample s-h1">Ein Garten ist nie fertig.</div>
+    </li>
+    <li class="scale-row">
+      <div class="scale-row__meta">H2 · Section<small>Fraunces · 44 px · 1.08</small></div>
+      <div class="scale-row__sample s-h2">Die Arbeit, die bleibt.</div>
+    </li>
+    <li class="scale-row">
+      <div class="scale-row__meta">H3 · Subhead<small>Fraunces · 28 px · 1.2</small></div>
+      <div class="scale-row__sample s-h3">Pflege mit langem Atem.</div>
+    </li>
+    <li class="scale-row">
+      <div class="scale-row__meta">Lede · Intro<small>Fraunces Italic · 20 px · 1.45</small></div>
+      <div class="scale-row__sample s-lede">Wir nehmen uns Zeit, weil ein Garten Zeit braucht.</div>
+    </li>
+    <li class="scale-row">
+      <div class="scale-row__meta">Body · Fließtext<small>Inter Regular · 14 px · 1.65</small></div>
+      <div class="scale-row__sample s-body">Seit 2009 betreuen wir Privatgärten in München und im Umkreis. Wir kommen pünktlich, mit eigenem Werkzeug und einem Blick, der weiß was er sucht.</div>
+    </li>
+    <li class="scale-row">
+      <div class="scale-row__meta">Label · Eyebrow<small>Inter Semibold · 10 px · 0.3em</small></div>
+      <div class="scale-row__sample s-label">Beratung · Gestaltung · Pflege</div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ KOMPONENTEN ============ -->
+<section class="page" id="komponenten">
+  <div class="page__meta">
+    <span>Kapitel VI · Komponenten</span>
+    <span class="page__num">07 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Bausteine · Konsistent</p>
+    <h2 class="h-section">Wie alles<br>aufgebaut ist.</h2>
+  </div>
+
+  <div class="comp-grid">
+    <div class="comp-cell">
+      <p class="comp-cell__label">Buttons · Primär & Sekundär</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn--primary">Beratung anfragen</a>
+        <a href="#" class="btn btn--secondary">Galerie ansehen</a>
+        <a href="#" class="btn btn--ghost">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <div class="comp-cell">
+      <p class="comp-cell__label">Eingabefelder · Inline</p>
+      <div>
+        <p class="input-label">Ihr Name</p>
+        <input class="input" type="text" placeholder="Z. B. Maria Wagner">
+      </div>
+      <div style="margin-top: 5mm;">
+        <p class="input-label">Telefon</p>
+        <input class="input" type="tel" placeholder="089 …">
+      </div>
+    </div>
+
+    <div class="comp-cell">
+      <p class="comp-cell__label">Card · Service-Vorschau</p>
+      <div class="card-sample">
+        <p class="card-sample__cat">Leistung · 02</p>
+        <h4 class="card-sample__title">Baum &amp; Hecke</h4>
+        <p class="card-sample__body">Wir lesen die Form, bevor wir schneiden. Im Spätwinter, mit ruhiger Hand, in der richtigen Höhe — damit der Baum nächstes Jahr besser wächst, nicht schlechter.</p>
+      </div>
+    </div>
+
+    <div class="comp-cell">
+      <p class="comp-cell__label">Trennelemente · Hairlines</p>
+      <div style="display: flex; flex-direction: column; gap: 6mm; padding: 4mm 0;">
+        <div style="height: 1px; background: var(--fern); width: 100%;"></div>
+        <span class="ornament" aria-hidden="true"></span>
+        <a href="#" class="link">Ein clay-unterstrichener Link.</a>
+      </div>
+    </div>
+
+    <div class="comp-cell comp-cell--span">
+      <p class="comp-cell__label">Spacing · Rhythm</p>
+      <p class="body" style="font-size: 12px;">
+        Der Raum ist Teil der Marke. Acht-Schritt-Skala: <strong>4 · 8 · 16 · 24 · 40 · 64 · 96 · 144 px</strong>.
+        Zwischen Sektionen niemals weniger als 96 px. Innerhalb eines Blocks niemals mehr als 24 px.
+        Weniger Abstand erzeugt Hektik. Mehr Abstand erzeugt Ruhe — und Ruhe ist hier kein Stil, sondern ein Versprechen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANWENDUNG ============ -->
+<section class="page" id="anwendung">
+  <div class="page__meta">
+    <span>Kapitel VII · Anwendung</span>
+    <span class="page__num">08 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">In Bewegung · In der Welt</p>
+    <h2 class="h-section">So sieht es aus.</h2>
+  </div>
+
+  <div class="app">
+    <header class="app-hero">
+      <div class="app-hero__nav">
+        <span class="app-hero__brand">Rudi <em>Macht</em> Alles</span>
+        <div class="app-hero__nav-items">
+          <span>Leistungen</span>
+          <span>Galerie</span>
+          <span>Über Rudi</span>
+          <span>Kontakt</span>
+        </div>
+      </div>
+
+      <div>
+        <h1 class="app-hero__head">
+          Wir machen<br>
+          Ihren Garten <em>schön</em>.<br>
+          Seit 2009.
+        </h1>
+        <p class="app-hero__sub">
+          Persönlich. Pünktlich. Aus München für München und Umgebung.
+          Rudi kommt selbst — keine Zeitarbeiter, keine Subunternehmer.
+        </p>
+        <div class="app-hero__cta-row">
+          <a href="#" class="app-hero__cta app-hero__cta--primary">Kostenlose Beratung</a>
+          <a href="#" class="app-hero__cta app-hero__cta--ghost">089 · Anrufen</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-grid-3">
+      <div class="app-service">
+        <span class="app-service__icon">i</span>
+        <h3 class="app-service__title">Pflege<br>im Jahreslauf</h3>
+        <p class="app-service__desc">Mähen, schneiden, jäten, mulchen. Wir kommen vorbei wenn es Zeit ist — und nicht erst wenn Sie anrufen.</p>
+      </div>
+      <div class="app-service">
+        <span class="app-service__icon" style="background: var(--clay);">ii</span>
+        <h3 class="app-service__title">Gestaltung<br>mit langem Blick</h3>
+        <p class="app-service__desc">Ein Garten reift über Jahre. Wir planen für das, was er in zehn Jahren sein soll — nicht nur für nächste Woche.</p>
+      </div>
+      <div class="app-service">
+        <span class="app-service__icon" style="background: var(--forest);">iii</span>
+        <h3 class="app-service__title">Pflaster &amp;<br>Stein</h3>
+        <p class="app-service__desc">Wir verlegen, was bleibt. Saubere Fugen, ehrliche Materialien, ruhige Linien — auch in zwanzig Jahren noch.</p>
+      </div>
+    </div>
+
+    <div class="app-quote">
+      <p class="app-quote__text">
+        Rudi hat unsere Wildnis nicht gebändigt — er hat ihr eine Form gegeben,
+        die wir selbst nie gefunden hätten.
+      </p>
+      <p class="app-quote__by">Maria Wagner · Bogenhausen · Kundin seit 2018</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPRACHE ============ -->
+<section class="page" id="sprache">
+  <div class="page__meta">
+    <span>Kapitel VIII · Sprache</span>
+    <span class="page__num">09 / 10</span>
+  </div>
+
+  <div style="margin-top: 8mm;">
+    <p class="eyebrow">Wie wir reden</p>
+    <h2 class="h-section">Persönlich.<br><em>Direkt.</em></h2>
+    <p class="body body--lg" style="margin-top: 6mm;">
+      Wir reden wie wir arbeiten — direkt, freundlich, ohne große Versprechen. Keine Werbesprache. Konkrete Worte.
+      Kurze Sätze. Und im Zweifel lieber ein Satz weniger.
+    </p>
+  </div>
+
+  <div class="voice-grid">
+    <div class="voice-col voice-col--ja">
+      <h3 class="voice-col__h">So reden wir</h3>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Wir pflegen Gärten in München. Seit 2009."</p>
+        <p class="voice-pair__note">Konkret. Faktisch. Vertrauen kommt aus Belegen, nicht aus Adjektiven.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Rudi kommt selbst vorbei. Schauen kostet nichts."</p>
+        <p class="voice-pair__note">Persönlich. Senkt die Hemmschwelle. Verspricht nur was wir halten.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Ein Schnitt zu viel verändert die Form für ein Jahr."</p>
+        <p class="voice-pair__note">Sätze, die etwas wissen. Erfahrung spricht für sich.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Rufen Sie an. Oder schreiben Sie kurz, was wächst."</p>
+        <p class="voice-pair__note">Höflich, direkt, ohne Druck. Mit einem kleinen Lächeln.</p>
+      </div>
+    </div>
+
+    <div class="voice-col voice-col--no">
+      <h3 class="voice-col__h">So nicht</h3>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Ihr absoluter Premium-Partner für Traumgärten!"</p>
+        <p class="voice-pair__note">Werbesprache. Hohl. Würde Rudi niemals sagen.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Mit unserer langjährigen Expertise verwandeln wir…"</p>
+        <p class="voice-pair__note">Phrasen statt Inhalt. Marketing-Wortschatz.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„🌱 Jetzt 20% Frühbucher-Rabatt! 🌿"</p>
+        <p class="voice-pair__note">Keine Emojis. Keine Rabatt-Schreie. Keine Ausrufezeichen.</p>
+      </div>
+      <div class="voice-pair">
+        <p class="voice-pair__sample">„Wir freuen uns auf Ihre unverbindliche Anfrage."</p>
+        <p class="voice-pair__note">Floskel. „Rufen Sie an" ist menschlicher.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KOLOPHON ============ -->
+<section class="page end" id="kolophon">
+  <div class="page__meta">
+    <span>Kolophon</span>
+    <span class="page__num">10 / 10</span>
+  </div>
+
+  <div>
+    <p class="eyebrow">Ende · und Anfang</p>
+    <h2 class="end__title">
+      Ein Garten<br>
+      <em>wächst</em> weiter.<br>
+      Diese Marke auch.
+    </h2>
+
+    <div class="end__hairline"></div>
+
+    <div class="end__signature">
+      <div>
+        <h4>Marke</h4>
+        <p>Rudi Macht Alles<br>Garten · Pflege · Handwerk<br>München · seit 2009</p>
+      </div>
+      <div>
+        <h4>Brandkit</h4>
+        <p>Edition Eins<br>Mai 2026<br>Eine lebendige Anleitung.</p>
+      </div>
+      <div>
+        <h4>Schriften</h4>
+        <p>Fraunces — Undercase Type<br>Inter — Rasmus Andersson</p>
+      </div>
+      <div>
+        <h4>Farben</h4>
+        <p>Forest · Fern · Clay<br>Cream · Paper · Stone · Mist<br>Sieben Töne, eine Stimme.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page__meta">
+    <span>Rudi Macht Alles</span>
+    <span>Brandkit v3 · 2026</span>
+  </div>
+</section>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.page').forEach(p => io.observe(p));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+# macOS System-Dateien
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & Temp
+*.log
+*.tmp
+node_modules/
+
+# Sensible Dateien (NIE auf GitHub hochladen!)
+.env
+.env.local
+*.key
+*.pem
+secrets.json
