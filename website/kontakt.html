@@ -1,128 +1,104 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kontakt — Rudi Macht Alles | Jetzt Anfrage stellen</title>
-  <meta name="description" content="Kontaktieren Sie Rudi Macht Alles für eine kostenlose Gartenberatung. Telefon, E-Mail oder Kontaktformular — wir melden uns innerhalb von 24 Stunden."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/components.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Rudi macht alles | Anrufen & Anfragen</title>
+  <meta name="description" content="Kontakt zu Rudi macht alles: Anrufen, WhatsApp oder Anfrage senden. Familienbetrieb aus Neumarkt i. d. OPf., tätig in Nürnberg, München, Freising und Landshut." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
 </head>
 <body>
-  <header class="navbar navbar--solid" id="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140"><defs><linearGradient id="treeGradK" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3A7D54"/><stop offset="100%" stop-color="#B8750E"/></linearGradient></defs><g id="iconK" transform="scale(0.6)"><rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/><circle cx="20" cy="28" r="16" fill="url(#treeGradK)" opacity="0.95"/><circle cx="12" cy="42" r="14" fill="url(#treeGradK)" opacity="0.85"/><circle cx="28" cy="42" r="14" fill="url(#treeGradK)" opacity="0.85"/><circle cx="8" cy="54" r="12" fill="url(#treeGradK)" opacity="0.75"/><circle cx="32" cy="54" r="12" fill="url(#treeGradK)" opacity="0.75"/><path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/><line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/></g><text x="65" y="75" class="logo-name" font-family="'Lora', serif" font-size="48" font-style="italic" font-weight="700">Rudi</text><text x="65" y="105" class="logo-sub" font-family="'Montserrat', sans-serif" font-size="18" font-weight="700" letter-spacing="2">Macht Alles</text></svg></a>
-      <button class="navbar__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="navbar__nav" id="navMenu"><a href="leistungen.html">Leistungen</a><a href="galerie.html">Galerie</a><a href="ueber-uns.html">Über uns</a><div class="navbar__cta"><a href="kontakt.html" class="btn btn--gold btn--sm active">Anfrage stellen</a></div></nav>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Rudi macht alles — Startseite"><span class="r">Rudi</span><span class="m">Macht Alles</span></a>
+      <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" id="menu">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="tel:+4917631147867" class="btn btn--primary">Jetzt anrufen</a>
+      </nav>
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero__bg" style="background:linear-gradient(145deg,#1B4332 0%,#2D6A4F 100%);"></div>
-    <div class="container page-hero__content">
-      <div class="page-hero__breadcrumb"><a href="index.html">Start</a><span>›</span><span>Kontakt</span></div>
-      <h1>Schreiben Sie uns</h1>
+  <section class="page-hero">
+    <div class="page-hero__bg" style="background-image:url('images/garten-haende.jpg')"></div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__crumb"><a href="index.html">Start</a> &rsaquo; Kontakt</div>
+      <h1>Kontakt</h1>
+      <p class="page-hero__sub">Rufen Sie an oder schreiben Sie kurz, was ansteht. Schauen kostet nichts — den Rest macht Rudi.</p>
     </div>
-  </div>
+  </section>
 
-  <section class="section" style="background:var(--white);">
+  <section class="section section--cream">
     <div class="container">
       <div class="contact-grid">
 
-        <!-- Kontakt-Info -->
-        <div class="contact-info reveal reveal--left">
-          <span class="eyebrow">Wir sind für Sie da</span>
-          <div class="gold-line"></div>
-          <h2 class="section__title">Kostenlose Erstberatung</h2>
-          <p style="color:var(--text-muted)">Füllen Sie das Formular aus oder kontaktieren Sie uns direkt — wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
-
-          <div class="contact-details">
-            <div class="contact-detail">
-              <div class="contact-detail__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.63 2.12 2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></div>
-              <div><div class="contact-detail__label">Telefon</div><div class="contact-detail__value"><a href="tel:+49123456789" style="color:var(--green-primary)" data-content="phone">+49 (0) 123 456 789</a></div></div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg></div>
-              <div><div class="contact-detail__label">E-Mail</div><div class="contact-detail__value"><a href="mailto:info@rudimachtalles.de" style="color:var(--green-primary)" data-content="email">info@rudimachtalles.de</a></div></div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></div>
-              <div><div class="contact-detail__label">Einsatzgebiet</div><div class="contact-detail__value" data-content="location">Musterstadt &amp; 50 km Umkreis</div></div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail__icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/></svg></div>
-              <div><div class="contact-detail__label">Öffnungszeiten</div><div class="contact-detail__value" data-content="openingHours">Mo–Fr: 07:00–18:00 Uhr</div></div>
-            </div>
+        <div class="contact-info reveal">
+          <div class="contact-row">
+            <div class="contact-row__ic"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div><h4>Anrufen</h4><a href="tel:+4917631147867">0176 311 47867</a><p style="color:var(--stone);font-size:13px;margin-top:2px">Mo–Fr 07:00–18:00 Uhr</p></div>
           </div>
-
-          <div class="contact-map">
-            <!-- Google Maps Embed hier einfügen: -->
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="220" style="border:0;" allowfullscreen loading="lazy"></iframe> -->
-            🗺 Google Maps Karte hier einfügen
+          <div class="contact-row">
+            <div class="contact-row__ic" style="background:#25D366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.605zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></div>
+            <div><h4>WhatsApp</h4><a href="https://wa.me/4917631147867">Direkt schreiben</a><p style="color:var(--stone);font-size:13px;margin-top:2px">Foto vom Garten schicken geht auch</p></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row__ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+            <div><h4>E-Mail</h4><a href="mailto:rudi.baralija@gmail.com">rudi.baralija@gmail.com</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row__ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div><h4>Einsatzgebiet</h4><p>Neumarkt i. d. OPf. · Nürnberg · München · Freising · Landshut</p></div>
           </div>
         </div>
 
-        <!-- Formular -->
-        <div class="reveal reveal--right">
-          <!-- Formspree: action="https://formspree.io/f/IHRE-ID" method="POST" eintragen -->
-          <form class="contact-form" id="kontaktForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Ihr Name *</label>
-                <input type="text" id="name" name="name" placeholder="Max Mustermann" required autocomplete="name"/>
-                <span class="form-error" id="nameError"></span>
-              </div>
-              <div class="form-group">
-                <label for="telefon">Telefon</label>
-                <input type="tel" id="telefon" name="telefon" placeholder="+49 123 456 789" autocomplete="tel"/>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">E-Mail-Adresse *</label>
-              <input type="email" id="email" name="email" placeholder="max@beispiel.de" required autocomplete="email"/>
-              <span class="form-error" id="emailError"></span>
-            </div>
-            <div class="form-group">
-              <label for="leistung">Gewünschte Leistung</label>
-              <select id="leistung" name="leistung">
-                <option value="">Bitte wählen …</option>
-                <option>Rasenpflege</option>
-                <option>Baum- &amp; Heckenschnitt</option>
-                <option>Gartengestaltung</option>
-                <option>Pflasterarbeiten</option>
-                <option>Pflanzpflege &amp; Beete</option>
-                <option>Entrümpelung &amp; Abtransport</option>
-                <option>Sonstiges</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="nachricht">Ihre Nachricht *</label>
-              <textarea id="nachricht" name="nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen …" required></textarea>
-              <span class="form-error" id="nachrichtError"></span>
-            </div>
-            <div class="form-group form-checkbox">
-              <input type="checkbox" id="datenschutz" name="datenschutz" required/>
-              <label for="datenschutz">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme zu. *</label>
-              <span class="form-error" id="datenschutzError"></span>
-            </div>
-            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;" id="submitBtn">
-              Anfrage absenden
-            </button>
-            <div class="form-success" id="formSuccess">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#2D6A4F" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#2D6A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Vielen Dank! Wir melden uns innerhalb von 24 Stunden.
-            </div>
-          </form>
-        </div>
+        <form class="form reveal" action="mailto:rudi.baralija@gmail.com" method="post" enctype="text/plain">
+          <div class="form__row"><label for="f-name">Name</label><input id="f-name" type="text" name="Name" placeholder="Ihr Name" required></div>
+          <div class="form__row"><label for="f-kontakt">Telefon oder E-Mail</label><input id="f-kontakt" type="text" name="Telefon-oder-Mail" placeholder="Damit Rudi sich zurückmelden kann" required></div>
+          <div class="form__row"><label for="f-ort">Ort</label><input id="f-ort" type="text" name="Ort" placeholder="z.B. Neumarkt"></div>
+          <div class="form__row"><label for="f-msg">Was steht an?</label><textarea id="f-msg" name="Nachricht" placeholder="Kurz beschreiben — z.B. Hecke schneiden, Terrasse pflastern, Garten neu anlegen…"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Anfrage senden</button>
+          <p style="color:var(--stone);font-size:12.5px;margin-top:16px;text-align:center">Am schnellsten geht's per Anruf oder WhatsApp — Rudi meldet sich meist noch am selben Tag.</p>
+        </form>
 
       </div>
     </div>
   </section>
 
-  <footer class="footer"><div class="container"><div class="footer__main"><div class="footer__brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" width="160" height="44"><defs><linearGradient id="treeGradFooter" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3A7D54"/><stop offset="100%" stop-color="#B8750E"/></linearGradient></defs><g id="iconFooter" transform="scale(0.25)"><rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/><circle cx="20" cy="28" r="16" fill="url(#treeGradFooter)" opacity="0.95"/><circle cx="12" cy="42" r="14" fill="url(#treeGradFooter)" opacity="0.85"/><circle cx="28" cy="42" r="14" fill="url(#treeGradFooter)" opacity="0.85"/><circle cx="8" cy="54" r="12" fill="url(#treeGradFooter)" opacity="0.75"/><circle cx="32" cy="54" r="12" fill="url(#treeGradFooter)" opacity="0.75"/><path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/><line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/></g><text x="150" y="85" font-family="'Lora', serif" font-size="32" font-style="italic" font-weight="700" fill="#B7E4C7">Rudi</text><text x="150" y="115" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" fill="#52B788">Macht Alles</text></svg><p>Gartenbau-Experte mit Leidenschaft für Natur und Handwerk.</p></div><div class="footer__col"><h5>Navigation</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div><div class="footer__col"><h5>Leistungen</h5><ul><li><a href="leistungen.html">Alle Leistungen</a></li></ul></div><div class="footer__col"><h5>Kontakt</h5><ul><li class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.63 2.12 2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#D4A853" stroke-width="2"/></svg>+49 (0) 123 456 789</li></ul></div></div></div><div class="footer__bottom"><div class="container"><span>© 2024 Rudi Macht Alles</span><div class="footer__legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div></footer>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-r">Rudi</span>
+            <span class="footer__logo-m">Macht Alles</span>
+            <span class="footer__logo-line"></span>
+            <span class="footer__logo-tag">Garten · Pflege · Handwerk</span>
+          </div>
+          <p>Garten, Pflege und Handwerk aus einer Hand. Ein Familienbetrieb aus Neumarkt i. d. OPf. — Rudi kommt selbst.</p>
+        </div>
+        <div class="footer__col"><h5>Seiten</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+        <div class="footer__col"><h5>Regionen</h5><ul><li>Neumarkt i. d. OPf.</li><li>Nürnberg</li><li>München</li><li>Freising</li><li>Landshut</li></ul></div>
+        <div class="footer__col"><h5>Kontakt</h5><ul>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><a href="tel:+4917631147867">0176 311 47867</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/></svg><a href="mailto:rudi.baralija@gmail.com">rudi.baralija@gmail.com</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>Neumarkt i. d. Oberpfalz</li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Rudi macht alles</span><span><a href="#">Impressum</a><a href="#">Datenschutz</a></span></div>
+    </div>
+  </footer>
 
-  <script src="js/content-loader.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/form.js"></script>
+  <div class="float">
+    <a class="float__wa" href="https://wa.me/4917631147867" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.605zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+    <a class="float__call" href="tel:+4917631147867" aria-label="Anrufen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
+  </div>
+
+  <script src="js/brand.js"></script>
 </body>
 </html>

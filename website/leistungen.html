@@ -1,139 +1,194 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leistungen — Rudi Macht Alles | Gartenbau Musterstadt</title>
-  <meta name="description" content="Alle Gartenbau-Leistungen von Rudi Macht Alles: Rasenpflege, Baumschnitt, Gartengestaltung, Pflasterarbeiten, Pflanzpflege und Entrümpelung."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/components.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leistungen — Rudi macht alles | Garten, Pflege & Handwerk</title>
+  <meta name="description" content="Alle Leistungen von Rudi macht alles: Rasenpflege, Baum- & Heckenschnitt, Gartengestaltung, Pflasterarbeiten, Pflanzpflege und Entrümpelung. Aus einer Hand in Neumarkt, Nürnberg & München." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
 </head>
 <body>
-  <header class="navbar navbar--solid" id="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140"><defs><linearGradient id="treeGradL" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3A7D54"/><stop offset="100%" stop-color="#B8750E"/></linearGradient></defs><g id="iconL" transform="scale(0.6)"><rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/><circle cx="20" cy="28" r="16" fill="url(#treeGradL)" opacity="0.95"/><circle cx="12" cy="42" r="14" fill="url(#treeGradL)" opacity="0.85"/><circle cx="28" cy="42" r="14" fill="url(#treeGradL)" opacity="0.85"/><circle cx="8" cy="54" r="12" fill="url(#treeGradL)" opacity="0.75"/><circle cx="32" cy="54" r="12" fill="url(#treeGradL)" opacity="0.75"/><path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/><line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/></g><text x="65" y="75" class="logo-name" font-family="'Lora', serif" font-size="48" font-style="italic" font-weight="700">Rudi</text><text x="65" y="105" class="logo-sub" font-family="'Montserrat', sans-serif" font-size="18" font-weight="700" letter-spacing="2">Macht Alles</text></svg></a>
-      <button class="navbar__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="navbar__nav" id="navMenu"><a href="leistungen.html" class="active">Leistungen</a><a href="galerie.html">Galerie</a><a href="ueber-uns.html">Über uns</a><div class="navbar__cta"><a href="kontakt.html" class="btn btn--gold btn--sm">Anfrage stellen</a></div></nav>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Rudi macht alles — Startseite"><span class="r">Rudi</span><span class="m">Macht Alles</span></a>
+      <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" id="menu">
+        <a href="leistungen.html" class="active">Leistungen</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="tel:+4917631147867" class="btn btn--primary">Jetzt anrufen</a>
+      </nav>
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero__bg" style="background:linear-gradient(160deg,#1B4332 0%,#2D6A4F 100%);"></div>
-    <div class="container page-hero__content">
-      <div class="page-hero__breadcrumb"><a href="index.html">Start</a><span>›</span><span>Leistungen</span></div>
+  <section class="page-hero">
+    <div class="page-hero__bg" style="background-image:url('images/garten-gemuese.jpg')"></div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__crumb"><a href="index.html">Start</a> &rsaquo; Leistungen</div>
       <h1>Unsere Leistungen</h1>
+      <p class="page-hero__sub">Egal wie groß, egal wie kompliziert — wir machen's möglich. Sechs Bereiche, ein Ansprechpartner: Rudi.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ── SERVICE CARDS ──────────────────────────────── -->
-  <section class="section" style="background:var(--white);">
+  <section class="section section--cream">
     <div class="container">
-      <div class="section__header reveal">
-        <span class="eyebrow">Alles aus einer Hand</span>
-        <div class="gold-line"></div>
-        <h2 class="section__title">Was wir für Sie tun</h2>
-        <p class="section__subtitle">Von der einfachen Pflege bis zur kompletten Neugestaltung — professionell und zuverlässig.</p>
-      </div>
+      <div class="svc-detail-grid">
 
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);">
-
-        <div class="service-card reveal" id="rasenpflege">
-          <div class="service-card__img"><div class="img-placeholder" style="background:linear-gradient(135deg,#1B4332,#52B788);height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M24 30v10M10 44h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Rasenpflege</h3>
-            <p class="service-card__text">Für einen satten, grünen Rasen das ganze Jahr — professionell und termingerecht.</p>
-            <ul class="service-card__list"><li>Regelmäßiges Mähen & Kantenstechen</li><li>Düngen & Kalken</li><li>Vertikutieren & Belüften</li><li>Bewässerung & Nachsaat</li><li>Neuanlage von Rasenflächen</li></ul>
+        <article class="svc-detail reveal" id="rasenpflege">
+          <div class="svc-detail__img" style="background-image:url('images/garten-haende.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M24 30v10M10 44h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Rasenpflege</h3>
+            <p>Damit der Rasen dicht und grün bleibt — das ganze Jahr, nicht nur im Mai.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mähen &amp; Kanten stechen</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Vertikutieren &amp; Belüften</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Düngen &amp; Kalken</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Nachsäen &amp; Rasen neu anlegen</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card reveal" id="baumschnitt">
-          <div class="service-card__img"><div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'); background-size: cover; background-position: center; height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Baum- & Heckenschnitt</h3>
-            <p class="service-card__text">Formschnitt, Auslichten und Pflege für Gesundheit, Sicherheit und ein gepflegtes Erscheinungsbild.</p>
-            <ul class="service-card__list"><li>Formschnitt & Auslichten</li><li>Totholzentfernung</li><li>Heckenpflege & -formung</li><li>Obstbaumschnitt</li><li>Sturmschaden-Beseitigung</li></ul>
+        <article class="svc-detail reveal" id="baumschnitt">
+          <div class="svc-detail__img" style="background-image:url('images/garten-gruen.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Baum- &amp; Heckenschnitt</h3>
+            <p>Fachgerecht und sauber. Ein Schnitt zu viel verändert die Form für ein Jahr — wir schauen genau hin.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Formschnitt &amp; Auslichten</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Kronenpflege &amp; Totholz</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Heckenschnitt &amp; -formung</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Obstbaumschnitt</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card reveal" id="gestaltung">
-          <div class="service-card__img"><div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80'); background-size: cover; background-position: center; height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M16 28V18a8 8 0 0116 0v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Gartengestaltung</h3>
-            <p class="service-card__text">Ihre Vision, unsere Expertise — wir planen und gestalten Ihren Garten von Grund auf neu.</p>
-            <ul class="service-card__list"><li>Gartenplanung & Konzept</li><li>Beete & Pflanzungen</li><li>Wege & Strukturelemente</li><li>Sicht- & Lärmschutz</li><li>Neuanlage von Gärten</li></ul>
+        <article class="svc-detail reveal" id="gestaltung">
+          <div class="svc-detail__img" style="background-image:url('images/garten-haus.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M16 28V18a8 8 0 0116 0v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Gartengestaltung</h3>
+            <p>Der Traum gehört Ihnen — wir machen ihn wahr. Von der Idee bis zum fertigen Garten.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Planung &amp; Beratung vor Ort</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Beete, Wege &amp; Sitzplätze</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sicht- &amp; Windschutz</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Komplette Neuanlage</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card reveal" id="pflaster">
-          <div class="service-card__img"><div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1585974687185-95146fa06c78?w=600&q=80'); background-size: cover; background-position: center; height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M12 28V20h6v8M22 28V20h6v8M32 28V20h6v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Pflasterarbeiten</h3>
-            <p class="service-card__text">Terrassen, Einfahrten, Wege und Stufen — solide ausgeführt und langlebig.</p>
-            <ul class="service-card__list"><li>Terrassen aus Naturstein & Beton</li><li>Einfahrten & Parkplätze</li><li>Wege & Trittplatten</li><li>Treppen & Stufen</li><li>Entwässerung & Drainage</li></ul>
+        <article class="svc-detail reveal" id="pflaster">
+          <div class="svc-detail__img" style="background-image:url('images/garten-rasen.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M12 28V20h6v8M22 28V20h6v8M32 28V20h6v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Pflasterarbeiten</h3>
+            <p>Sauber verlegt, eben und langlebig. Rudis Wurzeln liegen im Bau — das merkt man hier besonders.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Terrassen aus Naturstein &amp; Beton</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Einfahrten &amp; Wege</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Treppen, Stufen &amp; Randsteine</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Entwässerung &amp; Drainage</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card reveal" id="pflanzpflege">
-          <div class="service-card__img"><div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80'); background-size: cover; background-position: center; height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 40L20 24l8 8 6-12 6 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 42h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Pflanzpflege & Beete</h3>
-            <p class="service-card__text">Damit Ihre Beete das ganze Jahr blühen und gedeihen — regelmäßig und fachgerecht.</p>
-            <ul class="service-card__list"><li>Unkrautjäten & Mulchen</li><li>Pflanzen setzen & umsetzen</li><li>Saisonale Bepflanzung</li><li>Düngen & Pflanzenschutz</li><li>Rückschnitt & Pflege</li></ul>
+        <article class="svc-detail reveal" id="pflanzpflege">
+          <div class="svc-detail__img" style="background-image:url('images/garten-setzlinge.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 40L20 24l8 8 6-12 6 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 42h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Pflanzpflege &amp; Beete</h3>
+            <p>Damit Beete blühen statt verwildern. Wir kommen wieder — Pflege ist kein einmaliger Auftrag.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Unkraut jäten &amp; mulchen</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pflanzen setzen &amp; umsetzen</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Saisonale Bepflanzung</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Düngen &amp; Rückschnitt</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
-        <div class="service-card reveal" id="entruempelung">
-          <div class="service-card__img"><div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80'); background-size: cover; background-position: center; height:220px;"></div></div>
-          <div class="service-card__body">
-            <div class="service-card__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3 class="service-card__title">Entrümpelung & Abtransport</h3>
-            <p class="service-card__text">Grünschnitt, Laub, Gartenabfälle — wir räumen auf, laden ab und entsorgen alles sauber.</p>
-            <ul class="service-card__list"><li>Grünschnitt-Entsorgung</li><li>Laubentsorgung</li><li>Gartenabfälle & Sperrmüll</li><li>Baumstumpf-Fräsen</li><li>Komplette Garten-Entrümpelung</li></ul>
+        <article class="svc-detail reveal" id="entruempelung">
+          <div class="svc-detail__img" style="background-image:url('images/garten-pflanzen.jpg')"></div>
+          <div class="svc-detail__body">
+            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <h3>Entrümpelung &amp; Abtransport</h3>
+            <p>Sauber raus, nichts bleibt liegen. Wir räumen auf und nehmen alles mit.</p>
+            <ul class="svc-list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Grünschnitt &amp; Laub</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gartenabfälle &amp; alte Pflanzen</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sperrmüll aus dem Garten</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Fachgerechte Entsorgung</li>
+            </ul>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ── PROZESS ────────────────────────────────────── -->
-  <section class="section" style="background:var(--cream-dark);">
+  <section class="section process">
     <div class="container">
-      <div class="section__header section__header--center reveal">
-        <span class="eyebrow">Wie wir arbeiten</span>
-        <div class="gold-line gold-line--center"></div>
-        <h2 class="section__title">Ihr Weg zum Traumgarten</h2>
+      <div class="section__head section__head--center reveal">
+        <span class="eyebrow eyebrow--light">So läuft's</span>
+        <div class="rule"></div>
+        <h2 class="section__title">In vier Schritten zum Garten.</h2>
       </div>
-      <div class="process-grid">
-        <div class="process-step reveal"><div class="process-step__num">01</div><div class="process-step__title">Anfrage</div><p class="process-step__text">Beschreiben Sie kurz Ihr Anliegen — kostenlos und unverbindlich per Formular, E-Mail oder Telefon.</p></div>
-        <div class="process-step reveal"><div class="process-step__num">02</div><div class="process-step__title">Beratung vor Ort</div><p class="process-step__text">Wir kommen zu Ihnen, schauen uns die Situation an und besprechen Ihre Wünsche persönlich.</p></div>
-        <div class="process-step reveal"><div class="process-step__num">03</div><div class="process-step__title">Angebot</div><p class="process-step__text">Sie erhalten ein transparentes, faires Angebot — keine versteckten Kosten, alles klar aufgeschlüsselt.</p></div>
-        <div class="process-step reveal"><div class="process-step__num">04</div><div class="process-step__title">Umsetzung</div><p class="process-step__text">Pünktlich, sauber, professionell — wir realisieren Ihr Projekt und hinterlassen alles tadellos.</p></div>
-        <div class="process-step reveal"><div class="process-step__num">05</div><div class="process-step__title">Übergabe & Nachsorge</div><p class="process-step__text">Sie erhalten eine Einweisung und wir bleiben für regelmäßige Pflege langfristig an Ihrer Seite.</p></div>
+      <div class="process__grid">
+        <div class="process__step reveal"><div class="process__num">01</div><div class="process__t">Anruf</div><p>Sagen Sie kurz, was ansteht. Ein Anruf genügt.</p></div>
+        <div class="process__step reveal"><div class="process__num">02</div><div class="process__t">Vor Ort</div><p>Rudi kommt vorbei und schaut sich alles an. Schauen kostet nichts.</p></div>
+        <div class="process__step reveal"><div class="process__num">03</div><div class="process__t">Angebot</div><p>Sie bekommen ein klares Angebot. Erst dann geht's los.</p></div>
+        <div class="process__step reveal"><div class="process__num">04</div><div class="process__t">Gemacht</div><p>Sauber umgesetzt — und wir kommen wieder zur Pflege.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ── CTA ────────────────────────────────────────── -->
-  <div class="cta-section">
+  <section class="cta">
     <div class="container">
-      <div class="reveal">
-        <span class="eyebrow eyebrow--light">Kostenlos &amp; unverbindlich</span>
-        <h2>Bereit für Ihren neuen Garten?</h2>
-        <p>Wir kommen zu Ihnen und erstellen kostenlos ein Angebot.</p>
-        <div class="cta-section__btns"><a href="kontakt.html" class="btn btn--gold btn--lg">Jetzt Termin vereinbaren</a></div>
+      <span class="eyebrow eyebrow--light">Bereit?</span>
+      <h2>Sagen Sie, was ansteht.</h2>
+      <p>Kostenlos vorbeischauen, ehrlich beraten, sauberes Angebot. In Neumarkt, Nürnberg, München, Freising und Landshut.</p>
+      <div class="cta__btns">
+        <a href="tel:+4917631147867" class="btn btn--primary btn--lg">0176 311 47867</a>
+        <a href="https://wa.me/4917631147867" class="btn btn--ghost btn--lg">Per WhatsApp schreiben</a>
       </div>
     </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-r">Rudi</span>
+            <span class="footer__logo-m">Macht Alles</span>
+            <span class="footer__logo-line"></span>
+            <span class="footer__logo-tag">Garten · Pflege · Handwerk</span>
+          </div>
+          <p>Garten, Pflege und Handwerk aus einer Hand. Ein Familienbetrieb aus Neumarkt i. d. OPf. — Rudi kommt selbst.</p>
+        </div>
+        <div class="footer__col"><h5>Seiten</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+        <div class="footer__col"><h5>Regionen</h5><ul><li>Neumarkt i. d. OPf.</li><li>Nürnberg</li><li>München</li><li>Freising</li><li>Landshut</li></ul></div>
+        <div class="footer__col"><h5>Kontakt</h5><ul>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><a href="tel:+4917631147867">0176 311 47867</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/></svg><a href="mailto:rudi.baralija@gmail.com">rudi.baralija@gmail.com</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>Neumarkt i. d. Oberpfalz</li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 Rudi macht alles</span><span><a href="#">Impressum</a><a href="#">Datenschutz</a></span></div>
+    </div>
+  </footer>
+
+  <div class="float">
+    <a class="float__wa" href="https://wa.me/4917631147867" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.605zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+    <a class="float__call" href="tel:+4917631147867" aria-label="Anrufen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
   </div>
 
-  <footer class="footer"><div class="container"><div class="footer__main"><div class="footer__brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="160" height="44"><defs><linearGradient id="lgf3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#52B788"/><stop offset="100%" stop-color="#B7E4C7"/></linearGradient></defs><g transform="translate(0,4) scale(0.65)"><path d="M40 68C40 68 10 48 12 23C14 3 35 0 40 0C45 0 66 3 68 23C70 48 40 68 40 68Z" fill="url(#lgf3)"/><line x1="18" y1="76" x2="62" y2="76" stroke="#D4A853" stroke-width="2.5" stroke-linecap="round"/></g><text x="58" y="28" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="#B7E4C7">RUDI</text><text x="58" y="48" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="#52B788">MACHT ALLES</text></svg><p>Ihr zuverlässiger Gartenbau-Partner seit 2009.</p></div><div class="footer__col"><h5>Navigation</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div><div class="footer__col"><h5>Leistungen</h5><ul><li><a href="#rasenpflege">Rasenpflege</a></li><li><a href="#baumschnitt">Baumschnitt</a></li><li><a href="#gestaltung">Gartengestaltung</a></li><li><a href="#pflaster">Pflasterarbeiten</a></li></ul></div><div class="footer__col"><h5>Kontakt</h5><ul><li class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.63 2.12 2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#D4A853" stroke-width="2"/></svg>+49 (0) 123 456 789</li></ul></div></div></div><div class="footer__bottom"><div class="container"><span>© 2024 Rudi Macht Alles</span><div class="footer__legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div></footer>
-
-  <a href="kontakt.html" class="floating-cta" id="floatingCta" aria-label="Anfrage stellen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>Anfrage stellen</a>
-  <script src="js/main.js"></script>
+  <script src="js/brand.js"></script>
 </body>
 </html>

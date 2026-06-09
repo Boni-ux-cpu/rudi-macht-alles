@@ -1,203 +1,98 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galerie — Rudi Macht Alles | Gartenprojekte & Portfolio</title>
-  <meta name="description" content="Entdecken Sie unsere realisierten Gartenprojekte: Gartengestaltung, Rasenpflege, Pflasterarbeiten und mehr. Vorher-Nachher-Vergleiche."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/components.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie — Rudi macht alles | Unsere Gartenprojekte</title>
+  <meta name="description" content="Ein Blick auf die Arbeit von Rudi macht alles: Gärten, Terrassen, Pflasterarbeiten und Pflege in Neumarkt, Nürnberg, München, Freising und Landshut." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/brand.css" />
 </head>
 <body>
 
-  <header class="navbar navbar--solid" id="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="Startseite">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140">
-          <defs><linearGradient id="treeGradG" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3A7D54"/><stop offset="100%" stop-color="#B8750E"/></linearGradient></defs>
-          <g id="iconG" transform="scale(0.6)"><rect x="18" y="42" width="4" height="28" fill="#6B4C35" rx="2"/><circle cx="20" cy="28" r="16" fill="url(#treeGradG)" opacity="0.95"/><circle cx="12" cy="42" r="14" fill="url(#treeGradG)" opacity="0.85"/><circle cx="28" cy="42" r="14" fill="url(#treeGradG)" opacity="0.85"/><circle cx="8" cy="54" r="12" fill="url(#treeGradG)" opacity="0.75"/><circle cx="32" cy="54" r="12" fill="url(#treeGradG)" opacity="0.75"/><path d="M 16 70 L 10 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="6" y="82" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 20 70 L 20 80" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="16" y="80" width="9" height="9" fill="#B8750E" rx="1"/><path d="M 24 70 L 30 82" stroke="#6B4C35" stroke-width="2.5" fill="none" stroke-linecap="round"/><rect x="30" y="82" width="9" height="9" fill="#B8750E" rx="1"/><line x1="8" y1="98" x2="36" y2="98" stroke="#B8750E" stroke-width="2" stroke-linecap="round"/></g>
-          <text x="65" y="75" class="logo-name" font-family="'Lora', serif" font-size="48" font-style="italic" font-weight="700">Rudi</text>
-          <text x="65" y="105" class="logo-sub" font-family="'Montserrat', sans-serif" font-size="18" font-weight="700" letter-spacing="2">Macht Alles</text>
-        </svg>
-      </a>
-      <button class="navbar__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="navbar__nav" id="navMenu">
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Rudi macht alles — Startseite"><span class="r">Rudi</span><span class="m">Macht Alles</span></a>
+      <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" id="menu">
         <a href="leistungen.html">Leistungen</a>
         <a href="galerie.html" class="active">Galerie</a>
         <a href="ueber-uns.html">Über uns</a>
-        <div class="navbar__cta"><a href="kontakt.html" class="btn btn--gold btn--sm">Anfrage stellen</a></div>
+        <a href="tel:+4917631147867" class="btn btn--primary">Jetzt anrufen</a>
       </nav>
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero__bg" style="background:linear-gradient(135deg,#1B4332 0%,#2D6A4F 60%,#52B788 100%);"></div>
-    <div class="container page-hero__content">
-      <div class="page-hero__breadcrumb">
-        <a href="index.html">Start</a><span>›</span><span>Galerie</span>
-      </div>
-      <h1>Unsere Projekte</h1>
+  <section class="page-hero">
+    <div class="page-hero__bg" style="background-image:url('images/garten-gruen.jpg')"></div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__crumb"><a href="index.html">Start</a> &rsaquo; Galerie</div>
+      <h1>Galerie</h1>
+      <p class="page-hero__sub">Ein Blick auf unsere Arbeit — vom verwilderten Garten zum fertigen Ort. Echte Projektfotos folgen in Kürze.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ── GALERIE GRID ────────────────────────────────── -->
-  <section class="section" style="background:var(--white);">
+  <section class="section section--cream">
     <div class="container">
-      <div class="section__header reveal">
-        <span class="eyebrow">Portfolio</span>
-        <div class="gold-line"></div>
-        <h2 class="section__title">Realisierte Arbeiten</h2>
-        <p class="section__subtitle">Jedes Projekt ist einzigartig — hier sehen Sie eine Auswahl unserer besten Arbeiten.</p>
+      <div class="gal-grid">
+        <a class="gal-item reveal" href="leistungen.html#rasenpflege" style="background-image:url('images/garten-rasen.jpg')"><span class="gal-item__cap">Garten &amp; Rasen · Neumarkt</span></a>
+        <a class="gal-item reveal" href="leistungen.html#gestaltung" style="background-image:url('images/garten-haus.jpg')"><span class="gal-item__cap">Gartengestaltung · München</span></a>
+        <a class="gal-item reveal" href="leistungen.html#rasenpflege" style="background-image:url('images/garten-haende.jpg')"><span class="gal-item__cap">Rasen-Neuanlage · Nürnberg</span></a>
+        <a class="gal-item reveal" href="leistungen.html#gestaltung" style="background-image:url('images/garten-gemuese.jpg')"><span class="gal-item__cap">Wege &amp; Gestaltung · Freising</span></a>
+        <a class="gal-item reveal" href="leistungen.html#pflanzpflege" style="background-image:url('images/garten-setzlinge.jpg')"><span class="gal-item__cap">Beete &amp; Bepflanzung · Landshut</span></a>
+        <a class="gal-item reveal" href="leistungen.html#pflanzpflege" style="background-image:url('images/garten-pflanzen.jpg')"><span class="gal-item__cap">Pflanzung &amp; Pflege · Neumarkt</span></a>
       </div>
 
-      <div class="filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">Alle</button>
-        <button class="filter-btn" data-filter="gestaltung">Gestaltung</button>
-        <button class="filter-btn" data-filter="rasen">Rasen</button>
-        <button class="filter-btn" data-filter="schnitt">Schnittarbeiten</button>
-        <button class="filter-btn" data-filter="pflaster">Pflaster</button>
-        <button class="filter-btn" data-filter="beete">Beete</button>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item reveal" data-category="gestaltung">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-1.jpg" alt="Moderner Privatgarten" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Moderner Privatgarten</span></div>
-        </div>
-        <div class="gallery-item gallery-item--wide reveal" data-category="pflaster">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1585974687185-95146fa06c78?w=800&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-2.jpg" alt="Naturstein Terrasse" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Naturstein-Terrasse</span></div>
-        </div>
-        <div class="gallery-item reveal" data-category="rasen">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-3.jpg" alt="Rasen Neuanlage" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Rasen-Neuanlage</span></div>
-        </div>
-        <div class="gallery-item reveal" data-category="schnitt">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-4.jpg" alt="Heckenschnitt Formschnitt" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Formschnitt Hecke</span></div>
-        </div>
-        <div class="gallery-item gallery-item--wide reveal" data-category="gestaltung">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-5.jpg" alt="Garten Neugestaltung" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Garten-Neugestaltung</span></div>
-        </div>
-        <div class="gallery-item reveal" data-category="beete">
-          <div class="gallery-item__img img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba3dba?w=600&q=80'); background-size: cover; background-position: center;">
-            <!-- <img src="images/galerie-6.jpg" alt="Staudenbeet Anlage" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Staudenbeet</span></div>
-        </div>
-        <div class="gallery-item reveal" data-category="pflaster">
-          <div class="gallery-item__img img-placeholder" style="background:linear-gradient(135deg,#B8892A,#D4A853);">
-            <!-- <img src="images/galerie-7.jpg" alt="Einfahrt Pflasterung" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Einfahrt-Pflasterung</span></div>
-        </div>
-        <div class="gallery-item reveal" data-category="rasen">
-          <div class="gallery-item__img img-placeholder" style="background:linear-gradient(135deg,#1B4332,#40916C);">
-            <!-- <img src="images/galerie-8.jpg" alt="Rasen Pflege Vertikutieren" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Rasen-Regeneration</span></div>
-        </div>
-        <div class="gallery-item gallery-item--wide reveal" data-category="gestaltung">
-          <div class="gallery-item__img img-placeholder" style="background:linear-gradient(160deg,#2D6A4F,#B7E4C7,#52B788);">
-            <!-- <img src="images/galerie-9.jpg" alt="Garten mit Teich" loading="lazy"> -->
-          </div>
-          <div class="gallery-item__overlay"><span class="gallery-item__label">Garten mit Wasserelement</span></div>
-        </div>
+      <div style="text-align:center;margin-top:54px" class="reveal">
+        <p style="color:var(--stone);font-size:15px;margin-bottom:24px">Diese Bilder zeigen die Richtung — echte Fotos von Rudis Projekten kommen bald dazu.</p>
+        <a href="kontakt.html" class="btn btn--dark btn--lg">Eigenes Projekt anfragen</a>
       </div>
     </div>
   </section>
 
-  <!-- ── BEFORE / AFTER SLIDER ──────────────────────── -->
-  <section class="section" style="background:var(--cream-dark);">
+  <section class="cta">
     <div class="container">
-      <div class="section__header section__header--center reveal">
-        <span class="eyebrow">Vorher / Nachher</span>
-        <div class="gold-line gold-line--center"></div>
-        <h2 class="section__title">Der Unterschied ist sichtbar</h2>
-        <p class="section__subtitle">Ziehen Sie den Regler und erleben Sie die Transformation.</p>
-      </div>
-
-      <div class="ba-grid">
-        <div class="ba-slider reveal" id="ba1">
-          <div class="ba-slider__after" style="background:linear-gradient(135deg,#1B4332,#52B788);"></div>
-          <div class="ba-slider__before" style="background:linear-gradient(135deg,#5C6B72,#8A9BA3);"></div>
-          <div class="ba-slider__handle"></div>
-          <div class="ba-slider__labels">
-            <span class="ba-label">Vorher</span>
-            <span class="ba-label">Nachher</span>
-          </div>
-        </div>
-        <div class="ba-slider reveal" id="ba2">
-          <div class="ba-slider__after" style="background:linear-gradient(135deg,#2D6A4F,#74C69D);"></div>
-          <div class="ba-slider__before" style="background:linear-gradient(135deg,#8A9BA3,#5C6B72);"></div>
-          <div class="ba-slider__handle"></div>
-          <div class="ba-slider__labels">
-            <span class="ba-label">Vorher</span>
-            <span class="ba-label">Nachher</span>
-          </div>
-        </div>
-        <div class="ba-slider reveal" id="ba3">
-          <div class="ba-slider__after" style="background:linear-gradient(135deg,#D4A853,#B8892A);"></div>
-          <div class="ba-slider__before" style="background:linear-gradient(135deg,#5C6B72,#3A3A3A);"></div>
-          <div class="ba-slider__handle"></div>
-          <div class="ba-slider__labels">
-            <span class="ba-label">Vorher</span>
-            <span class="ba-label">Nachher</span>
-          </div>
-        </div>
+      <span class="eyebrow eyebrow--light">Bereit?</span>
+      <h2>Ihr Garten könnte der nächste sein.</h2>
+      <p>Kostenlos vorbeischauen, ehrlich beraten, sauberes Angebot. In Neumarkt, Nürnberg, München, Freising und Landshut.</p>
+      <div class="cta__btns">
+        <a href="tel:+4917631147867" class="btn btn--primary btn--lg">0176 311 47867</a>
+        <a href="https://wa.me/4917631147867" class="btn btn--ghost btn--lg">Per WhatsApp schreiben</a>
       </div>
     </div>
   </section>
-
-  <!-- ── CTA ────────────────────────────────────────── -->
-  <div class="cta-section">
-    <div class="container">
-      <div class="reveal">
-        <span class="eyebrow eyebrow--light">Ihr Projekt fehlt noch?</span>
-        <h2>Lassen Sie uns Ihren Garten verwandeln.</h2>
-        <p>Kostenlose Beratung vor Ort — unverbindlich und unkompliziert.</p>
-        <div class="cta-section__btns">
-          <a href="kontakt.html" class="btn btn--gold btn--lg">Jetzt anfragen</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__main">
         <div class="footer__brand">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="160" height="44"><defs><linearGradient id="lgf2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#52B788"/><stop offset="100%" stop-color="#B7E4C7"/></linearGradient></defs><g transform="translate(0,4) scale(0.65)"><path d="M40 68C40 68 10 48 12 23C14 3 35 0 40 0C45 0 66 3 68 23C70 48 40 68 40 68Z" fill="url(#lgf2)"/><line x1="18" y1="76" x2="62" y2="76" stroke="#D4A853" stroke-width="2.5" stroke-linecap="round"/></g><text x="58" y="28" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="#B7E4C7">RUDI</text><text x="58" y="48" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="2" fill="#52B788">MACHT ALLES</text></svg>
-          <p>Ihr zuverlässiger Gartenbau-Partner seit 2009.</p>
+          <div class="footer__logo">
+            <span class="footer__logo-r">Rudi</span>
+            <span class="footer__logo-m">Macht Alles</span>
+            <span class="footer__logo-line"></span>
+            <span class="footer__logo-tag">Garten · Pflege · Handwerk</span>
+          </div>
+          <p>Garten, Pflege und Handwerk aus einer Hand. Ein Familienbetrieb aus Neumarkt i. d. OPf. — Rudi kommt selbst.</p>
         </div>
-        <div class="footer__col"><h5>Navigation</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
-        <div class="footer__col"><h5>Leistungen</h5><ul><li><a href="leistungen.html#rasenpflege">Rasenpflege</a></li><li><a href="leistungen.html#baumschnitt">Baumschnitt</a></li><li><a href="leistungen.html#gestaltung">Gartengestaltung</a></li><li><a href="leistungen.html#pflaster">Pflasterarbeiten</a></li></ul></div>
-        <div class="footer__col"><h5>Kontakt</h5><ul><li class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.63 2.12 2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#D4A853" stroke-width="2"/></svg>+49 (0) 123 456 789</li><li class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#D4A853" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#D4A853" stroke-width="2"/></svg>info@rudimachtalles.de</li></ul></div>
+        <div class="footer__col"><h5>Seiten</h5><ul><li><a href="index.html">Startseite</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+        <div class="footer__col"><h5>Regionen</h5><ul><li>Neumarkt i. d. OPf.</li><li>Nürnberg</li><li>München</li><li>Freising</li><li>Landshut</li></ul></div>
+        <div class="footer__col"><h5>Kontakt</h5><ul>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg><a href="tel:+4917631147867">0176 311 47867</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/></svg><a href="mailto:rudi.baralija@gmail.com">rudi.baralija@gmail.com</a></li>
+          <li class="footer__ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>Neumarkt i. d. Oberpfalz</li>
+        </ul></div>
       </div>
+      <div class="footer__bottom"><span>© 2026 Rudi macht alles</span><span><a href="#">Impressum</a><a href="#">Datenschutz</a></span></div>
     </div>
-    <div class="footer__bottom"><div class="container"><span>© 2024 Rudi Macht Alles</span><div class="footer__legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div>
   </footer>
 
-  <a href="kontakt.html" class="floating-cta" id="floatingCta" aria-label="Anfrage stellen">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
-    Anfrage stellen
-  </a>
+  <div class="float">
+    <a class="float__wa" href="https://wa.me/4917631147867" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.605zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+    <a class="float__call" href="tel:+4917631147867" aria-label="Anrufen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.62 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.59a16 16 0 006.39 6.39l.95-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg></a>
+  </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/gallery.js"></script>
+  <script src="js/brand.js"></script>
 </body>
 </html>
