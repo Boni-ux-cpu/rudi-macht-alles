@@ -21,3 +21,6 @@ node_modules/
 *.key
 *.pem
 secrets.json
+
+# MCP-Config mit Zugangsschlüssel — nie hochladen
+.mcp.json

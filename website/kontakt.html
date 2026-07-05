@@ -26,7 +26,7 @@
   </header>
 
   <section class="page-hero">
-    <div class="page-hero__bg" style="background-image:url('images/garten-haende.jpg')"></div>
+    <div class="page-hero__bg" style="background-image:url('images/gestaltung-wasserlauf.webp')"></div>
     <div class="container page-hero__inner">
       <div class="page-hero__crumb"><a href="index.html">Start</a> &rsaquo; Kontakt</div>
       <h1>Kontakt</h1>
@@ -57,13 +57,24 @@
           </div>
         </div>
 
-        <form class="form reveal" action="mailto:rudi.baralija@gmail.com" method="post" enctype="text/plain">
-          <div class="form__row"><label for="f-name">Name</label><input id="f-name" type="text" name="Name" placeholder="Ihr Name" required></div>
-          <div class="form__row"><label for="f-kontakt">Telefon oder E-Mail</label><input id="f-kontakt" type="text" name="Telefon-oder-Mail" placeholder="Damit Rudi sich zurückmelden kann" required></div>
-          <div class="form__row"><label for="f-ort">Ort</label><input id="f-ort" type="text" name="Ort" placeholder="z.B. Neumarkt"></div>
-          <div class="form__row"><label for="f-msg">Was steht an?</label><textarea id="f-msg" name="Nachricht" placeholder="Kurz beschreiben — z.B. Hecke schneiden, Terrasse pflastern, Garten neu anlegen…"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Anfrage senden</button>
-          <p style="color:var(--stone);font-size:12.5px;margin-top:16px;text-align:center">Am schnellsten geht's per Anruf oder WhatsApp — Rudi meldet sich meist noch am selben Tag.</p>
+        <form class="form reveal" data-wa>
+          <div class="form__row"><label for="f-name">Name</label><input id="f-name" type="text" name="name" placeholder="Ihr Name" required></div>
+          <div class="form__row"><label for="f-kontakt">Telefon oder E-Mail</label><input id="f-kontakt" type="text" name="kontakt" placeholder="Damit Rudi sich zurückmelden kann" required></div>
+          <div class="form__row"><label for="f-leistung">Leistung</label>
+            <select id="f-leistung" name="leistung" required>
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option>Rasenpflege</option>
+              <option>Baum- &amp; Heckenschnitt</option>
+              <option>Gartengestaltung</option>
+              <option>Pflasterarbeiten</option>
+              <option>Pflanzpflege &amp; Beete</option>
+              <option>Entrümpelung &amp; Abtransport</option>
+              <option>Sonderprojekt / Sonstiges</option>
+            </select>
+          </div>
+          <div class="form__row"><label for="f-msg">Nachricht</label><textarea id="f-msg" name="nachricht" placeholder="Kurz beschreiben — z.B. Hecke schneiden, Terrasse pflastern, Garten neu anlegen…"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Anfrage per WhatsApp senden</button>
+          <p class="form__note">Beim Absenden öffnet sich WhatsApp mit Ihrer Nachricht — Sie sehen alles, bevor es rausgeht. Auf der Website wird nichts gespeichert. Antwort innerhalb von 24 Stunden.</p>
         </form>
 
       </div>
