@@ -62,7 +62,7 @@ Hinweis: Der alte Server auf Port 8000 liefert 404 (macOS-Berechtigung) — 8020
 
 ## Offene Punkte
 
-1. **Framer-Token erneuern** (unframer.co) — alter Token war im öffentlichen Repo sichtbar
+1. **Framer-Token erneuern** — Git-Historie wurde am 6.7. komplett bereinigt (Token aus .mcp.json UND .claude/settings.json getilgt, Force-Push, alter Branch gelöscht). Boni nutzt Framer weiter → neuen Token im Unframer-Plugin erzeugen und in lokale Config eintragen lassen
 2. **Foto von Rudi** für die „Direkter Draht"-Sektion (Platzhalter-Monogramm ist vorbereitet)
 3. **Fotos für Baum-/Heckenschnitt + Entrümpelung** (aktuell Icon-Kacheln)
 4. **Eigene Domain** (z.B. rudimachtalles.de) — kann auf GitHub Pages zeigen
