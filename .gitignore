@@ -24,3 +24,4 @@ secrets.json
 
 # MCP-Config mit Zugangsschlüssel — nie hochladen
 .mcp.json
+.claude/settings.json
