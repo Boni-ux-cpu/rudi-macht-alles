@@ -60,6 +60,14 @@ Hinweis: Der alte Server auf Port 8000 liefert 404 (macOS-Berechtigung) — 8020
 - **Schriften lokal eingebunden** (Fraunces + Inter als woff2 in `website/fonts/`) — kein Google-Fonts-Abruf mehr, DSGVO-Problem behoben
 - **.mcp.json aus dem Repo entfernt** (enthielt Framer-Token) — ABER: Token war öffentlich, muss bei unframer.co erneuert werden!
 
+## Erledigt (6. Juli 2026, zweite Session)
+
+- **leistungen.html komplett ausgebaut:** 6 vollbreite Bereiche (statt Karten-Grid), je mit Ergebnis-Absatz, „Das ist enthalten"-Liste, Bild-Slots (`<!-- BILD: … -->`), Vorher/Nachher-Layout bei Pflaster + Gestaltung, Referenz-Platzhalter, Ablauf-Zeile + WhatsApp-CTA
+- **FAQ-Sektion** mit 6 Fragen (Festpreis, Entsorgung inklusive, Start max. 2 Wochen, kleine Aufträge, Anwesenheit, ganz Bayern) als barrierearmes Akkordeon + FAQPage-Schema (JSON-LD)
+- **Homepage-Karten aufklappbar:** Teaser mit Ergebnis-Satz, 3 Stichpunkten, Ablauf-Zeile, „Alle Details"-Link + WhatsApp — nur eine offen, Tastatur-bedienbar
+- **Rechtsseiten** intern als Entwurf gekennzeichnet; „Auf der Website wird nichts gespeichert" verlinkt jetzt auf datenschutz.html
+- Positionierung geschärft: Rudi macht jede Besichtigung persönlich, Ausführung durch die Familien-Teams (ganz Bayern)
+
 ## Offene Punkte
 
 1. **Framer-Token erneuern** — Git-Historie wurde am 6.7. komplett bereinigt (Token aus .mcp.json UND .claude/settings.json getilgt, Force-Push, alter Branch gelöscht). Boni nutzt Framer weiter → neuen Token im Unframer-Plugin erzeugen und in lokale Config eintragen lassen
