@@ -242,22 +242,16 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
 .process__t{font-family:var(--serif);font-size:22px;margin:8px 0 10px}
 .process__step p{color:rgba(244,239,227,.78);font-size:15px}
 
-/* problem → lösung */
-.pl-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px;align-items:stretch}
-.pl-card{border-radius:14px;padding:44px 40px}
-.pl-card--pain{background:var(--paper);border:1px solid var(--mist)}
-.pl-card--sol{background:var(--forest);color:var(--cream)}
-.pl-card h3{font-family:var(--serif);font-style:italic;font-size:26px;margin-bottom:26px}
-.pl-card--pain h3{color:var(--forest)}
-.pl-list{list-style:none;display:grid;gap:22px}
-.pl-list li{display:flex;gap:16px;align-items:flex-start}
-.pl-list .pl-ic{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.pl-card--pain .pl-ic{background:rgba(184,98,58,.12);color:var(--clay)}
-.pl-card--sol .pl-ic{background:rgba(168,194,156,.16);color:var(--moss)}
-.pl-ic svg{width:16px;height:16px}
-.pl-list b{display:block;font-size:16px;margin-bottom:3px}
-.pl-card--pain .pl-list p{color:var(--stone);font-size:14.5px;line-height:1.55}
-.pl-card--sol .pl-list p{color:rgba(244,239,227,.8);font-size:14.5px;line-height:1.55}
+/* versprechen (der unterschied) */
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.promise{background:var(--paper);border:1px solid var(--mist);border-radius:14px;padding:42px 38px;position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.promise::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.promise:hover{transform:translateY(-6px);box-shadow:0 26px 52px -26px rgba(15,30,20,.4)}
+.promise:hover::before{transform:scaleX(1)}
+.promise__num{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--clay);margin-bottom:18px}
+.promise h3{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--forest);margin-bottom:14px}
+.promise p{color:var(--stone);font-size:15px;line-height:1.65}
+
 
 /* zahlen-band mit countern */
 .stats{background:var(--forest);color:var(--cream);padding:80px 0}
@@ -333,7 +327,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
   .trust__grid{grid-template-columns:repeat(2,1fr)}
   .trust__item:nth-child(2){border-right:0}
   .process__grid{grid-template-columns:repeat(2,1fr);gap:40px 30px}
-  .pl-grid{grid-template-columns:1fr}
+  .promise-grid{grid-template-columns:1fr}
   .personal__grid{grid-template-columns:1fr;gap:44px}
   .personal__media{max-width:420px;aspect-ratio:4/3}
   .footer__main{grid-template-columns:1fr 1fr;gap:40px}
@@ -347,7 +341,6 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
   .trust__grid{grid-template-columns:1fr 1fr}
   .stats{padding:64px 0}
   .stats__grid{grid-template-columns:1fr;gap:36px}
-  .pl-card{padding:34px 26px}
   .special-note{padding:24px 22px}
   .footer__main{grid-template-columns:1fr}
   .float a{width:52px;height:52px}
