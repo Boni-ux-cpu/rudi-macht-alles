@@ -53,12 +53,19 @@ Hinweis: Der alte Server auf Port 8000 liefert 404 (macOS-Berechtigung) — 8020
 
 ---
 
+## Erledigt (6. Juli 2026)
+
+- **Website ist live:** https://boni-ux-cpu.github.io/rudi-macht-alles/ (GitHub Pages, Deploy automatisch bei jedem Push auf main)
+- **Impressum + Datenschutz** live (Rrustem Baralija, Oberer Lährer Weg 5, 92318 Neumarkt i.d.OPf., keine USt-IdNr.), Footer-Links auf allen Seiten
+- **Schriften lokal eingebunden** (Fraunces + Inter als woff2 in `website/fonts/`) — kein Google-Fonts-Abruf mehr, DSGVO-Problem behoben
+- **.mcp.json aus dem Repo entfernt** (enthielt Framer-Token) — ABER: Token war öffentlich, muss bei unframer.co erneuert werden!
+
 ## Offene Punkte
 
-1. **Foto von Rudi** für die „Direkter Draht"-Sektion (Platzhalter-Monogramm ist vorbereitet)
-2. **Fotos für Baum-/Heckenschnitt + Entrümpelung** (aktuell Icon-Kacheln)
-3. **Impressum & Datenschutz** — Pflicht vor dem Online-Gehen (braucht: Name, Adresse, ggf. USt-IdNr.)
-4. **Domain + Hosting** (z.B. rudimachtalles.de)
+1. **Framer-Token erneuern** (unframer.co) — alter Token war im öffentlichen Repo sichtbar
+2. **Foto von Rudi** für die „Direkter Draht"-Sektion (Platzhalter-Monogramm ist vorbereitet)
+3. **Fotos für Baum-/Heckenschnitt + Entrümpelung** (aktuell Icon-Kacheln)
+4. **Eigene Domain** (z.B. rudimachtalles.de) — kann auf GitHub Pages zeigen
 5. **Echte Google-Bewertungen** — Kundenstimmen-Sektion wurde entfernt, bis echte da sind
 
 ---
