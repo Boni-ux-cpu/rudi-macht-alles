@@ -4,8 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leistungen — Rudi macht alles | Garten, Pflege & Handwerk</title>
-  <meta name="description" content="Alle Leistungen von Rudi macht alles: Rasenpflege, Baum- & Heckenschnitt, Gartengestaltung, Pflasterarbeiten, Pflanzpflege und Entrümpelung. Aus einer Hand in Neumarkt, Nürnberg & München." />
+  <meta name="description" content="Alle Leistungen von Rudi macht alles: Rasenpflege, Baum- & Heckenschnitt, Gartengestaltung, Pflasterarbeiten, Pflanzpflege und Entrümpelung. Festpreis nach kostenloser Besichtigung — in ganz Bayern." />
   <link rel="stylesheet" href="css/brand.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet ein Projekt bei euch — zum Beispiel Pflastern pro m²?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das hängt von Untergrund, Material und Umfang ab; ein Pauschalpreis pro m² wäre unseriös. Deshalb schauen wir kostenlos vorbei, danach bekommen Sie einen Festpreis. Der gilt — keine versteckten Nachforderungen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist die Entsorgung von Aushub und Grünschnitt enthalten?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wir schätzen die Mengen bei der Besichtigung mit ein, die Entsorgung ist Teil des Festpreises. Keine Überraschung am Ende." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie schnell könnt ihr anfangen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kurz: Nach der Besichtigung starten wir in der Regel innerhalb von maximal zwei Wochen. Den festen Termin bekommen Sie direkt bei der Besichtigung." }
+      },
+      {
+        "@type": "Question",
+        "name": "Übernehmt ihr auch kleine Aufträge?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, sehr gerne. Vom kleinen Gehweg bis zur kompletten Außenanlage — kein Auftrag ist zu klein für eine Anfrage." }
+      },
+      {
+        "@type": "Question",
+        "name": "Muss ich während der Arbeiten zu Hause sein?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nein. Nach der Besichtigung ist alles besprochen, wir arbeiten selbstständig." }
+      },
+      {
+        "@type": "Question",
+        "name": "In welchem Umkreis arbeitet ihr?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In ganz Bayern. Als Familienbetrieb mit mehreren Teams sind wir in verschiedenen Regionen unterwegs — von Neumarkt und Nürnberg bis München und Landshut." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -17,6 +56,7 @@
         <a href="leistungen.html" class="active">Leistungen</a>
         <a href="galerie.html">Galerie</a>
         <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
         <a href="tel:+4917631147867" class="btn btn--primary">Jetzt anrufen</a>
       </nav>
     </div>
@@ -31,104 +71,253 @@
     </div>
   </section>
 
-  <section class="section section--cream">
+  <section class="section--cream" style="padding:40px 0 0">
     <div class="container">
-      <div class="svc-detail-grid">
 
-        <article class="svc-detail reveal" id="rasenpflege">
-          <div class="svc-detail__img" style="background-image:url('images/rasen-rollrasen.webp');background-position:70% 45%"></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M24 30v10M10 44h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Rasenpflege</h3>
-            <p>Damit der Rasen dicht und grün bleibt — das ganze Jahr, nicht nur im Mai.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mähen &amp; Kanten stechen</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Vertikutieren &amp; Belüften</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Düngen &amp; Kalken</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Nachsäen &amp; Rasen neu anlegen</li>
-            </ul>
+      <div class="svc-full" id="rasenpflege">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <!-- BILD: dichter, frisch gemähter Rasen mit sauberer Kante zu Beet oder Weg -->
+            <figure><img src="images/rasen-rollrasen.webp" alt="Frisch verlegter Rollrasen zwischen Haus und Hecke" loading="lazy" style="object-position:70% 45%"></figure>
           </div>
-        </article>
-
-        <article class="svc-detail reveal" id="baumschnitt">
-          <div class="svc-detail__img svc-detail__img--icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Baum- &amp; Heckenschnitt</h3>
-            <p>Fachgerecht und sauber. Ein Schnitt zu viel verändert die Form für ein Jahr — wir schauen genau hin.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Formschnitt &amp; Auslichten</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Kronenpflege &amp; Totholz</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Heckenschnitt &amp; -formung</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Obstbaumschnitt</li>
-            </ul>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 01</span>
+            <h2>Rasenpflege</h2>
+            <p class="svc-full__intro">Damit der Rasen dicht und grün bleibt — das ganze Jahr, nicht nur im Mai.</p>
+            <p class="svc-full__intro">Am Ende steht ein Rasen, der dicht und gleichmäßig grün ist — und es bleibt. Keine kahlen Stellen, kein Moos, klare Kanten zu Beet und Weg. Auf Wunsch kommen wir in festen Abständen wieder, dann brauchen Sie an den Rasen keinen Gedanken mehr zu verschwenden.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mähen &amp; Kanten stechen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Vertikutieren &amp; Belüften</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Düngen &amp; Kalken nach Bedarf</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Nachsaat oder Neuanlage mit Rollrasen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Abtransport des Schnittguts — Entsorgung inklusive, im Festpreis einkalkuliert</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. Rasen-Neuanlage 200 m² mit Rollrasen, Ort]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
           </div>
-        </article>
-
-        <article class="svc-detail reveal" id="gestaltung">
-          <div class="svc-detail__img" style="background-image:url('images/gestaltung-wasserlauf.webp')"></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M16 28V18a8 8 0 0116 0v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Gartengestaltung</h3>
-            <p>Der Traum gehört Ihnen — wir machen ihn wahr. Von der Idee bis zum fertigen Garten.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Planung &amp; Beratung vor Ort</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Beete, Wege &amp; Sitzplätze</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sicht- &amp; Windschutz</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Komplette Neuanlage</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="svc-detail reveal" id="pflaster">
-          <div class="svc-detail__img" style="background-image:url('images/pflaster-muster.webp')"></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="12" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M12 28V20h6v8M22 28V20h6v8M32 28V20h6v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Pflasterarbeiten</h3>
-            <p>Sauber verlegt, eben und langlebig. Rudis Wurzeln liegen im Bau — das merkt man hier besonders.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Terrassen aus Naturstein &amp; Beton</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Einfahrten &amp; Wege</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Treppen, Stufen &amp; Randsteine</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Entwässerung &amp; Drainage</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="svc-detail reveal" id="pflanzpflege">
-          <div class="svc-detail__img" style="background-image:url('images/beete-ahorn.webp')"></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 40L20 24l8 8 6-12 6 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 42h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Pflanzpflege &amp; Beete</h3>
-            <p>Damit Beete blühen statt verwildern. Wir kommen wieder — Pflege ist kein einmaliger Auftrag.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Unkraut jäten &amp; mulchen</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pflanzen setzen &amp; umsetzen</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Saisonale Bepflanzung</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Düngen &amp; Rückschnitt</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="svc-detail reveal" id="entruempelung">
-          <div class="svc-detail__img svc-detail__img--icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-          <div class="svc-detail__body">
-            <div class="svc-detail__icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-            <h3>Entrümpelung &amp; Abtransport</h3>
-            <p>Sauber raus, nichts bleibt liegen. Wir räumen auf und nehmen alles mit.</p>
-            <ul class="svc-list">
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Grünschnitt &amp; Laub</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gartenabfälle &amp; alte Pflanzen</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sperrmüll aus dem Garten</li>
-              <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Fachgerechte Entsorgung</li>
-            </ul>
-          </div>
-        </article>
-
+        </div>
       </div>
-      <div class="special-note reveal">
+
+      <div class="svc-full svc-full--flip" id="baumschnitt">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <!-- BILD: Hecke oder Baumkrone direkt nach dem Schnitt, klare Form erkennbar -->
+            <figure>
+              <div class="img-slot" role="img" aria-label="Foto folgt: Baum- und Heckenschnitt">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M24 8C24 8 12 18 12 28a12 12 0 0024 0C36 18 24 8 24 8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 40v-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                <span>Projektfoto folgt</span>
+              </div>
+            </figure>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 02</span>
+            <h2>Baum- &amp; Heckenschnitt</h2>
+            <p class="svc-full__intro">Fachgerecht und sauber. Ein Schnitt zu viel verändert die Form für ein Jahr — wir schauen genau hin.</p>
+            <p class="svc-full__intro">Hecken mit klarer Form, Bäume mit gesunder, lichter Krone — geschnitten zum richtigen Zeitpunkt, damit alles kräftig nachwächst. Und wenn wir gehen, ist das Schnittgut mit.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Heckenschnitt &amp; Formschnitt</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Auslichten &amp; Kronenpflege</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Obstbaumschnitt</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Totholz entfernen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Abtransport — Entsorgung inklusive</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. 40 m Hainbuchenhecke in Form geschnitten, Ort]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-full" id="gestaltung">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <div class="ba-grid">
+              <!-- BILD: dieselbe Fläche VOR der Umgestaltung (Wiese, Erde, alte Anlage) -->
+              <figure>
+                <span class="ba-label">Vorher</span>
+                <div class="img-slot" role="img" aria-label="Foto folgt: Fläche vor der Umgestaltung">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><circle cx="17" cy="20" r="4" stroke="currentColor" stroke-width="2.5"/><path d="M6 34l10-9 8 7 9-11 9 13" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+                  <span>Vorher-Foto folgt</span>
+                </div>
+              </figure>
+              <!-- BILD: fertiger Garten nach der Umgestaltung -->
+              <figure>
+                <span class="ba-label">Nachher</span>
+                <img src="images/gestaltung-wasserlauf.webp" alt="Fertig gestalteter Garten mit Rasenfläche und Wasserlauf" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 03</span>
+            <h2>Gartengestaltung</h2>
+            <p class="svc-full__intro">Der Traum gehört Ihnen — wir machen ihn wahr. Von der Idee bis zum fertigen Garten.</p>
+            <p class="svc-full__intro">Aus einer Fläche wird ein Garten, der zu Ihrem Haus und Ihrem Alltag passt: Beete, Rasen, Wege, Sichtschutz — geplant und umgesetzt von einer Hand, bis alles fertig dasteht.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Planung &amp; Beratung vor Ort</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Erdarbeiten &amp; Geländemodellierung</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Beete, Bepflanzung, Rollrasen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Wege, Sitzplätze, Sichtschutz</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Entsorgung von Aushub inklusive</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. komplette Neuanlage 350 m² mit Rollrasen und Beeten, Ort]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-full svc-full--flip" id="pflaster">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <div class="ba-grid">
+              <!-- BILD: dieselbe Fläche VOR dem Pflastern (Erde, alter Belag, Baustelle) -->
+              <figure>
+                <span class="ba-label">Vorher</span>
+                <div class="img-slot" role="img" aria-label="Foto folgt: Fläche vor den Pflasterarbeiten">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><circle cx="17" cy="20" r="4" stroke="currentColor" stroke-width="2.5"/><path d="M6 34l10-9 8 7 9-11 9 13" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+                  <span>Vorher-Foto folgt</span>
+                </div>
+              </figure>
+              <!-- BILD: fertig gepflasterte Fläche -->
+              <figure>
+                <span class="ba-label">Nachher</span>
+                <img src="images/pflaster-muster.webp" alt="Fertig verlegte Pflasterfläche aus Kopfstein und Platten" loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 04</span>
+            <h2>Pflasterarbeiten</h2>
+            <p class="svc-full__intro">Sauber verlegt, eben und langlebig. Rudis Wurzeln liegen im Bau — das merkt man hier besonders.</p>
+            <p class="svc-full__intro">Eine Fläche, die eben liegt und eben bleibt: Unterbau nach Norm, damit nichts absackt, saubere Fugen, klare Kanten. Einfahrt, Terrasse oder Weg — befahrbar, begehbar, fertig.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aushub &amp; Unterbau nach Norm</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Beton-, Naturstein- oder Klinkerpflaster</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Randsteine, Stufen, Entwässerung</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Verdichtung &amp; Verfugung</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Entsorgung des Aushubs inklusive — im Festpreis</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. 120 m² Einfahrt in Neumarkt, Betonpflaster]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-full" id="pflanzpflege">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <!-- BILD: gepflegtes Beet mit Struktur, gerne mit rotem Ahorn -->
+            <figure><img src="images/beete-ahorn.webp" alt="Gepflegtes Beet mit rotem Ahorn und Trittplatten" loading="lazy"></figure>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 05</span>
+            <h2>Pflanzpflege &amp; Beete</h2>
+            <p class="svc-full__intro">Damit Beete blühen statt verwildern. Wir kommen wieder — Pflege ist kein einmaliger Auftrag.</p>
+            <p class="svc-full__intro">Beete, die gepflegt aussehen und es bleiben: passende Pflanzen am richtigen Platz, Boden gemulcht, Unkraut draußen. Auf Wunsch kommen wir in festen Abständen wieder.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Jäten &amp; Mulchen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pflanzen setzen &amp; umsetzen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Saisonale Bepflanzung</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Rückschnitt &amp; Düngen</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Grünschnitt-Entsorgung inklusive</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. Beetanlage mit Staudenpflanzung, Ort]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-full svc-full--flip" id="entruempelung">
+        <div class="svc-full__grid">
+          <div class="svc-full__media reveal">
+            <!-- BILD: geräumte Gartenfläche oder beladener Anhänger mit Grünschnitt -->
+            <figure>
+              <div class="img-slot" role="img" aria-label="Foto folgt: Entrümpelung und Abtransport">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M24 10L14 24h6v14h8V24h6L24 10z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                <span>Projektfoto folgt</span>
+              </div>
+            </figure>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Leistung 06</span>
+            <h2>Entrümpelung &amp; Abtransport</h2>
+            <p class="svc-full__intro">Sauber raus, nichts bleibt liegen. Wir räumen auf und nehmen alles mit.</p>
+            <p class="svc-full__intro">Der Garten ist frei: Grünschnitt, alte Pflanzen, Gerümpel — aufgeladen, abgefahren, fachgerecht entsorgt. Zurück bleibt eine saubere Fläche, mit der Sie wieder etwas anfangen können.</p>
+            <div class="svc-incl">
+              <h4>Das ist enthalten</h4>
+              <ul class="svc-list">
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Grünschnitt &amp; Laub</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Alte Pflanzen &amp; Wurzeln</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sperrmüll aus dem Garten</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Fachgerechte Entsorgung</li>
+                <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Besenreine Übergabe</li>
+              </ul>
+            </div>
+            <p class="svc-ref">[Referenz: z.B. Garten komplett geräumt inkl. Entsorgung, Ort]</p>
+            <div class="flow">Kostenlose Besichtigung <span class="sep">→</span> Festpreis <span class="sep">→</span> fester Termin</div>
+            <div class="svc-full__cta"><a href="https://wa.me/4917631147867" class="btn btn--dark">Per WhatsApp anfragen</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="special-note reveal" style="margin-bottom:90px">
         <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3-6.2-4.5-6.2 4.5 2.4-7.3L2 9.4h7.6L12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
         <p><b>Auch Sonderprojekte:</b> vom Baumhaus bis zum kompletten Gartenumbau — wir richten uns nach dem, was Sie brauchen. <a href="kontakt.html" style="color:var(--clay);font-weight:600">Einfach anfragen</a>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section__head section__head--center reveal">
+        <span class="eyebrow">Häufige Fragen</span>
+        <div class="rule"></div>
+        <h2 class="section__title">Was Kunden uns oft fragen.</h2>
+      </div>
+      <div class="faq reveal" data-acc-group>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-1">Was kostet ein Projekt bei euch — zum Beispiel Pflastern pro m²?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-1"><div><p>Das hängt von Untergrund, Material und Umfang ab; ein Pauschalpreis pro m² wäre unseriös. Deshalb schauen wir kostenlos vorbei, danach bekommen Sie einen Festpreis. Der gilt — keine versteckten Nachforderungen.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-2">Ist die Entsorgung von Aushub und Grünschnitt enthalten?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-2"><div><p>Ja. Wir schätzen die Mengen bei der Besichtigung mit ein, die Entsorgung ist Teil des Festpreises. Keine Überraschung am Ende.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-3">Wie schnell könnt ihr anfangen?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-3"><div><p>Kurz: Nach der Besichtigung starten wir in der Regel innerhalb von maximal zwei Wochen. Den festen Termin bekommen Sie direkt bei der Besichtigung.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-4">Übernehmt ihr auch kleine Aufträge?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-4"><div><p>Ja, sehr gerne. Vom kleinen Gehweg bis zur kompletten Außenanlage — kein Auftrag ist zu klein für eine Anfrage.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-5">Muss ich während der Arbeiten zu Hause sein?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-5"><div><p>Nein. Nach der Besichtigung ist alles besprochen, wir arbeiten selbstständig.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" data-acc aria-expanded="false" aria-controls="faq-6">In welchem Umkreis arbeitet ihr?<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="acc-panel faq__panel" id="faq-6"><div><p>In ganz Bayern. Als Familienbetrieb mit mehreren Teams sind wir in verschiedenen Regionen unterwegs — von Neumarkt und Nürnberg bis München und Landshut.</p></div></div>
+        </div>
       </div>
     </div>
   </section>

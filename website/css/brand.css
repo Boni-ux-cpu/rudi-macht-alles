@@ -356,6 +356,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
   *{scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none;transition:none}
   .statement__bg{transform:none!important}
+  .acc-panel,.faq__q .chev,.svc-card__toggle .chev{transition:none}
 }
 
 /* Werte / Features */
@@ -374,6 +375,58 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
 .gal-item:hover{transform:translateY(-4px);box-shadow:0 22px 44px -22px rgba(15,30,20,.55)}
 .gal-item__cap{position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(transparent,rgba(15,30,20,.85));color:var(--cream);font-size:13px;letter-spacing:.04em;opacity:0;transform:translateY(8px);transition:.4s var(--ease)}
 .gal-item:hover .gal-item__cap{opacity:1;transform:none}
+
+/* Leistungs-Bereiche vollbreit (leistungen.html) */
+.svc-full{padding:84px 0;border-top:1px solid var(--mist);scroll-margin-top:110px}
+.svc-full:first-child{border-top:0;padding-top:20px}
+.svc-full__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.svc-full--flip .svc-full__media{order:2}
+.svc-full figure{margin:0}
+.svc-full__media img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover;display:block}
+.img-slot{aspect-ratio:4/3;border-radius:12px;background:linear-gradient(155deg,var(--forest),var(--fern-deep));display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;color:var(--moss)}
+.img-slot svg{width:44px;height:44px}
+.img-slot span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,227,.55)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ba-grid figure{position:relative}
+.ba-grid img,.ba-grid .img-slot{aspect-ratio:3/4;height:100%}
+.ba-label{position:absolute;top:12px;left:12px;background:rgba(15,30,20,.78);color:var(--cream);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:6px;z-index:1}
+.svc-full h2{font-size:clamp(28px,3.6vw,42px);font-style:italic;color:var(--forest);margin:14px 0 0}
+.svc-full__intro{color:var(--stone);font-size:16.5px;line-height:1.65;margin-top:16px}
+.svc-incl{margin-top:26px}
+.svc-incl h4{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fern-deep);margin-bottom:12px}
+.svc-ref{font-family:var(--serif);font-style:italic;color:var(--stone);font-size:15px;margin-top:20px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:600;font-size:13.5px;color:var(--forest);margin-top:24px}
+.flow .sep{color:var(--clay);font-weight:400}
+.svc-full__cta{margin-top:22px}
+
+/* FAQ-Akkordeon */
+.faq{max-width:820px;margin:52px auto 0}
+.faq__item{background:var(--paper);border:1px solid var(--mist);border-radius:12px;margin-bottom:14px;overflow:hidden;transition:box-shadow .3s var(--ease)}
+.faq__item:has(.faq__q[aria-expanded="true"]){box-shadow:0 16px 36px -22px rgba(15,30,20,.35)}
+.faq__q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:0;cursor:pointer;text-align:left;padding:22px 26px;font-family:var(--sans);font-weight:600;font-size:16px;color:var(--forest)}
+.faq__q .chev{flex:none;width:28px;height:28px;border-radius:50%;background:var(--cream);border:1px solid var(--mist);display:flex;align-items:center;justify-content:center;color:var(--clay);transition:transform .35s var(--ease)}
+.faq__q .chev svg{width:14px;height:14px}
+.faq__q[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.acc-panel.open{grid-template-rows:1fr}
+.acc-panel>div{overflow:hidden}
+.faq__panel p{padding:0 26px 24px;color:var(--stone);font-size:15px;line-height:1.65}
+
+/* Homepage-Karten: aufklappbar */
+.svc-card{cursor:pointer}
+.svc-card__toggle{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;width:100%;background:none;border:0;cursor:pointer;padding:0;text-align:left;margin-bottom:12px}
+.svc-card__toggle h3{margin-bottom:0}
+.svc-card__toggle .chev{flex:none;width:28px;height:28px;border-radius:50%;background:var(--cream);border:1px solid var(--mist);display:flex;align-items:center;justify-content:center;color:var(--clay);transition:transform .35s var(--ease),background .3s var(--ease);margin-top:2px}
+.svc-card__toggle .chev svg{width:14px;height:14px}
+.svc-card__toggle[aria-expanded="true"] .chev{transform:rotate(180deg);background:var(--clay);color:var(--cream)}
+.svc-panel ul{list-style:none;display:grid;gap:7px;margin:4px 0 0;padding:0}
+.svc-panel li{display:flex;gap:9px;font-size:14px;color:var(--forest)}
+.svc-panel li::before{content:"—";color:var(--fern);flex:none}
+.svc-panel .flow{font-size:12px;margin-top:16px}
+.svc-panel__result{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--forest);margin:6px 0 10px}
+.svc-panel__links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:16px;padding-bottom:4px}
+.svc-panel__links a{font-weight:600;font-size:13.5px;color:var(--clay)}
+.svc-panel__links a:hover{color:var(--clay-deep)}
 
 /* Rechtstexte (Impressum, Datenschutz) */
 .legal{max-width:760px}
@@ -407,8 +460,15 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
 @media(max-width:980px){
   .feat-grid{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr;gap:40px}
+  .svc-full{padding:64px 0}
+  .svc-full__grid{grid-template-columns:1fr;gap:36px}
+  .svc-full--flip .svc-full__media{order:0}
 }
 @media(max-width:600px){
   .feat-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .ba-grid{grid-template-columns:1fr}
+  .ba-grid img,.ba-grid .img-slot{aspect-ratio:4/3}
+  .faq__q{padding:18px 20px;font-size:15px}
+  .faq__panel p{padding:0 20px 20px}
 }

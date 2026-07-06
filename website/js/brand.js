@@ -19,6 +19,33 @@
     });
   });
 
+  // Akkordeons (FAQ + Leistungs-Karten): nur eines pro Gruppe offen
+  document.querySelectorAll('[data-acc-group]').forEach(group => {
+    const btns = [...group.querySelectorAll('[data-acc]')];
+    const closeAll = () => btns.forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      document.getElementById(b.getAttribute('aria-controls')).classList.remove('open');
+    });
+    btns.forEach(btn => btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const wasOpen = btn.getAttribute('aria-expanded') === 'true';
+      closeAll();
+      if (!wasOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        document.getElementById(btn.getAttribute('aria-controls')).classList.add('open');
+      }
+    }));
+  });
+  // Klick auf die Karte (z.B. Bild) löst den Aufklapp-Knopf aus
+  document.querySelectorAll('.svc-card').forEach(card => {
+    const btn = card.querySelector('[data-acc]');
+    if (!btn) return;
+    card.addEventListener('click', e => {
+      if (e.target.closest('a, button')) return;
+      btn.click();
+    });
+  });
+
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
   if (reduce) return;
 
