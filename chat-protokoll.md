@@ -1,7 +1,7 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 5. Juli 2026
-**Letzte Session:** Conversion-Redesign der kompletten Website + echte Projektfotos eingebaut.
+**Stand:** 6. September 2026
+**Letzte Session:** Bild für Baum- & Heckenschnitt, komplette Sicherheits- und Funktionsprüfung, Platzhalter entfernt, 6 neue Projektfotos + neue Bildersektion auf der Startseite.
 
 ---
 
@@ -68,13 +68,79 @@ Hinweis: Der alte Server auf Port 8000 liefert 404 (macOS-Berechtigung) — 8020
 - **Rechtsseiten** intern als Entwurf gekennzeichnet; „Auf der Website wird nichts gespeichert" verlinkt jetzt auf datenschutz.html
 - Positionierung geschärft: Rudi macht jede Besichtigung persönlich, Ausführung durch die Familien-Teams (ganz Bayern)
 
+## Erledigt (6. September 2026)
+
+### Bild für Baum- & Heckenschnitt
+- `images/heckenschnitt-thuja.webp` (Pexels, gewerblich frei, 194 KB, 1200x800) ersetzt die Icon-Kachel auf der Startseite und den Platzhalter auf leistungen.html
+- Bewusst ein Motiv ohne frontal erkennbares Gesicht gewählt — die Pexels-Lizenz deckt keine Nutzung ab, die nach Werbung mit einer abgebildeten Person aussieht
+- Bleibt ein Symbolbild wie bei Entrümpelung: sobald ein echtes Foto einer geschnittenen Hecke da ist, ersetzen
+
+### Vollständige Prüfung — Ergebnis
+Bestanden:
+- Formular-Injection-Test: Versuch, über das Nachrichtenfeld eine fremde Telefonnummer in den WhatsApp-Link zu schleusen, schlägt fehl (encodeURIComponent). Kein XSS.
+- Git-Historie über alle 17 Commits durchsucht: kein Token, kein Schlüssel mehr auffindbar. Die Bereinigung vom 6.7. hat gehalten.
+- 39 interne Links und Bilder einzeln gegen den Server geprüft: 0 Fehler
+- Kontaktdaten über alle 7 Seiten identisch (Telefon 27x, WhatsApp 25x, E-Mail 23x)
+- Alle 27 Bilder mit alt-Text; JSON-LD valide (LocalBusiness + FAQPage)
+- Mobile 375px: kein horizontales Scrollen
+
+Behoben:
+- **Sechs sichtbare `[Referenz: ...]`-Platzhalter** von leistungen.html entfernt (standen live auf der Website)
+- **Vorher/Nachher-Bereiche aufgelöst** (Gestaltung + Pflaster) — es gibt keine Vorher-Fotos, die Platzhalter "Vorher-Foto folgt" waren live sichtbar. Jetzt je ein Einzelbild wie in den anderen Bereichen.
+- **sitemap.xml + robots.txt** zeigten auf `rudimachtalles.de` — Domain existiert nicht (kein DNS). Umgestellt auf die github.io-Adresse. **Zurückstellen, sobald die eigene Domain läuft.**
+- Meta-Descriptions gekürzt (186/201 → 133/134 Zeichen, Google schneidet bei ~160 ab)
+- `window.open` beim WhatsApp-Versand mit `noopener` abgesichert
+- `<noscript>`-Fallback in allen 7 Seiten: ohne JavaScript blieb die Seite wegen der Einblend-Effekte praktisch leer
+- Touch-Ziele im Handy-Menü auf 44x44 px vergrößert (waren 32-33 px)
+
+Geklärt:
+- **Rechtsform: Einzelunternehmen**, keine GmbH. Das Impressum stimmt so. Die alte Visitenkarte im Ordner `kunden-unterlagen/` nennt noch "GmbH" — die ist überholt.
+
+Hinweise ohne Handlungsbedarf:
+- Das GitHub-Repo ist öffentlich: chat-protokoll.md, CLAUDE.md und die Visitenkarten-PDFs sind für jeden lesbar. Keine Zugangsdaten, keine Kundendaten dabei.
+- CSS-Regeln für `.ba-grid`, `.ba-label`, `.svc-ref`, `.img-slot` sind jetzt ungenutzt — bewusst stehengelassen als Vorlage, falls doch mal Vorher/Nachher-Fotos kommen.
+- Voller Bericht: `Website-Pruefbericht.pdf` im Projektordner
+
+
+### Neue Projektfotos (26 gesichtet, 6 verwendet)
+Boni hat 26 neue Fotos in `bilder/` gelegt. Alle einzeln durchgesehen.
+
+**Wichtig — drei davon waren bereits auf der Website** und wurden aussortiert:
+weiße Pflanzkübel (= `bepflanzung-kuebel`), Luftbild Polygonalterrasse (= `galerie-polygonal`), Pool mit Holzdeck (= `galerie-pool-deck`).
+
+**Übernommen (je 1200x900 WebP, aus 4:3-Zuschnitt):**
+| Datei | Motiv | Anmerkung |
+|---|---|---|
+| `terrasse-abendlicht.webp` | Natursteinterrasse mit Beleuchtung | einzige Abendaufnahme, trägt als großes Bild die Sektion |
+| `treppe-blockstufen.webp` | Blockstufen-Treppe | Treppenbau kam vorher nicht vor; Kabelrolle rechts weggeschnitten |
+| `vorgarten-schwungbeete.webp` | Vorgarten mit geschwungenen Beeten | |
+| `rundbeet-wasserschale.webp` | Rundbeet, Cortenstahl, Wasserschale | gestalterisch stärkstes Motiv |
+| `polygonalweg-hortensien.webp` | Polygonalweg mit Hortensien | Sommer/Blüte |
+| `kopfsteinpflaster-weg.webp` | Kopfstein zwischen Sandsteinmauern | Arbeiter + Bauschutt am oberen Rand weggeschnitten |
+
+**Aussortiert:** Weiden-Iglu (ist ein Screenshot mit Browser-Leiste), reine Baustellenfotos, Pool mit Hortensien (Pool ist bereits 2x auf der Seite), Kopfsteinweg mit Rosenbögen (Umfeld noch unfertig).
+
+### Neue Sektion „Aus unserer Arbeit" auf der Startseite
+- Sitzt zwischen Zahlen-Band und Statement-Parallax — erst die Behauptung „50+ Projekte", direkt danach der Bildbeweis
+- Raster `.work-grid`: 3-spaltig, erstes Bild über 2 Spalten und 2 Reihen (795x600), die anderen fünf 389x292; auf dem Handy 2-spaltig mit dem großen Bild über die volle Breite
+- Nutzt das bestehende `.gal-item`-Muster (Bildunterschrift beim Hover, Klick führt zur passenden Leistung), darunter Knopf zur Galerie
+- **Galerie-Seite von 11 auf 17 Bilder erweitert** — die sechs neuen sind eingemischt, nicht angehängt, damit die starken Motive weit oben stehen. Sonst hätte „Alle Projekte ansehen" auf andere Bilder geführt als die auf der Startseite gezeigten.
+
+### Personenbilder
+- **Familienfoto (Rudi + 4 Söhne)** → `familie-rudi-soehne.webp`, ersetzt in der Sektion „Wer wir sind" das Gartenbild. Der Text dort spricht von „Rudi und seine Söhne" — das Bild belegt die Aussage jetzt. (Einverständnis der Söhne zur Veröffentlichung ist Bonis Sache.)
+- **Foto von Rudi im Garten:** kurz eingebaut, dann auf Bonis Wunsch wieder entfernt. Grund: Schnappschuss beim Sprechen, harte Mittagssonne, Bierflasche in der Hand (weggeschnitten), und mit 906x900 px Original blieb nach dem engen Zuschnitt zu wenig Auflösung.
+- **Stattdessen: das Logo als Platzhalter** in „Sie sprechen direkt mit Rudi" — als Inline-SVG auf dem grünen Verlauf.
+  **Wichtig:** Die SVG-Dateien in `brandkit/` laden Schriften per `@import` von Google Fonts. Nicht direkt einbinden — das wäre der DSGVO-Fehler von Anfang Juli zurück. Die eingebaute Fassung nutzt die lokal vorhandenen Schriften über CSS-Klassen (`.lg-rudi`, `.lg-ma`, `.lg-cl` in `.personal__logo`), verifiziert: kein Google-Abruf mehr.
+
 ## Offene Punkte
 
-1. **Framer-Token erneuern** — Git-Historie wurde am 6.7. komplett bereinigt (Token aus .mcp.json UND .claude/settings.json getilgt, Force-Push, alter Branch gelöscht). Boni nutzt Framer weiter → neuen Token im Unframer-Plugin erzeugen und in lokale Config eintragen lassen
-2. **Foto von Rudi** für die „Direkter Draht"-Sektion (Platzhalter-Monogramm ist vorbereitet)
-3. **Fotos für Baum-/Heckenschnitt + Entrümpelung** (aktuell Icon-Kacheln)
-4. **Eigene Domain** (z.B. rudimachtalles.de) — kann auf GitHub Pages zeigen
-5. **Echte Google-Bewertungen** — Kundenstimmen-Sektion wurde entfernt, bis echte da sind
+1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
+2. **Eigene Domain** (z.B. rudimachtalles.de) — noch nicht registriert. Danach sitemap.xml + robots.txt zurückstellen und `url` ins LocalBusiness-Schema ergänzen.
+3. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
+4. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
+5. **Referenz-Sätze je Leistung** — die Platzhalter sind raus. Sobald Zahlen da sind (z.B. „40 m Hainbuchenhecke, Neumarkt"), lohnt es sich, sie einzusetzen.
+6. **Echte Google-Bewertungen** — Kundenstimmen-Sektion wurde entfernt, bis echte da sind
+7. **Impressum + Datenschutz** vor größeren Werbeausgaben anwaltlich gegenlesen lassen (tragen intern noch den Entwurfs-Vermerk)
 
 ---
 

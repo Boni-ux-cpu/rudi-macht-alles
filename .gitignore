@@ -25,3 +25,10 @@ secrets.json
 # MCP-Config mit Zugangsschlüssel — nie hochladen
 .mcp.json
 .claude/settings.json
+
+# Arbeitsmaterial - bleibt lokal, gehoert nicht ins oeffentliche Repo
+bilder/
+dashboard/
+kunden-unterlagen/
+Markenbuch-Check.pdf
+Website-Pruefbericht.pdf

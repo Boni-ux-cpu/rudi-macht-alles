@@ -15,7 +15,7 @@
       if (v('name')) lines.push('Name: ' + v('name'));
       if (v('kontakt')) lines.push('Erreichbar unter: ' + v('kontakt'));
       if (v('nachricht')) lines.push('Nachricht: ' + v('nachricht'));
-      window.open('https://wa.me/4917631147867?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+      window.open('https://wa.me/4917631147867?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
     });
   });
 
