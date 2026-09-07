@@ -5,17 +5,32 @@
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
   }
 
-  // Anfrage-Formular: baut eine WhatsApp-Nachricht aus den Feldern — keine Daten werden gespeichert
+  // Anfrage-Formular: baut die Nachricht aus den Feldern — keine Daten werden gespeichert.
+  // Zwei Wege: WhatsApp (Absenden) oder E-Mail (zweiter Knopf).
   document.querySelectorAll('form[data-wa]').forEach(f => {
-    f.addEventListener('submit', e => {
-      e.preventDefault();
+    const text = () => {
       const v = n => (f.elements[n] && f.elements[n].value.trim()) || '';
       const lines = ['Hallo Rudi, ich habe eine Anfrage über die Website.'];
       if (v('leistung')) lines.push('Leistung: ' + v('leistung'));
       if (v('name')) lines.push('Name: ' + v('name'));
       if (v('kontakt')) lines.push('Erreichbar unter: ' + v('kontakt'));
       if (v('nachricht')) lines.push('Nachricht: ' + v('nachricht'));
-      window.open('https://wa.me/4917631147867?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+      return lines.join('\n');
+    };
+
+    f.addEventListener('submit', e => {
+      e.preventDefault();
+      window.open('https://wa.me/4917631147867?text=' + encodeURIComponent(text()), '_blank', 'noopener');
+    });
+
+    const mailBtn = f.querySelector('[data-mail]');
+    if (mailBtn) mailBtn.addEventListener('click', () => {
+      // Pflichtfelder auch hier prüfen, sonst geht eine halbleere Anfrage raus
+      if (!f.reportValidity()) return;
+      const betreff = (f.elements['leistung'] && f.elements['leistung'].value.trim()) || 'Anfrage über die Website';
+      location.href = 'mailto:rudi.baralija@gmail.com'
+        + '?subject=' + encodeURIComponent('Anfrage: ' + betreff)
+        + '&body=' + encodeURIComponent(text());
     });
   });
 
