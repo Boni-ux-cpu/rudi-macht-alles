@@ -1,7 +1,7 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 6. September 2026
-**Letzte Session:** Bild für Baum- & Heckenschnitt, komplette Sicherheits- und Funktionsprüfung, Platzhalter entfernt, 6 neue Projektfotos + neue Bildersektion auf der Startseite.
+**Stand:** 7. September 2026
+**Letzte Session:** Eigene Domain rudimachtalles.de ist live. Davor: 6 neue Projektfotos, neue Bildersektion, komplette Sicherheits- und Funktionsprüfung.
 
 ---
 
@@ -132,10 +132,31 @@ weiße Pflanzkübel (= `bepflanzung-kuebel`), Luftbild Polygonalterrasse (= `gal
 - **Stattdessen: das Logo als Platzhalter** in „Sie sprechen direkt mit Rudi" — als Inline-SVG auf dem grünen Verlauf.
   **Wichtig:** Die SVG-Dateien in `brandkit/` laden Schriften per `@import` von Google Fonts. Nicht direkt einbinden — das wäre der DSGVO-Fehler von Anfang Juli zurück. Die eingebaute Fassung nutzt die lokal vorhandenen Schriften über CSS-Klassen (`.lg-rudi`, `.lg-ma`, `.lg-cl` in `.personal__logo`), verifiziert: kein Google-Abruf mehr.
 
+## Erledigt (7. September 2026) — Eigene Domain live
+
+**Die Website läuft unter https://rudimachtalles.de**
+
+- Domain bei netcup registriert (5 EUR, Verlängerung 06.09.2027 — Folgepreis prüfen)
+- DNS im netcup-CCP unter **CloudDNS** (nicht unter „Nameserver"): vier A-Einträge auf
+  185.199.108–111.153 mit Host `@`, dazu `www` als CNAME auf `boni-ux-cpu.github.io`, TTL 3600
+- **DNSSEC bleibt deaktiviert** — für GitHub Pages nicht nötig, nur zusätzliche Fehlerquelle
+- `website/CNAME` mit Inhalt `rudimachtalles.de` angelegt. **Wichtig:** Bei Deploy über GitHub Actions
+  reicht diese Datei allein nicht — die Domain muss zusätzlich unter
+  Repository → Settings → Pages → Custom domain eingetragen werden.
+  (Nicht zu verwechseln mit Account-Einstellungen → Pages → „Add a verified domain“ — das ist eine
+  optionale Schutzfunktion mit TXT-Eintrag, die wir nicht brauchen.)
+- Zertifikat für HTTPS von GitHub ausgestellt, deckt auch `www` ab
+- Umgestellt: sitemap.xml, robots.txt, **canonical-Tags auf allen sieben Seiten** (nötig, weil die Seite
+  unter zwei Adressen erreichbar ist), `url` im LocalBusiness-Schema, `og:url`
+- Die alte github.io-Adresse funktioniert weiterhin
+
+**Noch offen bei der Domain:** Haken „Enforce HTTPS“ in den GitHub-Einstellungen — bis dahin
+antwortet `http://` (ohne s) mit 404. Die verschlüsselte Adresse funktioniert bereits.
+
 ## Offene Punkte
 
 1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
-2. **Eigene Domain** (z.B. rudimachtalles.de) — noch nicht registriert. Danach sitemap.xml + robots.txt zurückstellen und `url` ins LocalBusiness-Schema ergänzen.
+2. **E-Mail-Adresse mit eigener Domain** — `info@rudimachtalles.de` soll in der bestehenden Gmail landen. Zu klären: Was bietet netcup bei einer Domain ohne Hosting-Paket, und was kostet es. Erst danach die Adresse auf der Website tauschen (steht dort 23-mal, plus Impressum, Datenschutz und Firmeneintrag). Reihenfolge zwingend: erst Weiterleitung testen, dann auf die Website — sonst gehen Anfragen verloren.
 3. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
 4. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
 5. **Referenz-Sätze je Leistung** — die Platzhalter sind raus. Sobald Zahlen da sind (z.B. „40 m Hainbuchenhecke, Neumarkt"), lohnt es sich, sie einzusetzen.
