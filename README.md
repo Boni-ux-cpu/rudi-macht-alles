@@ -52,7 +52,7 @@ Rudi_macht_alles/
 
 Die Texte stehen **direkt im HTML**. Öffne die passende Datei in `website/`, such die Stelle, ändere sie, speichere, fertig.
 
-> **Hinweis:** Die Datei `anleitung.md` beschreibt ein älteres System über `website/content.json`. Das ist überholt — die Seiten lesen diese Datei nicht mehr. Auch `js/content-loader.js`, `js/form.js`, `js/gallery.js` und `js/main.js` stammen aus dieser Version und werden von keiner Seite geladen.
+Eine Schritt-für-Schritt-Anleitung dafür steht in **`anleitung.md`** — inklusive der Stellen, die man leicht übersieht.
 
 **Wenn du etwas an mehreren Stellen änderst, denk an diese Orte:**
 
