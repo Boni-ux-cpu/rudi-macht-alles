@@ -182,6 +182,13 @@ Recherche-Ergebnis für später:
 - **Wichtig:** Der kostenlose Weg (Weiterleiter + „Senden als" in Gmail) ist eine Sackgasse — **Google schaltet „Senden als" für fremde Adressen im Januar 2027 ab**, neue Einrichtungen werden schon vorher eingeschränkt. Quelle: Gmail-Hilfe.
 - Empfehlung falls später: netcup, weil dort schon ein Kundenkonto besteht
 
+### Visitenkarte (9.9.)
+- `Visitenkarte-Druck.pdf` im Projektordner — 85 x 55 mm, 3 mm Anschnitt, Schnittmarken, 2 Seiten, Schriften eingebettet
+- Vorderseite dunkelgrün mit Logo wie auf der Website; Rückseite hell mit Fachgebiet, vier Leistungen, Telefon (bewusst größtes Element), Gmail, Domain, QR-Code zur Website, klein „Rudi Baralija" in der Ecke
+- **Schriften:** Die Website hat Fraunces/Inter nur als woff2. Für den Druck mit fontTools nach TTF gewandelt (`flavor = None` setzen, sonst bleibt es woff2!). Variable Fonts brauchen vorher eine Instanz (`instancer.instantiateVariableFont`). Skript liegt im Scratchpad.
+- Domain steht ohne „www" auf der Karte — das ist die kanonische Adresse, www leitet per 301 dorthin um
+- **Die alten Karten in `kunden-unterlagen/` nicht mehr verteilen:** `Rudi.pdf` führt den Zusatz „GmbH", den es nicht gibt (abmahnfähig), dazu zwei Schreibfehler und die alte hotmail-Adresse. `HAUSMEISTER-RUDI.pdf` ist eine dritte, abweichende Marke.
+
 ## Offene Punkte
 
 1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
