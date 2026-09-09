@@ -1,7 +1,7 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 7. September 2026
-**Letzte Session:** Eigene Domain rudimachtalles.de ist live. Davor: 6 neue Projektfotos, neue Bildersektion, komplette Sicherheits- und Funktionsprüfung.
+**Stand:** 9. September 2026
+**Letzte Session:** Domain live, Google Search Console eingerichtet, Unternehmensprofil befüllt. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
 
 ---
 
@@ -153,15 +153,46 @@ weiße Pflanzkübel (= `bepflanzung-kuebel`), Luftbild Polygonalterrasse (= `gal
 **Noch offen bei der Domain:** Haken „Enforce HTTPS“ in den GitHub-Einstellungen — bis dahin
 antwortet `http://` (ohne s) mit 404. Die verschlüsselte Adresse funktioniert bereits.
 
+## Erledigt (9. September 2026)
+
+### Website-Änderungen
+- **Hinweis auf KI-Erstellung**: Fußzeile aller 7 Seiten („Website mit Unterstützung von KI erstellt") plus eigener Abschnitt im Impressum
+- **Zweiter Weg im Anfrageformular**: Knopf „Lieber per E-Mail" neben WhatsApp. Beide nutzen dieselbe Textfunktion; der E-Mail-Knopf prüft die Pflichtfelder und löst kein versehentliches Absenden aus (`type="button"`). Datenschutzerklärung entsprechend ergänzt.
+- **Öffnungszeiten** auf 08:00–18:00 (vorher 07:00) — Startseite, Kontaktseite, LocalBusiness-Schema
+- **Familienfoto entfernt**, in „Wer wir sind" steht wieder `galerie-corten.webp`. Datei aus `website/images/` gelöscht.
+  Boni hat entschieden: **Git-Historie wird NICHT bereinigt** — das Foto bleibt über frühere Commits abrufbar, das ist so akzeptiert.
+
+### Auffindbarkeit
+- **„Enforce HTTPS" aktiv** — `http://` leitet mit 301 auf `https://` um
+- **Google Search Console eingerichtet**: Property als „URL-Präfix" `https://rudimachtalles.de`, Bestätigung über `<meta name="google-site-verification">` in `index.html`. Sitemap eingereicht, Indexierung beantragt.
+  Zwei Tage nach dem Domain-Start war die Seite in keiner Suchmaschine auffindbar — ohne diese Anmeldung hätte es Wochen dauern können.
+  Selbstprüfung: Google-Suche nach `site:rudimachtalles.de`
+
+### Google Unternehmensprofil
+- Angelegt und befüllt: Name „Rudi macht alles", Kategorie **„Gartenbauer"** (Landschaftsgärtner steht bei Google nicht zur Auswahl), Leistungen und Öffnungszeiten hinterlegt
+- **Status: noch nicht öffentlich sichtbar** — die Identitätsbestätigung per Post läuft
+- Kurzbeschreibung (ca. 300 Zeichen) wurde geliefert, lange Fassung steht in `Google-Unternehmensprofil.pdf`
+
+### E-Mail mit eigener Domain — recherchiert, vertagt
+Boni hat entschieden: **erstmal so lassen**, die Gmail-Adresse bleibt auf der Website.
+Recherche-Ergebnis für später:
+- netcup bietet bei einer **reinen Domain keine E-Mail** — dafür braucht es ein Webhosting-Paket (2,69 Euro/Monat, ca. 32 Euro/Jahr)
+- mailbox.org Standard: 3 Euro/Monat (36 Euro/Jahr), eigene Domain erst ab diesem Tarif
+- Google Workspace Starter: 6,80 Euro/Monat (ca. 82 Euro/Jahr)
+- **Wichtig:** Der kostenlose Weg (Weiterleiter + „Senden als" in Gmail) ist eine Sackgasse — **Google schaltet „Senden als" für fremde Adressen im Januar 2027 ab**, neue Einrichtungen werden schon vorher eingeschränkt. Quelle: Gmail-Hilfe.
+- Empfehlung falls später: netcup, weil dort schon ein Kundenkonto besteht
+
 ## Offene Punkte
 
 1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
-2. **E-Mail-Adresse mit eigener Domain** — `info@rudimachtalles.de` soll in der bestehenden Gmail landen. Zu klären: Was bietet netcup bei einer Domain ohne Hosting-Paket, und was kostet es. Erst danach die Adresse auf der Website tauschen (steht dort 23-mal, plus Impressum, Datenschutz und Firmeneintrag). Reihenfolge zwingend: erst Weiterleitung testen, dann auf die Website — sonst gehen Anfragen verloren.
-3. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
-4. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
-5. **Referenz-Sätze je Leistung** — die Platzhalter sind raus. Sobald Zahlen da sind (z.B. „40 m Hainbuchenhecke, Neumarkt"), lohnt es sich, sie einzusetzen.
-6. **Echte Google-Bewertungen** — Kundenstimmen-Sektion wurde entfernt, bis echte da sind
-7. **Impressum + Datenschutz** vor größeren Werbeausgaben anwaltlich gegenlesen lassen (tragen intern noch den Entwurfs-Vermerk)
+2. **Google-Profil bestätigen** — Postkarte abwarten, Code eingeben. Danach: Fotos hochladen (mindestens 10 aus `website/images/`), Beschreibung eintragen. **Das ist der größte offene Hebel** — ohne Bestätigung ist das Profil unsichtbar.
+3. **Indexierung abwarten** — nach dem Antrag in der Search Console üblicherweise Stunden bis Tage. Prüfen mit `site:rudimachtalles.de`.
+4. **E-Mail mit eigener Domain** — vertagt, Recherche oben. Falls später: erst Postfach einrichten und testen, dann die Adresse auf der Website tauschen (steht dort 23-mal, plus Impressum, Datenschutz, Firmeneintrag und im E-Mail-Knopf des Formulars).
+5. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
+6. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
+7. **Referenz-Sätze je Leistung** — die Platzhalter sind raus. Sobald Zahlen da sind (z.B. „40 m Hainbuchenhecke, Neumarkt"), lohnt es sich, sie einzusetzen.
+8. **Echte Google-Bewertungen** — Kundenstimmen-Sektion wurde entfernt, bis echte da sind
+9. **Impressum + Datenschutz** vor größeren Werbeausgaben anwaltlich gegenlesen lassen (tragen intern noch den Entwurfs-Vermerk)
 
 ---
 
