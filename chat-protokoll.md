@@ -1,7 +1,7 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 9. September 2026
-**Letzte Session:** Domain live, Google Search Console eingerichtet, Unternehmensprofil befüllt. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
+**Stand:** 22. September 2026
+**Letzte Session:** Google-Profil bestätigt, Website auf Platz 1 bei Google, 15 Fotos ins Profil geladen. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
 
 ---
 
@@ -189,11 +189,29 @@ Recherche-Ergebnis für später:
 - Domain steht ohne „www" auf der Karte — das ist die kanonische Adresse, www leitet per 301 dorthin um
 - **Die alten Karten in `kunden-unterlagen/` nicht mehr verteilen:** `Rudi.pdf` führt den Zusatz „GmbH", den es nicht gibt (abmahnfähig), dazu zwei Schreibfehler und die alte hotmail-Adresse. `HAUSMEISTER-RUDI.pdf` ist eine dritte, abweichende Marke.
 
+## Erledigt (22. September 2026)
+
+### Google-Profil ist bestätigt
+- **Ohne Postkarte.** Die Karte kam nie an (15 Tage). Stattdessen hat Google offenbar automatisch freigeschaltet — die Hilfe nennt als Grund: „Sie bestätigen Ihre Website in der Google Search Console". Genau das lief am 9.9.
+- Belege: Warnkasten verschwunden, „NICHT ÖFFENTLICH SICHTBAR" weg, 12 Aufrufe gezählt, **kein „Bestätigungsprozess"-Knopf mehr vorhanden**
+- Im Profil korrekt: Telefon, Öffnungszeiten 08:00, Kategorie „Gartenbauer", Einzugsgebiet als **Fläche** (Nürnberg–Regensburg–Augsburg–München) statt Adresse — die Privatadresse bleibt unsichtbar
+
+### Website ist indexiert — Platz 1
+Suche nach „rudi macht alles neumarkt" im Inkognito-Fenster: `rudimachtalles.de` steht **an erster Stelle**, mit Titel und Beschreibung. 15 Tage nach Registrierung der Domain.
+
+### Fotos ins Profil geladen
+- **Wichtig für später: Google nimmt kein WebP** — das Format aller Website-Bilder. Sie müssen vorher nach JPG gewandelt werden.
+- 15 Dateien in `~/Desktop/Fotos-fuer-Google` abgelegt (durchnummeriert, stärkstes Motiv zuerst, plus Logo als quadratisches Profilbild auf Markenhintergrund). Googles Vorgaben geprüft: JPG, 10 KB–5 MB, kürzeste Kante ≥ 720 px.
+- Am 22.9. von Boni hochgeladen.
+
+### Noch offen beim Profil
+Der Unternehmenskasten erschien beim Inkognito-Test **noch nicht** in der Suche. Erwartung: kommt in einigen Tagen. Gründe für die Verzögerung: frisch bestätigt, bis dahin keine Fotos, keine Bewertungen — und Betriebe ohne feste Adresse erscheinen zuerst in Google Maps und bei Suchen mit Standortbezug.
+
 ## Offene Punkte
 
 1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
-2. **Google-Profil bestätigen** — Postkarte abwarten, Code eingeben. Danach: Fotos hochladen (mindestens 10 aus `website/images/`), Beschreibung eintragen. **Das ist der größte offene Hebel** — ohne Bestätigung ist das Profil unsichtbar.
-3. **Indexierung abwarten** — nach dem Antrag in der Search Console üblicherweise Stunden bis Tage. Prüfen mit `site:rudimachtalles.de`.
+2. **Bewertungen sammeln** — jetzt der größte Hebel. Im Profil unter „Um Rezensionen bitten" gibt es einen kurzen Link zum Weiterschicken. Jeden zufriedenen Kunden direkt nach dem Auftrag fragen, am besten vor Ort.
+3. **Prüfen, ob der Unternehmenskasten erscheint** — in ein paar Tagen erneut im Inkognito-Fenster nach „Rudi macht alles Neumarkt" suchen, zusätzlich in Google Maps.
 4. **E-Mail mit eigener Domain** — vertagt, Recherche oben. Falls später: erst Postfach einrichten und testen, dann die Adresse auf der Website tauschen (steht dort 23-mal, plus Impressum, Datenschutz, Firmeneintrag und im E-Mail-Knopf des Formulars).
 5. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
 6. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
