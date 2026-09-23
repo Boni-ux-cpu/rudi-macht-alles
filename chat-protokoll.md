@@ -1,7 +1,7 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 22. September 2026
-**Letzte Session:** Google-Profil bestätigt, Website auf Platz 1 bei Google, 15 Fotos ins Profil geladen. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
+**Stand:** 23. September 2026
+**Letzte Session:** Fünf Ortsseiten erstellt, SEO der bestehenden Seiten überarbeitet. Davor: Google-Profil bestätigt, Website auf Platz 1. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
 
 ---
 
@@ -206,6 +206,33 @@ Suche nach „rudi macht alles neumarkt" im Inkognito-Fenster: `rudimachtalles.d
 
 ### Noch offen beim Profil
 Der Unternehmenskasten erschien beim Inkognito-Test **noch nicht** in der Suche. Erwartung: kommt in einigen Tagen. Gründe für die Verzögerung: frisch bestätigt, bis dahin keine Fotos, keine Bewertungen — und Betriebe ohne feste Adresse erscheinen zuerst in Google Maps und bei Suchen mit Standortbezug.
+
+## Erledigt (23. September 2026) — Lokales SEO
+
+### Fünf Ortsseiten
+`gartenbau-neumarkt.html`, `-nuernberg`, `-muenchen`, `-freising`, `-landshut` — je 1100 bis 1700 Wörter.
+
+**Der Punkt dabei:** keine Textbausteine mit ausgetauschtem Ortsnamen. Jede Seite hat eigenen, recherchierten Inhalt — Bodenarten, Niederschlagsmengen, Bebauungsstruktur, echte Ortsteile, örtliche Baumschutzregeln. Gemessen: zwischen je zwei Seiten nur **19–24 % gemeinsamer Wortschatz**. Google wertet austauschbare Ortsseiten als Spam ab; das ist hier vermieden.
+
+Beispiele für den echten Ortsbezug:
+- **Neumarkt:** sandiger Talkessel vs. Jurakalk auf den Höhen, die 1972 eingemeindeten Orte und ihr Wachstum, aktuelle Baugebiete
+- **Nürnberg:** Sandboden aus Burgsandstein und Flugsand, nur 600–660 mm Niederschlag, Grundstücke am Reichswald mit Kiefern
+- **München:** Schottermächtigkeit, Baumschutzverordnung vom 08.12.2025 (geschützt ab 60 cm Stammumfang — **im amtlichen Verordnungstext nachgeprüft**)
+- **Freising:** drei Bodenlagen (Schotterebene, Löss-Lehm, Niedermoor), Stadtgrünverordnung seit 17.04.2019 mit Fällantragspflicht
+- **Landshut:** eigener Zuschnitt auf die dortige Bebauung
+
+Technisch je Seite: `LocalBusiness`-Schema mit `areaServed` auf den Ort, `FAQPage`-Schema, canonical, eigenes Hero-Bild. Im Footer **aller** Seiten verlinkt, Sitemap von 5 auf 10 Adressen.
+
+**Entfernt bei der Faktenprüfung:** Immobilienpreise im Landshut-Text (für Gartenbau irrelevant, veraltet schnell).
+
+### SEO der bestehenden Seiten
+- **Titel:** nennen jetzt alle Hauptbegriff und Ort, alle unter 60 Zeichen. Vorher fehlte der Ort bei Leistungen, Galerie, Über uns und Kontakt; der Startseiten-Titel war mit 76 Zeichen zu lang.
+- **„Gartenbau" von 2 auf 7 Vorkommen, „Gartenpflege" von 0 auf 3** — an drei inhaltlich passenden Stellen ergänzt, kein Keyword-Stuffing.
+- Drei zu lange Meta-Beschreibungen gekürzt.
+
+### Hinweis zum Arbeitsweg
+Die Texte entstanden über einen Workflow (Recherche → Text → zwei Prüfer → Überarbeitung, je Ort). **Acht von sechzehn Agenten liefen ins Session-Limit**, ein Wiederaufnahmeversuch scheiterte komplett und lieferte ein leeres Ergebnis. Die brauchbaren Daten steckten aber im `journal.jsonl` des Laufs — Recherche für alle fünf Orte, Texte für drei. Die zwei fehlenden Texte (Nürnberg, Freising) und die Faktenprüfung wurden dann direkt erledigt.
+**Merke für künftige Workflows:** bei Limit-Abbrüchen zuerst `journal.jsonl` im Transcript-Verzeichnis prüfen, bevor man neu startet — ein Resume kann vorhandene Ergebnisse überschreiben.
 
 ## Offene Punkte
 
