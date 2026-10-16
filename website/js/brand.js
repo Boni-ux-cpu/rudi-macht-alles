@@ -1,8 +1,13 @@
 (function () {
   const burger = document.getElementById('burger'), menu = document.getElementById('menu');
   if (burger && menu) {
+    const zu = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); };
     burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', zu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) zu(); });
+    document.addEventListener('click', e => {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) zu();
+    });
   }
 
   // Anfrage-Formular: baut die Nachricht aus den Feldern — keine Daten werden gespeichert.

@@ -1,7 +1,8 @@
 # Rudi macht alles — Projekt-Protokoll
 
-**Stand:** 23. September 2026
-**Letzte Session:** Fünf Ortsseiten erstellt, SEO der bestehenden Seiten überarbeitet. Davor: Google-Profil bestätigt, Website auf Platz 1. Davor: 6 neue Projektfotos, neue Bildersektion, Sicherheits- und Funktionsprüfung.
+**Stand:** 2. Oktober 2026
+**Zuletzt:** Fünf Ortsseiten auf je rund 230 Wörter gekürzt. Google-Profil ist **nicht** bestätigt — nur Video-Bestätigung möglich, das ist der nächste Schritt. Website steht bei „rudi macht alles neumarkt" auf Platz 1.
+**Wichtigster offener Punkt:** das Bestätigungsvideo (Anforderungen unter „2. Oktober 2026").
 
 ---
 
@@ -182,6 +183,11 @@ Recherche-Ergebnis für später:
 - **Wichtig:** Der kostenlose Weg (Weiterleiter + „Senden als" in Gmail) ist eine Sackgasse — **Google schaltet „Senden als" für fremde Adressen im Januar 2027 ab**, neue Einrichtungen werden schon vorher eingeschränkt. Quelle: Gmail-Hilfe.
 - Empfehlung falls später: netcup, weil dort schon ein Kundenkonto besteht
 
+### Anleitung und README
+- **`anleitung.md`** neu geschrieben — Schritt für Schritt für jemanden, der nicht programmiert: welche Datei für welche Seite, wie man Text ändert, wie man ein Bild tauscht, wie man veröffentlicht. Dazu die Stellen, die man leicht übersieht (Telefonnummer steht auf allen Seiten, Öffnungszeiten zweimal in `index.html`).
+- **`README.md`** neu — Ordner-Übersicht, Technik, Veröffentlichungsweg und ein Abschnitt **„Finger weg"**: `CNAME`, `fonts/`, canonical-Angaben, das Search-Console-Tag, die Brandkit-SVGs. Die alte Fassung hätte den Datenschutz-Fehler mit Google Fonts wieder eingeführt.
+- **Aufgeräumt:** `content.json` gelöscht (enthielt „500+ Projekte" und „100 % Zufriedenheit" — widersprach den verbindlichen Aussagen), dazu die vier toten Skripte `content-loader.js`, `form.js`, `gallery.js`, `main.js`. Aktiv ist nur noch `brand.js`.
+
 ### Visitenkarte (9.9.)
 - `Visitenkarte-Druck.pdf` im Projektordner — 85 x 55 mm, 3 mm Anschnitt, Schnittmarken, 2 Seiten, Schriften eingebettet
 - Vorderseite dunkelgrün mit Logo wie auf der Website; Rückseite hell mit Fachgebiet, vier Leistungen, Telefon (bewusst größtes Element), Gmail, Domain, QR-Code zur Website, klein „Rudi Baralija" in der Ecke
@@ -191,10 +197,15 @@ Recherche-Ergebnis für später:
 
 ## Erledigt (22. September 2026)
 
-### Google-Profil ist bestätigt
-- **Ohne Postkarte.** Die Karte kam nie an (15 Tage). Stattdessen hat Google offenbar automatisch freigeschaltet — die Hilfe nennt als Grund: „Sie bestätigen Ihre Website in der Google Search Console". Genau das lief am 9.9.
-- Belege: Warnkasten verschwunden, „NICHT ÖFFENTLICH SICHTBAR" weg, 12 Aufrufe gezählt, **kein „Bestätigungsprozess"-Knopf mehr vorhanden**
+### Google-Profil — vermeintlich bestätigt (am 2.10. widerlegt, siehe unten)
+- **Die Annahme war falsch.** Am 22.9. sah es nach automatischer Freischaltung aus: Warnkasten verschwunden, „NICHT ÖFFENTLICH SICHTBAR" weg, 12 Aufrufe gezählt, kein „Bestätigungsprozess"-Knopf mehr vorhanden. Am 2.10. war der Knopf wieder da und das Profil weiterhin unbestätigt.
+- **Merke:** Ein fehlender Warnkasten im Profil ist kein Nachweis. Der einzige verlässliche Test ist die Suche im Inkognito-Fenster — erscheint der Unternehmenskasten, ist das Profil live. Die Postkarte kam übrigens nie an (15 Tage).
 - Im Profil korrekt: Telefon, Öffnungszeiten 08:00, Kategorie „Gartenbauer", Einzugsgebiet als **Fläche** (Nürnberg–Regensburg–Augsburg–München) statt Adresse — die Privatadresse bleibt unsichtbar
+
+### Erkennungsbild für Browser und WhatsApp
+Vorher hatte die Seite im Browser-Tab nur ein leeres Blatt, und beim Teilen über WhatsApp erschien kein Vorschaubild.
+- `favicon.ico` plus `icon-48/96/144/192/512.png` und `apple-touch-icon.png` — das Logo auf dunkelgrünem Grund, in kleinen Größen auf das Monogramm reduziert, weil der ganze Schriftzug bei 48 px nicht lesbar ist
+- `vorschau.jpg` (1200 x 630) als `og:image` — das ist das Bild, das beim Teilen eines Links in WhatsApp, Facebook und iMessage erscheint
 
 ### Website ist indexiert — Platz 1
 Suche nach „rudi macht alles neumarkt" im Inkognito-Fenster: `rudimachtalles.de` steht **an erster Stelle**, mit Titel und Beschreibung. 15 Tage nach Registrierung der Domain.
@@ -205,12 +216,12 @@ Suche nach „rudi macht alles neumarkt" im Inkognito-Fenster: `rudimachtalles.d
 - Am 22.9. von Boni hochgeladen.
 
 ### Noch offen beim Profil
-Der Unternehmenskasten erschien beim Inkognito-Test **noch nicht** in der Suche. Erwartung: kommt in einigen Tagen. Gründe für die Verzögerung: frisch bestätigt, bis dahin keine Fotos, keine Bewertungen — und Betriebe ohne feste Adresse erscheinen zuerst in Google Maps und bei Suchen mit Standortbezug.
+Der Unternehmenskasten erschien beim Inkognito-Test **noch nicht** in der Suche. Damals als Verzögerung gedeutet — tatsächlich war das der Hinweis darauf, dass das Profil gar nicht bestätigt war. Ein unbestätigtes Profil erscheint überhaupt nicht.
 
 ## Erledigt (23. September 2026) — Lokales SEO
 
 ### Fünf Ortsseiten
-`gartenbau-neumarkt.html`, `-nuernberg`, `-muenchen`, `-freising`, `-landshut` — je 1100 bis 1700 Wörter.
+`gartenbau-neumarkt.html`, `-nuernberg`, `-muenchen`, `-freising`, `-landshut` — zunächst je 1100 bis 1700 Wörter. **Am 2.10. auf je rund 230 Wörter gekürzt**, Begründung unten.
 
 **Der Punkt dabei:** keine Textbausteine mit ausgetauschtem Ortsnamen. Jede Seite hat eigenen, recherchierten Inhalt — Bodenarten, Niederschlagsmengen, Bebauungsstruktur, echte Ortsteile, örtliche Baumschutzregeln. Gemessen: zwischen je zwei Seiten nur **19–24 % gemeinsamer Wortschatz**. Google wertet austauschbare Ortsseiten als Spam ab; das ist hier vermieden.
 
@@ -234,11 +245,42 @@ Technisch je Seite: `LocalBusiness`-Schema mit `areaServed` auf den Ort, `FAQPag
 Die Texte entstanden über einen Workflow (Recherche → Text → zwei Prüfer → Überarbeitung, je Ort). **Acht von sechzehn Agenten liefen ins Session-Limit**, ein Wiederaufnahmeversuch scheiterte komplett und lieferte ein leeres Ergebnis. Die brauchbaren Daten steckten aber im `journal.jsonl` des Laufs — Recherche für alle fünf Orte, Texte für drei. Die zwei fehlenden Texte (Nürnberg, Freising) und die Faktenprüfung wurden dann direkt erledigt.
 **Merke für künftige Workflows:** bei Limit-Abbrüchen zuerst `journal.jsonl` im Transcript-Verzeichnis prüfen, bevor man neu startet — ein Resume kann vorhandene Ergebnisse überschreiben.
 
+## Erledigt (2. Oktober 2026)
+
+### Ortsseiten drastisch gekürzt — von 1500 auf 230 Wörter
+Boni zu den langen Fassungen: *„es steht so viel text dort und wir sind eine gartenbau firma und keine forschungsfirma — was da drin steht interessiert den kunden nicht"*. Er hat recht. Die Seiten erklärten Bodenarten, Niederschlagsmengen und Verordnungsdaten. Fachlich korrekt, aber am Leser vorbei.
+
+**Der Denkfehler:** „sehr professionell" war als „fachlich fundiert" gelesen worden. Gemessen wurde nur, ob Google die Seiten unterscheiden kann — nicht, ob ein Kunde sie liest.
+
+Alle fünf Seiten auf **rund 230 Wörter Fließtext** gekürzt (gerendert 447–487 Wörter mit Navigation und Fußzeile). Geblieben ist, was eine Kundenfrage beantwortet:
+- Welche Orte und Ortsteile wir anfahren
+- Was die örtlichen Böden für den Garten bedeuten — aber als Konsequenz formuliert („auf Sandboden bauen wir den Untergrund vorher auf, sonst bildet der Rasen Lücken") statt als Hintergrundwissen
+- Örtliche Fällregeln, wo sie den Kunden betreffen (München, Freising)
+
+Weg sind: Niederschlagsmengen in Millimetern, Schottermächtigkeiten, Eingemeindungsdaten, Immobilienpreise.
+Technik unverändert: `LocalBusiness`- und `FAQPage`-Schema, canonical, eigenes Hero-Bild, Footer-Verlinkung, Sitemap mit 10 Adressen.
+
+**Regel für künftige Texte:** erst „beantwortet das eine Kundenfrage", dann „ist das für Google unterscheidbar". Beides muss stimmen, in dieser Reihenfolge.
+
+### Google-Profil: nur noch Video-Bestätigung möglich
+Der „Bestätigungsprozess"-Knopf ist wieder da — das Profil war also nie bestätigt (Korrektur oben beim 22.9.). Google bietet jetzt **ausschließlich „Geschäftsvideo"** an.
+
+- **Die Methode wählt Google, nicht der Nutzer.** In der Hilfe steht wörtlich, die angebotenen Verfahren „können nicht geändert werden". SMS, Telefon und E-Mail stehen nur bestimmten Fällen offen; bei Betrieben ohne festen Standort fällt das meist weg, weil es keine prüfbare Adresse gibt.
+- **Kein Lager und kein Ladenschild nötig.** Für Betriebe im Einzugsgebiet verlangt das Video drei Dinge:
+  1. **Standort erkennbar** — Straßenschild, Hausnummer, Umgebung in der Nähe des angegebenen Gebiets
+  2. **Existenz des Betriebs** — Werkzeuge, Maschinen, Fahrzeug, Visitenkarte, Geschäftsunterlagen
+  3. **Leitungsbefugnis** — zum Beispiel das Fahrzeug aufschließen, Werkzeug aus dem eigenen Anhänger holen, ein Geschäftsdokument zeigen
+- Live am Handy aufnehmen, mindestens 30 Sekunden, direkt im Profil. Kein vorbereitetes Video aus der Galerie.
+- **Achtung:** Rudis Arbeitsshirt sagt „Rudi's Hausmeister Service" — ein anderer Name als im Profil. Besser die neue Visitenkarte zeigen, die trägt den richtigen Namen.
+
+### Memory für kommende Sessions aufgeräumt
+Die Projekt-Notizen waren veraltet (Framer statt GitHub, alte Schriften, falsche Akzentfarbe, Profil als „angelegt" statt „unbestätigt"). Neu geschrieben statt ergänzt, dazu zwei neue Einträge: Google-Profil-Stand und die Regel „Texte kurz, aus Kundensicht". Querverweise zwischen allen Einträgen geprüft, 12 kaputte repariert.
+
 ## Offene Punkte
 
-1. **Framer-Token erneuern** — Historie ist nachweislich sauber (6.9. erneut geprüft), aber der alte Token war einmal öffentlich sichtbar und gilt damit als kompromittiert. Neuen Token im Unframer-Plugin erzeugen.
-2. **Bewertungen sammeln** — jetzt der größte Hebel. Im Profil unter „Um Rezensionen bitten" gibt es einen kurzen Link zum Weiterschicken. Jeden zufriedenen Kunden direkt nach dem Auftrag fragen, am besten vor Ort.
-3. **Prüfen, ob der Unternehmenskasten erscheint** — in ein paar Tagen erneut im Inkognito-Fenster nach „Rudi macht alles Neumarkt" suchen, zusätzlich in Google Maps.
+1. **Video für die Google-Bestätigung drehen** — der einzige Weg, das Profil sichtbar zu machen. Alles andere beim Profil (Bewertungen, Unternehmenskasten) hängt daran. Anforderungen oben beim 2.10.
+2. **Bewertungen sammeln** (erst nach der Bestätigung möglich) — jetzt der größte Hebel. Im Profil unter „Um Rezensionen bitten" gibt es einen kurzen Link zum Weiterschicken. Jeden zufriedenen Kunden direkt nach dem Auftrag fragen, am besten vor Ort.
+3. **Prüfen, ob der Unternehmenskasten erscheint** — nach der Bestätigung im Inkognito-Fenster nach „Rudi macht alles Neumarkt" suchen, zusätzlich in Google Maps.
 4. **E-Mail mit eigener Domain** — vertagt, Recherche oben. Falls später: erst Postfach einrichten und testen, dann die Adresse auf der Website tauschen (steht dort 23-mal, plus Impressum, Datenschutz, Firmeneintrag und im E-Mail-Knopf des Formulars).
 5. **Foto von Rudi** für die „Direkter Draht"-Sektion — aktuell steht dort das Logo. Gebraucht wird: Rudi auf einer Baustelle, in Arbeitskleidung, ruhig in die Kamera, quer oder hoch, mindestens 1200 px. Zwei Minuten Aufwand, große Wirkung an genau der Stelle, wo über den Anruf entschieden wird.
 6. **Echte Projektfotos** für Baum-/Heckenschnitt und Entrümpelung — beide laufen weiterhin mit gekauftem Symbolbild. Ein Handyfoto direkt nach dem Schnitt reicht. (Alle anderen Bereiche haben inzwischen echte Fotos.)
@@ -250,17 +292,4 @@ Die Texte entstanden über einen Workflow (Recherche → Text → zwei Prüfer �
 
 ## Ordner-Struktur
 
-```
-Rudi_macht_alles/
-├── bilder/                 (Original-Fotos, unverändert)
-├── brandkit/               (Logo, Markenbuch)
-└── website/
-    ├── index.html          (NEU: Conversion-Struktur)
-    ├── leistungen.html     (echte Bilder, Festpreis-Prozess, Sonderprojekte)
-    ├── galerie.html        (11 echte Projektfotos, lazy)
-    ├── ueber-uns.html      (echte Bilder)
-    ├── kontakt.html        (WhatsApp-Formular mit Leistungs-Dropdown)
-    ├── css/brand.css       (erweitert: Trust-Leiste, Problem/Lösung, Stats, Personal…)
-    ├── js/brand.js         (Reveal, Counter, Parallax, WhatsApp-Formular)
-    └── images/             (11 optimierte WebP-Fotos)
-```
+Die aktuelle Übersicht steht in **`README.md`** — dort wird sie gepflegt, damit sie nicht an zwei Stellen auseinanderläuft. Kurz: alles unter `website/` wird veröffentlicht (12 Seiten, `css/brand.css`, `js/brand.js`, `fonts/`, `images/`, Icons, `CNAME`, `robots.txt`, `sitemap.xml`), alles darüber ist Projektarbeit (Protokoll, PDFs, `brandkit/`, `bilder/`, `kunden-unterlagen/`).

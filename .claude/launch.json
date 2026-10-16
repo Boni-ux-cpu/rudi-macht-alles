@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rudi-website",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8030", "--directory", "/Users/tugceaktan/Desktop/Rudi_macht_alles/website"],
+      "port": 8030
+    },
+    {
+      "name": "rudi-test",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8031", "--directory", "/private/tmp/claude-501/-Users-tugceaktan/8b3bb83d-93cb-485c-ae3d-aa84c0f24def/scratchpad/test_site"],
+      "port": 8031
+    }
+  ]
+}

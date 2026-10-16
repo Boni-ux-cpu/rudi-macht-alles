@@ -11,15 +11,18 @@
   <meta property="og:image" content="https://rudimachtalles.de/vorschau.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rudimachtalles.de/" />
-  <link rel="preload" as="image" href="images/hero-garten.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/hero-garten-900.webp" media="(max-width:980px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/hero-garten.webp" media="(min-width:981px)" fetchpriority="high" />
   <meta name="google-site-verification" content="2QH1jnQ9FcgvLPC0f1UQEWUvmUBPR4BAVfQlO-yzBmY" />
   <link rel="canonical" href="https://rudimachtalles.de/" />
   <link rel="icon" href="/icon-48.png" sizes="48x48" />
   <link rel="icon" href="/icon-96.png" sizes="96x96" />
   <link rel="icon" href="/icon-192.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
   <link rel="stylesheet" href="css/brand.css" />
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 
@@ -59,7 +62,7 @@
   </header>
 
   <section class="hero">
-    <div class="hero__bg" data-parallax="0.18" style="background-image:url('images/hero-garten.webp')"></div>
+    <div class="hero__bg" data-parallax="0.18" style="--bg:url('/images/hero-garten.webp');--bg-s:url('/images/hero-garten-900.webp')"></div>
     <div class="container">
       <div class="hero__inner">
         <span class="eyebrow eyebrow--light">Garten · Pflege · Handwerk</span>
@@ -88,7 +91,7 @@
       </div>
       <div class="svc-grid" data-acc-group>
         <div class="svc-card reveal">
-          <div class="svc-card__media"><img src="images/rasen-rollrasen.webp" alt="Frisch verlegter Rollrasen" loading="lazy" style="object-position:70% 45%"></div>
+          <div class="svc-card__media"><img src="images/rasen-rollrasen.webp" srcset="images/rasen-rollrasen-900.webp 675w, images/rasen-rollrasen.webp 900w" sizes="(max-width:980px) 100vw, 50vw" alt="Frisch verlegter Rollrasen" loading="lazy" style="object-position:70% 45%"></div>
           <div class="svc-card__body">
             <h3 class="svc-card__h" style="margin:0"><button class="svc-card__toggle" data-acc aria-expanded="false" aria-controls="svcp-rasenpflege">Rasenpflege<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></h3>
             <p>Mähen, vertikutieren, düngen, neu anlegen. Damit der Rasen dicht und grün bleibt — das ganze Jahr.</p>
@@ -105,7 +108,7 @@
           </div>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__media"><img src="images/heckenschnitt-thuja.webp" alt="Heckenschnitt an einer Thuja-Hecke mit der Akku-Heckenschere" loading="lazy" style="object-position:40% 50%"></div>
+          <div class="svc-card__media"><img src="images/heckenschnitt-thuja.webp" srcset="images/heckenschnitt-thuja-900.webp 900w, images/heckenschnitt-thuja.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Heckenschnitt an einer Thuja-Hecke mit der Akku-Heckenschere" loading="lazy" style="object-position:40% 50%"></div>
           <div class="svc-card__body">
             <h3 class="svc-card__h" style="margin:0"><button class="svc-card__toggle" data-acc aria-expanded="false" aria-controls="svcp-baumschnitt">Baum- &amp; Heckenschnitt<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></h3>
             <p>Formschnitt, Auslichten, Kronenpflege, Heckenschnitt — fachgerecht und sauber.</p>
@@ -139,7 +142,7 @@
           </div>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__media"><img src="images/pflaster-muster.webp" alt="Pflasterfläche aus Kopfstein und Platten" loading="lazy"></div>
+          <div class="svc-card__media"><img src="images/pflaster-muster.webp" srcset="images/pflaster-muster-900.webp 900w, images/pflaster-muster.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Pflasterfläche aus Kopfstein und Platten" loading="lazy"></div>
           <div class="svc-card__body">
             <h3 class="svc-card__h" style="margin:0"><button class="svc-card__toggle" data-acc aria-expanded="false" aria-controls="svcp-pflaster">Pflasterarbeiten<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></h3>
             <p>Terrassen, Einfahrten und Wege — sauber verlegt, eben und langlebig. Rudis Wurzeln liegen im Bau.</p>
@@ -156,7 +159,7 @@
           </div>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__media"><img src="images/beete-ahorn.webp" alt="Beet mit rotem Ahorn und Trittplatten" loading="lazy"></div>
+          <div class="svc-card__media"><img src="images/beete-ahorn.webp" srcset="images/beete-ahorn-900.webp 900w, images/beete-ahorn.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Beet mit rotem Ahorn und Trittplatten" loading="lazy"></div>
           <div class="svc-card__body">
             <h3 class="svc-card__h" style="margin:0"><button class="svc-card__toggle" data-acc aria-expanded="false" aria-controls="svcp-pflanzpflege">Pflanzpflege &amp; Beete<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></h3>
             <p>Unkraut jäten, mulchen, Pflanzen setzen, Beete pflegen — damit Beete blühen statt verwildern.</p>
@@ -174,7 +177,7 @@
         </div>
         <div class="svc-card reveal">
           <!-- Symbolbild (Pexels, frei lizenziert) — bei Gelegenheit durch echtes Projektfoto ersetzen -->
-          <div class="svc-card__media"><img src="images/entruempelung-schubkarre.webp" alt="Schubkarre voll Grünschnitt vor einer Hecke" loading="lazy"></div>
+          <div class="svc-card__media"><img src="images/entruempelung-schubkarre.webp" srcset="images/entruempelung-schubkarre-900.webp 900w, images/entruempelung-schubkarre.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Schubkarre voll Grünschnitt vor einer Hecke" loading="lazy"></div>
           <div class="svc-card__body">
             <h3 class="svc-card__h" style="margin:0"><button class="svc-card__toggle" data-acc aria-expanded="false" aria-controls="svcp-entruempelung">Entrümpelung &amp; Abtransport<span class="chev"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></h3>
             <p>Grünschnitt, Laub, alte Pflanzen, Gartenabfälle — wir räumen auf und nehmen alles mit.</p>
@@ -229,12 +232,12 @@
         <p class="section__sub">Terrassen, Treppen, Wege, Beete — vom kleinen Vorgarten bis zur kompletten Gartenanlage. Alles selbst gemacht, in Neumarkt und ganz Bayern.</p>
       </div>
       <div class="work-grid">
-        <a class="gal-item work-grid__gross reveal" href="leistungen.html#pflaster"><img src="images/terrasse-abendlicht.webp" alt="Natursteinterrasse mit Beleuchtung in der Abenddämmerung" loading="lazy"><span class="gal-item__cap">Natursteinterrasse mit Beleuchtung</span></a>
-        <a class="gal-item reveal" href="leistungen.html#gestaltung"><img src="images/rundbeet-wasserschale.webp" alt="Rundes Pflanzbeet mit Cortenstahl-Kante und Wasserschale" loading="lazy"><span class="gal-item__cap">Rundbeet mit Wasserschale</span></a>
-        <a class="gal-item reveal" href="leistungen.html#pflaster"><img src="images/kopfsteinpflaster-weg.webp" alt="Kopfsteinpflaster-Weg zwischen zwei Sandsteinmauern" loading="lazy"><span class="gal-item__cap">Kopfsteinpflaster zwischen Sandsteinmauern</span></a>
-        <a class="gal-item reveal" href="leistungen.html#pflaster"><img src="images/treppe-blockstufen.webp" alt="Treppe aus Blockstufen mit gepflasterter Fläche" loading="lazy"><span class="gal-item__cap">Blockstufen-Treppe am Hang</span></a>
-        <a class="gal-item reveal" href="leistungen.html#pflanzpflege"><img src="images/polygonalweg-hortensien.webp" alt="Polygonalplatten-Weg mit blühenden Hortensien" loading="lazy"><span class="gal-item__cap">Polygonalweg mit Hortensien</span></a>
-        <a class="gal-item reveal" href="leistungen.html#gestaltung"><img src="images/vorgarten-schwungbeete.webp" alt="Vorgarten mit geschwungenen Beetkanten und frisch gesetzten Bäumen" loading="lazy"><span class="gal-item__cap">Vorgarten mit geschwungenen Beeten</span></a>
+        <a class="gal-item work-grid__gross reveal" href="leistungen.html#pflaster"><img src="images/terrasse-abendlicht.webp" srcset="images/terrasse-abendlicht-900.webp 900w, images/terrasse-abendlicht.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Natursteinterrasse mit Beleuchtung in der Abenddämmerung" loading="lazy"><span class="gal-item__cap">Natursteinterrasse mit Beleuchtung</span></a>
+        <a class="gal-item reveal" href="leistungen.html#gestaltung"><img src="images/rundbeet-wasserschale.webp" srcset="images/rundbeet-wasserschale-900.webp 900w, images/rundbeet-wasserschale.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Rundes Pflanzbeet mit Cortenstahl-Kante und Wasserschale" loading="lazy"><span class="gal-item__cap">Rundbeet mit Wasserschale</span></a>
+        <a class="gal-item reveal" href="leistungen.html#pflaster"><img src="images/kopfsteinpflaster-weg.webp" srcset="images/kopfsteinpflaster-weg-900.webp 900w, images/kopfsteinpflaster-weg.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Kopfsteinpflaster-Weg zwischen zwei Sandsteinmauern" loading="lazy"><span class="gal-item__cap">Kopfsteinpflaster zwischen Sandsteinmauern</span></a>
+        <a class="gal-item reveal" href="leistungen.html#pflaster"><img src="images/treppe-blockstufen.webp" srcset="images/treppe-blockstufen-900.webp 900w, images/treppe-blockstufen.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Treppe aus Blockstufen mit gepflasterter Fläche" loading="lazy"><span class="gal-item__cap">Blockstufen-Treppe am Hang</span></a>
+        <a class="gal-item reveal" href="leistungen.html#pflanzpflege"><img src="images/polygonalweg-hortensien.webp" srcset="images/polygonalweg-hortensien-900.webp 900w, images/polygonalweg-hortensien.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Polygonalplatten-Weg mit blühenden Hortensien" loading="lazy"><span class="gal-item__cap">Polygonalweg mit Hortensien</span></a>
+        <a class="gal-item reveal" href="leistungen.html#gestaltung"><img src="images/vorgarten-schwungbeete.webp" srcset="images/vorgarten-schwungbeete-900.webp 900w, images/vorgarten-schwungbeete.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Vorgarten mit geschwungenen Beetkanten und frisch gesetzten Bäumen" loading="lazy"><span class="gal-item__cap">Vorgarten mit geschwungenen Beeten</span></a>
       </div>
       <div class="work-more reveal">
         <a href="galerie.html" class="btn btn--dark">Alle Projekte ansehen</a>
@@ -244,7 +247,7 @@
 
   <section class="statement">
     <div class="statement__bg" data-parallax="0.16">
-      <img src="images/galerie-pool-deck.webp" alt="Fertige Garten- und Terrassenanlage mit Pool" loading="lazy" />
+      <img src="images/galerie-pool-deck.webp" srcset="images/galerie-pool-deck-900.webp 675w, images/galerie-pool-deck.webp 900w" sizes="100vw" alt="Fertige Garten- und Terrassenanlage mit Pool" loading="lazy" />
     </div>
     <div class="statement__ov"></div>
     <p class="statement__quote">Der Traum gehört Ihnen.<br>Wir machen ihn <span class="hl">wahr.</span></p>
@@ -254,7 +257,7 @@
     <div class="container">
       <div class="about__grid">
         <div class="about__media reveal">
-          <img src="images/galerie-corten.webp" alt="Gartenanlage mit Terrasse und Hochbeeten aus Cortenstahl" loading="lazy" />
+          <img src="images/galerie-corten.webp" srcset="images/galerie-corten-900.webp 900w, images/galerie-corten.webp 1200w" sizes="(max-width:980px) 100vw, 50vw" alt="Gartenanlage mit Terrasse und Hochbeeten aus Cortenstahl" loading="lazy" />
           <div class="about__badge"><b>seit 2009</b><span>Erfahrung im Garten</span></div>
         </div>
         <div class="about__text reveal">

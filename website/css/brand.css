@@ -91,12 +91,23 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Ersatzschriften mit angeglichener Höhe.
+   Ohne sie springt das Layout, sobald Fraunces/Inter fertig geladen sind:
+   Fraunces ist 8,8 % höher als Georgia, Inter 5,2 % höher als Arial.
+   Die Werte sind im Browser gemessen, nicht geschätzt — Abweichung 0 px.
+   Nicht ändern, ohne danach die Layout-Sprünge neu zu messen. */
+@font-face{font-family:'Fraunces Fallback';src:local('Georgia'),local('Noto Serif'),local('Droid Serif'),local('Times New Roman');font-style:italic;size-adjust:75.25%;ascent-override:129.97%;descent-override:33.89%;line-gap-override:0%}
+@font-face{font-family:'Fraunces Fallback';src:local('Georgia'),local('Noto Serif'),local('Droid Serif'),local('Times New Roman');font-style:normal;size-adjust:86.47%;ascent-override:113.10%;descent-override:29.49%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial'),local('Roboto'),local('Helvetica Neue'),local('Helvetica');font-weight:400;size-adjust:106.21%;ascent-override:91.21%;descent-override:22.71%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial'),local('Roboto'),local('Helvetica Neue'),local('Helvetica');font-weight:500;size-adjust:107.39%;ascent-override:90.21%;descent-override:22.46%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial'),local('Roboto'),local('Helvetica Neue'),local('Helvetica');font-weight:600;size-adjust:101.80%;ascent-override:95.17%;descent-override:23.69%;line-gap-override:0%}
+
 :root{
   --forest:#1E3026; --forest-deep:#0F1E14; --fern:#4A7C5D; --fern-deep:#3A6248; --moss:#A8C29C;
   --clay:#B8623A; --clay-deep:#9C4F2D; --clay-soft:#C9805E;
   --cream:#F4EFE3; --paper:#FCF9F1; --mist:#E0D9C8; --stone:#6B6358; --ink:#1A1A18;
-  --serif:'Fraunces','EB Garamond',Georgia,serif;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --serif:'Fraunces','Fraunces Fallback','EB Garamond',Georgia,serif;
+  --sans:'Inter','Inter Fallback',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
   --ease:cubic-bezier(.2,.7,.2,1);
   --container:1320px;
 }
@@ -129,12 +140,15 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
 .nav__links a:not(.btn){color:var(--cream);font-weight:500;font-size:14.5px;position:relative}
 .nav__links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--clay-soft);transition:width .3s var(--ease)}
 .nav__links a:not(.btn):hover::after,.nav__links a.active::after{width:100%}
-.nav__burger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:none;border:0;cursor:pointer;padding:8px;min-width:44px;min-height:44px;color:var(--cream)}
-.nav__burger span{width:26px;height:2px;background:currentColor;transition:.3s var(--ease)}
+.nav__burger{display:none;position:relative;z-index:2;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:none;border:0;cursor:pointer;padding:8px;min-width:44px;min-height:44px;color:var(--cream)}
+.nav__burger span{width:26px;height:2px;background:currentColor;transition:transform .3s var(--ease),opacity .2s var(--ease)}
+.nav__burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav__burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* hero (Startseite) */
 .hero{position:relative;background:var(--forest);color:var(--cream);padding:210px 0 140px;overflow:hidden}
-.hero__bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
+.hero__bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-image:var(--bg)}
 .hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,20,.7) 0%,rgba(20,38,28,.8) 50%,rgba(15,30,20,.92) 100%)}
 .hero__inner{position:relative;z-index:2;max-width:820px}
 .hero h1{font-style:italic;font-size:clamp(54px,7.4vw,108px);font-variation-settings:"opsz" 144,"SOFT" 90;margin:22px 0 0}
@@ -150,7 +164,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
 
 /* page-hero (Unterseiten) — gleicher Foto-Kopf wie Startseite */
 .page-hero{position:relative;background:var(--forest);color:var(--cream);padding:200px 0 90px;overflow:hidden}
-.page-hero__bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
+.page-hero__bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-image:var(--bg)}
+/* Am Handy die kleinere Bildfassung laden — spart rund die Hälfte an Daten. */
+@media(max-width:980px){.hero__bg,.page-hero__bg{background-image:var(--bg-s,var(--bg))}}
 .page-hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,20,.72) 0%,rgba(15,30,20,.9) 100%)}
 .page-hero__inner{position:relative;z-index:2}
 .page-hero__crumb{font-size:13px;color:var(--moss);letter-spacing:.04em;margin-bottom:16px}
@@ -319,6 +335,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05}
   .nav__links.open{transform:none}
   .nav__links a:not(.btn){font-size:20px;font-family:var(--serif);font-style:italic;display:flex;align-items:center;min-height:44px}
   .nav__burger{display:flex}
+  .float{right:14px;bottom:14px;gap:10px}
+  .float a{width:48px;height:48px}
   .hero{padding:170px 0 100px}
   .svc-grid,.svc-detail-grid{grid-template-columns:repeat(2,1fr)}
   .about__grid{grid-template-columns:1fr;gap:48px}
